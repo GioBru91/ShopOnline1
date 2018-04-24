@@ -78,6 +78,8 @@ Model:
 . dataFine
 . prezzoDiSpedizione 
 . quantitaAcquistata
+. idUtente 
+. idProdotto
 
 - Utente
 . idUtente
@@ -86,8 +88,8 @@ Model:
 . username
 . password
 . indirizzo
-. listaOrdini (acquisti in corso)
-. listaAcquisti (acquisti completati)
+. listaOrdini (acquisti passati)
+. listaAcquisti (acquisti in corso)
 
 - Recensioni
 . titolo
