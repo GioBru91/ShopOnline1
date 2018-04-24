@@ -1,0 +1,5 @@
+@charset "ISO-8859-1";
+
+form input[type="submit"], input[type="reset"]{
+	width: 100px;
+}
