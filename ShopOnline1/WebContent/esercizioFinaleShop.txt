@@ -1,0 +1,96 @@
+GIOVANNI-ALBACHIARA-DOMENICO
+GABRIELE-ANDREA-MARIA-MARIA
+CLAUDIO-PAVLIN-DANIELE-ANGELO
+
+SVILUPPARE UNA WEB APPLICATION PER UN SHOP ONLINE.
+QUESTA APPLICAZIONE DOVRA' IMPLEMENTARE QUESTE PAGINE/FUNZIONALITA :
+(alcune pagine e funzioanlità saranno visibili solo se l'utente è loggato (per es. se non si è loggati non si può acquistare un prodotto))
+
+- HOME 
+costituita principalmente da un carousel e da una navbar (presente in
+tutte le pagine dell'app)
+la navbar oltre i soliti link avrà un riquadro per la ricerca di un prodotto che consentirà al client di ricercare un prodotto tramite il nome
+(ritornare i prodotti con nomi simili)
+- REGISTRAZIONE E LOGIN
+costituite da un form, implementare la validazione del form tramite JS
+aggiungere un pulsante (per es. un icona di un occhio) che consenta di
+visualizzare la password che abbiamo scritto
+- LOGOUT
+- LISTA PRODOTTI
+mostrerà la lista dei prodotti disponibili
+- LISTA PRODOTTI IN OFFERTA
+- LISTA PRODOTTI PER CATEGORIA 
+implementare un menu a tendina nella navbar che consenta di scegliere la categoria
+per ogni prodotto ci sarà un bottone acquista (disponibile solo se si è loggati) e un bottone dettagli (che mostra i dettagli del prodotti)
+- DETTAGLIO PRODOTTO
+qui vengono mostrati i dettagli del prodotto e le recensioni.
+implementare lo zoom sull'immagine del prodotto al passaggio del cursore
+(tipo amazon)
+- ACQUISTO PRODOTTO
+qui troviamo un form dove vengono inseriti i dettagli dell'acquisto
+(spedizione quantita ecc..)
+- LISTA ACQUISTI
+mostra la lista dei prodotti acquistati e consegnati e qui abbiamo la 
+possibilità di acquistarlo di nuovo se disponibile e di aggiungere
+la recensione del prodotto
+- LISTA ORDINI
+mostra la lista dei prodotti acquistati ma non ancora consegnati
+qui è presente un bottone dettagli che mostra i dettagli dell'acquisto
+e una progress bar che indica lo stato di avanzamento della spedizione
+- CONTATTI
+questa pagina mostra i dettagli della società per la quale state sviluppando l'app
+nome, numero di telefono, mail, una breve descrizione e l'indirizzo
+implementare una mappa (google maps api) che mostri il posizionamento
+della sede della società.
+- CARRELLO
+aggiungere la funzionalità aggiungi al carrello su tutte le pagine dove
+è possibile acquistare i prodotti
+questo bottone dovrà salvare i prodotti selezionati sul carrello e aumentare il contatore degli oggetti nel carrello (tipo amazon)
+
+
+- IL MIO ACCOUNT
+aggiungere questa funzionalità sulla navbar che consenta di visualizzare
+le informazioni dell'account loggato e di modificarle
+
+- HOME (seguito)
+aggiungere un secondo carousel che mostri i 3 prodotti più venduti
+al passaggio del mouse sull'immagine del prodotto all'interno del carousel
+verrà mostrato un popover che fa vedere alcuni dettagli del prodotto
+come prezzo, percentuale di sconto e disponibilità 
+
+Model:
+
+- Prodotto 
+. idProdotto
+. nome
+. categoria (enum)
+. marca
+. prezzo
+. offerta (boolean)
+. sconto (int % di sconto)
+. quantitaDisponibile
+. immagine (String percorso)
+
+- Acquisto
+. idAcquisto
+. tipoSpezione
+. dataInizio
+. dataFine
+. prezzoDiSpedizione 
+. quantitaAcquistata
+
+- Utente
+. idUtente
+. nome
+. cognome
+. username
+. password
+. indirizzo
+. listaOrdini (acquisti in corso)
+. listaAcquisti (acquisti completati)
+
+- Recensioni
+. titolo
+. contenuto (massimo 1000 caratteri)
+. idUtente 
+. idProdotto
