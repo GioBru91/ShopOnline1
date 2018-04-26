@@ -130,7 +130,7 @@
 <h1>Devi inserire i valori per tutti i campi</h1>
 </div>
 
-<%if (request.getAttribute("errore1") == null){ %>
+<%if (request.getAttribute("errore1") != null){ %>
 <div class="alert alert-danger"  style = margin-top:20px">
 <h4>Username già utilizzato</h4>
 </div>

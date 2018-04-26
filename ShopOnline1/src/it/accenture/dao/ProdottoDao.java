@@ -15,6 +15,8 @@ public interface ProdottoDao {
 	
 	public Prodotto getProdottoById(int idProdotto);
 	
+	public Prodotto getProdottoByNome(String nomeProdotto);
+	
 	public void close();
 	
 }
