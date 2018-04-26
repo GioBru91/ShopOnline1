@@ -45,9 +45,77 @@
         </div>
        </nav> 
 
-       
+<div id="slideshow" class="carousel slide">
+ <div class="carousel-inner">
+ 
+  <div class="item active">
+   <img src="img/slide2.jpg" alt="...">
+   <div class="carousel-caption">
+   <h3>DONNA</h3>
+   </div>
+  </div>
+  <div class="item active">
+   <img src="img/slide3.jpg" alt="...">
+   <div class="carousel-caption">
+    ...
+   </div>
+  </div>
+  <div class="item active">
+   <img src="img/slide4.jpg" alt="...">
+   <div class="carousel-caption">
+    ...
+   </div>
+  </div>
+  <div class="item active">
+   <img src="img/slide5.jpg" alt="...">
+   <div class="carousel-caption">
+    ...
+   </div>
+  </div>
+  <div class="item active">
+   <img src="img/slide6.jpg" alt="...">
+   <div class="carousel-caption">
+    ...
+   </div>
+  </div>
+  <div class="item active">
+   <img src="img/slide7.jpg" alt="...">
+   <div class="carousel-caption">
+    ...
+   </div>
+  </div>
+  <div class="item active">
+   <img src="img/slide8.jpg" alt="...">
+   <div class="carousel-caption">
+    ...
+   </div>
+   
+   <a class="left carousel-control" href="#myCarousel" data-slide ="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide ="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
 
-
+  </div>
+  
+ </div>
+ 
+<!-- Indicatori di posizione -->
+ <ol class="carousel-indicators">
+  <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+  <li data-target="#slideshow" data-slide-to="1"></li>
+  <li data-target="#slideshow" data-slide-to="2"></li>
+ </ol>
+ 
+<!-- Controlli -->
+ <a class="left carousel-control" href="#slideshow" data-slide="prev">
+ <span class="icon-prev"></span>
+ </a>
+ <a class="right carousel-control" href="#slideshow" data-slide="next">
+ <span class="icon-next"></span>
+ </a>
+</div>
 
 </body>
 </html>
