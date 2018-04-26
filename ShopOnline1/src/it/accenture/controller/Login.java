@@ -31,7 +31,8 @@ public class Login extends HttpServlet {
 		    System.out.println("login effettuato");
 			HttpSession sessione = req.getSession();
 		    sessione.setAttribute("utenteLoggato", utente);
-		    resp.sendRedirect("index.jsp");
+		    RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+			dispatcher.forward(req, resp);
 	
 
 }

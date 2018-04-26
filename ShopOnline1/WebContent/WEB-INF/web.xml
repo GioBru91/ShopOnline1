@@ -44,6 +44,17 @@
   <url-pattern>/Logout</url-pattern>
   </servlet-mapping>
  
+ <!-- EFFETTUA ACQUISTO -->
+  <servlet>
+  <servlet-name>EffettuaAcquisto</servlet-name>
+  <servlet-class>it.accenture.controller.EffettuaAcquisto
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>EffettuaAcquisto</servlet-name>
+  <url-pattern>/EffettuaAcquisto</url-pattern>
+  </servlet-mapping>
  
  <!-- LOGIN FILTER -->
   <filter>
