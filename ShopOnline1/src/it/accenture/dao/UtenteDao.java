@@ -6,6 +6,8 @@ public interface UtenteDao {
 
 	public void registrazione(Utente utente);
 	
+	public Utente controlloUsername(String username);
+	
 	public Utente login(String username, String password);
 	
 	public void close();

@@ -14,26 +14,25 @@ import it.accenture.model.Utente;
 
 public class Login extends HttpServlet {
 
-@Override
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	String username = req.getParameter("username");
-	String password = req.getParameter("password");
-    UtenteDaoImpl utenteService = new UtenteDaoImpl();
-	Utente utente = utenteService.login(username, password);
-	System.out.println(utente);
-	utenteService.close();
-	if (utente == null) {
-	   System.out.println("credenziali sbagliate");
-	req.setAttribute("errore", true);
-	RequestDispatcher dispatcher =
-			req.getRequestDispatcher("registrazione.jsp?form=login");
-	dispatcher.forward(req, resp);
-} else {
-    System.out.println("login effettuato");
-	HttpSession sessione = req.getSession();
-    sessione.setAttribute("utenteLoggato", utente);
-    resp.sendRedirect("index.jsp");
-
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+	    UtenteDaoImpl utenteService = new UtenteDaoImpl();
+		Utente utente = utenteService.login(username, password);
+		System.out.println(utente);
+		utenteService.close();
+		if (utente == null) {
+		   System.out.println("credenziali sbagliate");
+			req.setAttribute("errore", true);
+			RequestDispatcher dispatcher = req.getRequestDispatcher("login.jsp");
+			dispatcher.forward(req, resp);
+		} else {
+		    System.out.println("login effettuato");
+			HttpSession sessione = req.getSession();
+		    sessione.setAttribute("utenteLoggato", utente);
+		    resp.sendRedirect("index.jsp");
+	
 
 }
 
