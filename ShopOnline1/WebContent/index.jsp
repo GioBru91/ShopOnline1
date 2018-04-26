@@ -7,115 +7,131 @@
 <title>Home</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
 
-<div id="banner" align="right" style="margin-right: 30px">
-    <div id="banner-content">
-    
-    <img src="img/icona-profilo.png" width="2%" style= margin:10px> 
-    <img src="img/icone_cuore.png" width="2%" style=margin:10px> 
-    <img src="img/icona_carrello.png" width="2%" style=margin:10px> 
+<div id="banner" align="right" style="margin-right: 20px">
+     <div id="banner-content">  
+     
+     
+<div class="dropdown" style="margin-right:5px;">
+<a data-toggle="dropdown" href="#">
+ <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style=margin:10px></button>
+</a>
+<ul class="dropdown-menu" style="margin-left: 81%;">
+   						<li><a href="#">Login</a></li>
+						<li><a href="#">Registrazione</a></li>
+						<li><a href="#">I miei ordini</a></li>
+						<li><a href="#">I miei acquisti</a></li>
+						<li><a href="#">Logout</a></li>
+   <li class="divider"></li>
+</ul>
+
+
+<a data-toggle="dropdown" href="#">
+<button class="btn" id="carrello"><img src="img/icona_carrello.png" width="40%" style=margin:10px></button>
+</a>
+</div>
+
+
+     
+ 
    
+<form id="cerca" align="right"  action="" method="get"  width="2%" style= margin:10px>
+<fieldset>
+<legend></legend>
+<input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: medium;font-weight: 200;"> 
+<button class="btn" id="cerca"><img src="img/icone_cerca.png" width="40%" style=margin:10px></button>
+</fieldset>
+</form>
    
     </div>
   </div>
-  <div id="main-content">
-  <center>
-    <img src="img/icone_cerca.png" width="2%" style=margin:10px> 
-   <img src="img/text_box.png" width="2%" style=margin:10px>
-    </center>
-  </div>
+  
 
-
-
+ 
 	<nav class="nav navbar-default">
-       <div class=" collapse navbar-collapse" style="margin-left:406px;">
+       <div class=" collapse navbar-collapse" style="margin-left:4px;background-color: grey;">
             <ul class="nav navbar-nav">
                
-                <li><a href="about.html" style="font-family: inherit;font-size: large;font-weight: 500;">UOMO</a></li>
-                <li><a href="contact.html" style="font-family: inherit;font-size: large;font-weight: 500;">DONNA</a></li>
-                <li><a href="membership.html" style="font-family: inherit;font-size: large;font-weight: 500;">BAMBINO</a></li>
-                <li><a href="borrow.html" style="font-family: inherit;font-size: large;font-weight: 500;">CASA</a></li>
-                <li><a href="policies.html" style="font-family: inherit;font-size: large;font-weight: 500;">ELETTRONICA</a></li>
-                <li><a href="sitemap.html" style="font-family: inherit;font-size: large;font-weight: 500;">LIBRI</a></li>
-            </ul>
+<div class="dropdown">
+<a data-toggle="dropdown" href="#" class="btn btn-primary">
+<div class="container" onmouseover="myFunction(this)" onclick="myFunction(this)" style="background-color: grey">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div></a>
+<ul class="dropdown-menu">
+   <li><a href="Uomo">UOMO</a></li>
+   <li><a href="Donna">DONNA</a></li>
+   <li><a href="Bambino">BAMBINO</a></li>
+   <li><a href="Casa">CASA</a></li>
+   <li><a href="Elettronica">ELETTRONICA</a></li>
+   <li><a href="Libri">LIBRI</a></li>
+   <li><a>----------</a></li>
+   <li><a href="Libri">% SALDI %</a></li>
+   <li><a>----------</a></li>
+   <li><a href="ListaProdotti">TUTTI I PRODOTTI</a></li>
+   <li class="divider"></li>
+    </ul>
+</div>
+</ul>
         </div>
        </nav> 
 
-<div id="slideshow" class="carousel slide">
- <div class="carousel-inner">
- 
-  <div class="item active">
-   <img src="img/slide2.jpg" alt="...">
-   <div class="carousel-caption">
-   <h3>DONNA</h3>
-   </div>
-  </div>
-  <div class="item active">
-   <img src="img/slide3.jpg" alt="...">
-   <div class="carousel-caption">
-    ...
-   </div>
-  </div>
-  <div class="item active">
-   <img src="img/slide4.jpg" alt="...">
-   <div class="carousel-caption">
-    ...
-   </div>
-  </div>
-  <div class="item active">
-   <img src="img/slide5.jpg" alt="...">
-   <div class="carousel-caption">
-    ...
-   </div>
-  </div>
-  <div class="item active">
-   <img src="img/slide6.jpg" alt="...">
-   <div class="carousel-caption">
-    ...
-   </div>
-  </div>
-  <div class="item active">
-   <img src="img/slide7.jpg" alt="...">
-   <div class="carousel-caption">
-    ...
-   </div>
-  </div>
-  <div class="item active">
-   <img src="img/slide8.jpg" alt="...">
-   <div class="carousel-caption">
-    ...
-   </div>
-   
-   <a class="left carousel-control" href="#myCarousel" data-slide ="prev">
-<span class="glyphicon glyphicon-chevron-left"></span>
-</a>
-<a class="right carousel-control" href="#myCarousel" data-slide ="next">
-<span class="glyphicon glyphicon-chevron-right"></span>
-</a>
+<br>
 
-  </div>
-  
- </div>
- 
-<!-- Indicatori di posizione -->
- <ol class="carousel-indicators">
-  <li data-target="#slideshow" data-slide-to="0" class="active"></li>
-  <li data-target="#slideshow" data-slide-to="1"></li>
-  <li data-target="#slideshow" data-slide-to="2"></li>
- </ol>
- 
-<!-- Controlli -->
- <a class="left carousel-control" href="#slideshow" data-slide="prev">
- <span class="icon-prev"></span>
- </a>
- <a class="right carousel-control" href="#slideshow" data-slide="next">
- <span class="icon-next"></span>
- </a>
+<div class="jumbotron" style="align:center; font:initial; color: white;">
+<img src="img/logo.png" class="img-rounded">
+<center>
+<h1>SALDI</h1>
+</center>
 </div>
+</div>
+
+<div class="container">
+    
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center" style="margin-left: 300px">
+    
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/slide1.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/slide2.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/slide3.jpg" alt="Chicago" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="img/slide4.jpg" alt="Chicago" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="img/slide5.jpg" alt="Chicago" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="img/slide6.jpg" alt="Chicago" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="img/slide7.jpg" alt="Chicago" style="width:100%;">
+      </div>
+      <div class="item">
+        <img src="img/slide8.jpg" alt="Chicago" style="width:100%;">
+      </div>
+      
+    </div>
+
+    
+  </div>
+</div>
+ 
+ 
+
 
 </body>
 </html>

@@ -8,3 +8,68 @@ element.style {
 	width: 15 px;
 	height: 15px;
 }
+
+legend {
+    display: block;
+    width: 20%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: unset;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.btn {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 0px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 5%;
+    height: 5%;
+}
+
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+jumbotron{
+	align:center;
+	text-align: center;
+	color: white;
+	padding-top: 0px;
+    padding-bottom: 5px;
+}
+
+
+.dropdown:hover .dropdown-menu{
+	display: block;
+	
+}

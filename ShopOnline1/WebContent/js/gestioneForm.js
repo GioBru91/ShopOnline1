@@ -62,3 +62,7 @@ function validazioneFormLogin() {
 		return controllo;
 }
 
+function myFunction(x) {
+    x.classList.toggle("change");
+}
+
