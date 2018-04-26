@@ -9,13 +9,20 @@ public class Acquisto {
 	private Spedizione tipoSpedizione;
 	private LocalDate dataInizio;
 	private LocalDate dataFine;
-	private double prezzoDiSpedizione; //con aumento in base al tipo di spedizione
+	private double prezzoDiSpedizione;
 	private int quantitaAcquistata;
+	private double prezzoTotale;
 	private int idUtente;
 	private int idProdotto;
 	
 	
 	
+	public double getPrezzoTotale() {
+		return prezzoTotale;
+	}
+	public void setPrezzoTotale(double prezzoTotale) {
+		this.prezzoTotale = prezzoTotale;
+	}
 	public int getIdUtente() {
 		return idUtente;
 	}
@@ -53,7 +60,7 @@ public class Acquisto {
 		this.dataFine = dataFine;
 	}
 	public double getPrezzoDiSpedizione() {
-		return prezzoDiSpedizione;
+		return tipoSpedizione.getPrezzoSpedizione();
 	}
 	public void setPrezzoDiSpedizione(double prezzoDiSpedizione) {
 		this.prezzoDiSpedizione = prezzoDiSpedizione;
@@ -64,14 +71,15 @@ public class Acquisto {
 	public void setQuantitaAcquistata(int quantitaAcquistata) {
 		this.quantitaAcquistata = quantitaAcquistata;
 	}
-	
 	@Override
 	public String toString() {
 		return "Acquisto [idAcquisto=" + idAcquisto + ", tipoSpedizione=" + tipoSpedizione + ", dataInizio="
 				+ dataInizio + ", dataFine=" + dataFine + ", prezzoDiSpedizione=" + prezzoDiSpedizione
-				+ ", quantitaAcquistata=" + quantitaAcquistata + ", idUtente=" + idUtente + ", idProdotto=" + idProdotto
-				+ "]";
+				+ ", quantitaAcquistata=" + quantitaAcquistata + ", prezzoTotale=" + prezzoTotale + ", idUtente="
+				+ idUtente + ", idProdotto=" + idProdotto + "]";
 	}
+	
+	
 	
 
 	

@@ -30,7 +30,7 @@ public class AcquistoDaoImpl implements AcquistoDao {
 	@Override
 	public void insertAcquisto(Acquisto acquisto) {
 		String query = "insert into acquisto values ("
-					 + "acquisto_sequence.nextval, ?, ?, ?, ?, ?, ?, ?";
+					 + "acquisto_sequence.nextval, ?, ?, ?, ?, ?, ?, ?, ?";
 		try {
 			prepared = connection.prepareStatement(query);
 			prepared.setInt(1, acquisto.getIdAcquisto());
@@ -41,6 +41,7 @@ public class AcquistoDaoImpl implements AcquistoDao {
 			prepared.setInt(6, acquisto.getQuantitaAcquistata());
 			prepared.setInt(7, acquisto.getIdUtente());
 			prepared.setInt(8, acquisto.getIdProdotto());
+			prepared.setDouble(9, acquisto.getPrezzoTotale());
 			prepared.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -74,6 +75,7 @@ public class AcquistoDaoImpl implements AcquistoDao {
 				acquisto.setQuantitaAcquistata(rs.getInt(6));
 				acquisto.setIdUtente(idUtente);
 				acquisto.setIdProdotto(rs.getInt(8));
+				acquisto.setPrezzoTotale(rs.getDouble(9));
 				listaAcquisti.add(acquisto);
 			}
 		} catch (SQLException e) {
@@ -112,6 +114,7 @@ public class AcquistoDaoImpl implements AcquistoDao {
 				acquisto.setQuantitaAcquistata(rs.getInt(6));
 				acquisto.setIdUtente(idUtente);
 				acquisto.setIdProdotto(rs.getInt(8));
+				acquisto.setPrezzoTotale(rs.getDouble(9));
 				listaOrdini.add(acquisto);
 			}
 		}catch (SQLException e) {

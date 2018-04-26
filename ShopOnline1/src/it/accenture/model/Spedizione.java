@@ -3,14 +3,14 @@ package it.accenture.model;
 public enum Spedizione {
 
 	PRIME(40, 1),
-	PRIORITARIA(20, 3),
-	ORDINARIA(1, 7);
+	PRIORITARIA(25, 3),
+	ORDINARIA(10, 7);
 	
-	private int percentualeIncrementoPrezzo;
+	private double prezzoSpedizione;
 	private int giorni;
 		
-		private Spedizione(int percentualeIncrementoPrezzo, int giorni) {
-			this.percentualeIncrementoPrezzo = percentualeIncrementoPrezzo;
+		private Spedizione(double prezzoSpedizione, int giorni) {
+			this.prezzoSpedizione = prezzoSpedizione;
 			this.giorni = giorni;
 		}
 		
@@ -28,11 +28,15 @@ public enum Spedizione {
 
 
 
-		public int getPercentualeIncrementoPrezzo() {
-			return percentualeIncrementoPrezzo;
+		public double getPrezzoSpedizione() {
+			return prezzoSpedizione;
 		}
-	
-		public void setPercentualeIncrementoPrezzo(int percentualeIncrementoPrezzo) {
-			this.percentualeIncrementoPrezzo = percentualeIncrementoPrezzo;
+
+
+
+		public void setPrezzoSpedizione(double prezzoSpedizione) {
+			this.prezzoSpedizione = prezzoSpedizione;
 		}
+
+		
 }
