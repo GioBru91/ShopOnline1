@@ -1,13 +1,14 @@
 package it.accenture.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Acquisto {
 
 	private int idAcquisto;
 	private Spedizione tipoSpedizione;
-	private Date dataInizio;
-	private Date dataFine;
+	private LocalDate dataInizio;
+	private LocalDate dataFine;
 	private double prezzoDiSpedizione; //con aumento in base al tipo di spedizione
 	private int quantitaAcquistata;
 	private int idUtente;
@@ -39,16 +40,16 @@ public class Acquisto {
 	public void setTipoSpedizione(Spedizione tipoSpedizione) {
 		this.tipoSpedizione = tipoSpedizione;
 	}
-	public Date getDataInizio() {
+	public LocalDate getDataInizio() {
 		return dataInizio;
 	}
-	public void setDataInizio(Date dataInizio) {
+	public void setDataInizio(LocalDate dataInizio) {
 		this.dataInizio = dataInizio;
 	}
-	public Date getDataFine() {
+	public LocalDate getDataFine() {
 		return dataFine;
 	}
-	public void setDataFine(Date dataFine) {
+	public void setDataFine(LocalDate dataFine) {
 		this.dataFine = dataFine;
 	}
 	public double getPrezzoDiSpedizione() {
