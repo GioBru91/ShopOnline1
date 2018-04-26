@@ -2,6 +2,9 @@
 
 element.style {
     image-rendering: pixelated;
-    
 }
 
+.carousel-indicators li {
+	width: 15 px;
+	height: 15px;
+}
