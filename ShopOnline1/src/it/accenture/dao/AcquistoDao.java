@@ -8,10 +8,11 @@ public interface AcquistoDao {
 
 	public void insertAcquisto(Acquisto acquisto);
 	
-	public List<Acquisto> listaAcquisti (int idCliente);
+	public List<Acquisto> getlListaAcquistiByUtente(int idUtente);
 	
-	public List<Acquisto> listaOrdini (int idCliente);
+	public List<Acquisto> getListaOrdiniByUtente (int idUtente);
 	
 	public void close();
+
 	
 }
