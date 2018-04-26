@@ -2,5 +2,56 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>ShopOnline1</display-name>
  
+ <!-- REGISTRAZIONE -->
+  <servlet>
+  <servlet-name>Registrazione</servlet-name>
+  <servlet-class>it.accenture.controller.Registrazione
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Registrazione</servlet-name>
+  <url-pattern>/Registrazione</url-pattern>
+  </servlet-mapping>
+ 
+ <!-- LOGIN -->
+  <servlet>
+  <servlet-name>Login</servlet-name>
+  <servlet-class>it.accenture.controller.Login
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Login</servlet-name>
+  <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+ 
+ <session-config>
+  <session-timeout>60</session-timeout>
+  </session-config>
+ 
+ 
+ 
+ <!-- LOGOUT -->
+  <servlet>
+  <servlet-name>Logout</servlet-name>
+  <servlet-class>it.accenture.controller.Logout
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Logout</servlet-name>
+  <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 </web-app>
