@@ -11,6 +11,9 @@
 <script type= "text/javascript" src="js/gestioneForm.js"></script>
 </head>
 <body>
+
+<%String username= (String) request.getAttribute("username"); %>
+
 <div id="banner" align="right" style="margin-right: 30px">
     <div id="banner-content">
     

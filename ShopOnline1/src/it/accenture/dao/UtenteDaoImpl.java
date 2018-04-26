@@ -90,6 +90,41 @@ public class UtenteDaoImpl implements UtenteDao{
 		}	
 	}
 
+	@Override
+	public Utente controlloUsername(String username) {
+		Utente utente = null;
+		ResultSet rs = null;
+		String query = "select * from utente where username = ?";
+		try {
+			prepared= connection.prepareStatement(query);
+			prepared.setString(1, username);
+			rs = prepared.executeQuery();
+			if(rs.next()){
+				utente = new Utente();
+				utente.setIdUtente(rs.getInt(1));
+				utente.setNome(rs.getString(2));
+				utente.setCognome(rs.getString(3));
+				utente.setUsername(username);
+				utente.setPassword(rs.getString(5));
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try{
+				if(prepared != null){
+					prepared.close();
+				}
+				if (rs != null){
+					rs.close();
+				}
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}	
+		}
+		return utente;
+	}
+
 
 	
 }

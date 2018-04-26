@@ -1,6 +1,7 @@
 function validazioneForm() {
 	var nome=  document.getElementById('nome').value;
 	var cognome=  document.getElementById('cognome').value;
+	var indirizzo=  document.getElementById('indirizzo').value;
 	var username=  document.getElementById('username').value;
 	var password=  document.getElementById('password').value;
 	var controllo= true;
@@ -14,6 +15,11 @@ function validazioneForm() {
 	if (cognome==""){
 		document.getElementById('cognome').placeholder='Campo Obbligatorio';
 		document.getElementById('cognome').classList.add('alert-danger');
+		controllo=false;
+	}
+	if (indirizzo==""){
+		document.getElementById('indirizzo').placeholder='Campo Obbligatorio';
+		document.getElementById('indirizzo').classList.add('alert-danger');
 		controllo=false;
 	}
 	if (username==""){

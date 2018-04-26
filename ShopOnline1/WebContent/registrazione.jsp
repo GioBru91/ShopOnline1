@@ -46,7 +46,7 @@
         </div>
        </nav> 
        
-       <form class="form-horizontal" align="center"  action="Registrazione" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" >
+<form class="form-horizontal" align="center"  action="Registrazione" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" >
 
 
 <center>
@@ -66,6 +66,16 @@
 </div>
 </div>
 </center>
+
+<center>
+<div class="form-group" >
+<label > Inserisci Indirizzo</label>
+<div>
+<input type="text" style="width:53%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
+</div>
+</div>
+</center>
+
 <center>
 <div class="form-group" >
 <label> Inserisci Username</label>
@@ -120,6 +130,11 @@
 <h1>Devi inserire i valori per tutti i campi</h1>
 </div>
 
+<%if (request.getAttribute("errore1") != null){ %>
+<div class="alert alert-danger"  style = margin-top:20px">
+<h4>Username già utilizzato</h4>
+</div>
+<% } %>
 
 
 </div> <!--container-->
