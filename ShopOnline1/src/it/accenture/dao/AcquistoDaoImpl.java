@@ -1,7 +1,9 @@
 package it.accenture.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
@@ -25,6 +27,14 @@ public class AcquistoDaoImpl implements AcquistoDao {
 	public void insertAcquisto(Acquisto acquisto) {
 		String query = "insert into acquisto values ("
 					 + "acquisto_sequence.nextval, ?, ?, ?, ?, ?, ?, ?";
+		try {
+			prepared = connection.prepareStatement(query);
+			prepared.setInt(1, acquisto.getIdAcquisto());
+			prepared.setString(2, acquisto.getTipoSpedizione().toString());
+			prepared.setDate(3, Date.valueOf(acquisto.getDataInizio()));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
