@@ -23,7 +23,7 @@
 <a data-toggle="dropdown" href="#">
  <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style=margin:10px></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 81%;">
+<ul class="dropdown-menu" style="margin-left: 82%;">
    						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -91,31 +91,33 @@
 
 <form class="form-horizontal" action="Login" method ="post" onsubmit="return validazioneFormLogin()" id="formLogin">
 
-<center>
+
 <div class="form-group" >
 <label > Inserisci Username</label>
 <div >
 <input type="text" style="width:53%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
 </div>
 </div>
-</center>
-<center>
+
+
 <div class="form-group" >
-<label > Inserisci Password</label>
+<label for="password"> Inserisci Password</label>
+<button  onclick="myEye('password');" id="showhide"><span class="glyphicon glyphicon-eye-open"></span></button>
 <div >
 <input type="password" style="width:53%" name ="password" placeholder="Inserisci password" class= "form-control" id="password">
+ 
 </div>
 </div>
-</center>
 
 
-<center>
+
+
 <div class="form-group">
 <input type="submit" value="Login" class="btn btn-warning">
 <input type="submit" value="Esci" class="btn btn-warning">
 </div>
 </form>
-</center>
+
 
 
 </div>
@@ -123,13 +125,13 @@
 </form>
 
 <div class="row">
-<span class="col-md-5"></span>
-<div class="col-md-4">
-<p>Non sei registrato? </p>
-<p><a href="registrazione.jsp">Clicca qui</a> per registrarti </p>
+
+<div class=>
+<p style="margin-left: 628px;">Non sei registrato? </p>
+<p style="margin-left: 615px;"><a href="registrazione.jsp">Clicca qui</a> per registrarti </p>
 
 </div>
-</span class="col-md-3"></span>
+
 
 </div>
 <div class="alert alert-danger" id="alert" style="display:none; margin-top: 20px">
@@ -141,6 +143,39 @@
 <h4>Utente e password sbagliati.</h4>
 </div>
 <% } %>
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<div class="footer">
+<center>
+    <div class="container">
+        <h3>TheOriginals</h3>
+        <div id='skills'>
+            <div class="skill">
+                <h4><a href="contatti.jsp">CHI SIAMO</a></h4>
+               
+            </div>
+            <div class="skill">
+                <h4><a href="contatti.jsp">CONTATTI</h4>
+                
+            </div>
+            <div class="skill">
+                <h4><a href="contatti.jsp">INDICAZIONI STRADALI</h4>
+                
+            </div>
+        </div>
+    </div>
+    </center>
+</div>
+
 
 </body>
 </html>

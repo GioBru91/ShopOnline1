@@ -24,7 +24,7 @@
 <a data-toggle="dropdown" href="#">
  <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px"></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 81%;">
+<ul class="dropdown-menu" style="margin-left: 82%;">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -124,21 +124,25 @@
 
 </div>
 
+<br>
+<br>
+<br>
+
 <div class="footerchi">
 
     <div class="container">
         <h3>TheOriginals</h3>
         <div id='skills'>
             <div class="skill">
-                <h4>HOME</h4>
+                <h4><a href="index.jsp">HOME</h4>
                
             </div>
             <div class="skill">
-                <h4>LOGIN</h4>
+                <h4><a href="login.jsp">LOGIN</h4>
                 
             </div>
             <div class="skill">
-                <h4>REGISTRATI</h4>
+                <h4><a href="registrazione.jsp">Registrazione</h4>
                 
             </div>
         </div>
