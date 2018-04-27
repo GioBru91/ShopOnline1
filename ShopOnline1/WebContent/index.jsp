@@ -13,14 +13,16 @@
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
+
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
+
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
      
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown" href="#">
- <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style=margin:10px></button>
+ <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px"></button>
 </a>
 <ul class="dropdown-menu" style="margin-left: 81%;">
 						<%if(utente == null) {%>
@@ -31,11 +33,12 @@
 						<li><a href="ListaAcquisti">I miei acquisti</a></li>
 						<li><a href="Logout">Logout</a></li>
 						<%} %>
+						
    <li class="divider"></li>
 </ul>
 
 
-<a data-toggle="dropdown" href="#">
+<a id="carrello" href="#">
 <button class="btn" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
 </a>
 </div>
@@ -44,11 +47,11 @@
      
  
    
-<form id="cerca" align="right"  action="" method="get"  width="2%" style="margin:10px">
+<form id="cerca" align="right" action="" method="get" width="2%" style="margin:10px">
 <fieldset>
 <legend></legend>
 <input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: medium;font-weight: 200;"> 
-<button class="btn" id="cerca"><img src="img/icone_cerca.png" width="40%" style=margin:10px></button>
+<button class="btn" id="cerca"><img src="img/icone_cerca.png" width="40%" style="margin:10px"></button>
 </fieldset>
 </form>
    
@@ -98,7 +101,7 @@
 
 <div class="container">
     
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center" style="margin-left: 300px">
+  <div id="myCarousel" class="carousel slide" align="center" style="margin-left: 300px">
     
     <div class="carousel-inner">
       <div class="item active">
@@ -134,8 +137,5 @@
   </div>
 </div>
  
- 
-
-
-</body>
+ </body>
 </html>

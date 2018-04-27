@@ -77,7 +77,7 @@
    <li><a>----------</a></li>
    <li><a href="ListaProdotti">TUTTI I PRODOTTI</a></li>
    <li class="divider"></li>
-    </ul>
+</ul>
 </div>
 </ul>
         </div>
