@@ -39,7 +39,7 @@
 
 
 <a data-toggle="dropdown" href="#">
-<button class="btn" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
+<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
 </a>
 </div>
 

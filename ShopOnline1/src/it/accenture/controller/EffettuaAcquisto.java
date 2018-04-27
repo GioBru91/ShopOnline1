@@ -43,14 +43,9 @@ public class EffettuaAcquisto extends HttpServlet {
 		String tipoSpedizione = req.getParameter("tipoSpedizione");
 		LocalDate dataInizio = LocalDate.parse(dateInizioString);
 		Spedizione tipoSpedizione1 = Spedizione.valueOf(tipoSpedizione);
-		Calendar inizio = Calendar.getInstance();
-		Calendar fine = Calendar.getInstance();
-		inizio.set(dataInizio.getYear(), dataInizio.getMonthValue(), dataInizio.getDayOfMonth());
-		fine.set(dataInizio.getYear(), dataInizio.getMonthValue(), (dataInizio.getDayOfMonth() + tipoSpedizione1.getGiorni()));
-		Date dataInizio1 = inizio.getTime();
-		Date dataFine1 = fine.getTime();
+		LocalDate dataFine = dataInizio.plusDays(tipoSpedizione1.getGiorni());
 		
-		System.out.println(dataInizio1 + " - " + dataFine1);
+		//System.out.println(dataInizio1 + " - " + dataFine1);
 		
 		double prezzoProdotto = Double.parseDouble(req.getParameter("prezzoProdotto"));
 		int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
@@ -72,13 +67,15 @@ public class EffettuaAcquisto extends HttpServlet {
 			Acquisto acquisto = new Acquisto();
 			acquisto.setTipoSpedizione(tipoSpedizione1);
 			acquisto.setDataInizio(dataInizio);
-			acquisto.setDataFine(dataFine1.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+			acquisto.setDataFine(dataFine);
 			acquisto.setPrezzoDiSpedizione(tipoSpedizione1.getPrezzoSpedizione());
 			acquisto.setQuantitaAcquistata(quantitaAcquistata);
 			acquisto.setIdUtente(utenteLoggato.getIdUtente());
 			acquisto.setIdProdotto(idProdotto);
 			acquisto.setPrezzoTotale(prezzoScontato);
 			
+			System.out.println(acquisto.getDataInizio());
+			System.out.println(acquisto.getDataFine());
 			System.out.println(acquisto);
 			
 			AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
@@ -89,7 +86,7 @@ public class EffettuaAcquisto extends HttpServlet {
 			Acquisto acquisto = new Acquisto();
 			acquisto.setTipoSpedizione(tipoSpedizione1);
 			acquisto.setDataInizio(dataInizio);
-			acquisto.setDataFine(dataFine1.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+			acquisto.setDataFine(dataFine);
 			acquisto.setPrezzoDiSpedizione(tipoSpedizione1.getPrezzoSpedizione());
 			acquisto.setQuantitaAcquistata(quantitaAcquistata);
 			acquisto.setIdUtente(utenteLoggato.getIdUtente());
