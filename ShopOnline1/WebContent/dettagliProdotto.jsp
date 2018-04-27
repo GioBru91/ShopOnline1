@@ -1,4 +1,3 @@
-<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -7,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista Prodotti</title>
+<title>Dettagli Prodotto</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
@@ -16,7 +15,7 @@
 </head>
 <body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
-<% List<Prodotto> listaProdotti = (List<Prodotto>) request.getAttribute("listaProdotti"); %>
+<% Prodotto prodotto = (Prodotto) request.getAttribute("dettagliProdotto"); %>
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
@@ -90,70 +89,40 @@
 </div>
 </nav> 
 <br>
+<div class="conteiner">
 
-<!-- CONTAINER -->
-<div class = "container">
-<div class = "table-responsive">
-<table class="table">
-<thead>
-<tr>
-<th>N° Prodotto</th>
-<th>Nome</th>
-<th>Categoria</th>
-<th>Marca</th>
-<th>Prezzo</th>
-<th>Offerta</th>
-<th>Sconto</th>
-<th>Quantità Disponibile</th>
-<th>Immagine</th>
-</tr>
-</thead>
-<tbody>
-<% for (Prodotto prodotto : listaProdotti) { %>
-<tr>
-<td><%= prodotto.getIdProdotto() %></td>
-<td><%= prodotto.getNome() %> </td>
-<td><%= prodotto.getCategoria().toString().replace("_", " ") %> </td>
-<td><%= prodotto.getMarca() %> </td>
-<td><%= prodotto.getPrezzo() %> </td>
+<%= prodotto.getImmagine() %>
 
 
+<div class="page-header text-center">
+
+<ol>
+<li><%=prodotto.getIdProdotto() %> </li>
+<li><%=prodotto.getNome() %> </li>
+<li><%=prodotto.getCategoria() %> </li>
+<li><%=prodotto.getMarca() %> </li>
+<li><%= prodotto.getPrezzo() %> </li>
 <%if(prodotto.isOfferta()) { %> 
-<td>
+<li>
 <img src="img/vverde.png" width="20px">
-</td>
-<td><%= prodotto.getSconto() %> % </td>
+</li>
+<li><%= prodotto.getSconto() %> % </li>
 <%} else {%>
-<td>
+<li>
 <img src="img/xrossa.png" width="20px">
-</td>
-<td>--</td>
+</li>
+<li>--</li>
 <%} %>
-<td><%= prodotto.getQuantitaDisponibile() %> </td>
-<td><%= prodotto.getImmagine() %></td>
-<td>
-<form action="EffettuaAcquisto" method="post" >
-<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
-<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
-<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
-<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
-<input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
-<%if (utente == null){ %>
-disabled
-<%} %>
->
-</form>
-</td>
-<td>
-<form action="DettagliProdotto" method="post" >
-<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<input type="submit" value ="Dettagli" class = "btn btn-success" style="width: 70px">
-</form>
-<%} %>
-</td>
-</tr>
-</tbody>
-</table>
+<li><%= prodotto.getQuantitaDisponibile() %> </li>
+<li><%= prodotto.getImmagine() %></li>
+
+
+</ol>
+
+
+
+
+
 </div>
 </div>
 </body>

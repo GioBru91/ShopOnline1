@@ -80,7 +80,29 @@
   <url-pattern>/ListaProdotti</url-pattern>
   </servlet-mapping>
  
+ <!-- LISTA SALDI -->
+  <servlet>
+  <servlet-name>ListaSaldi</servlet-name>
+  <servlet-class>it.accenture.controller.ListaSaldi
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaSaldi</servlet-name>
+  <url-pattern>/ListaSaldi</url-pattern>
+  </servlet-mapping>
  
+ <!-- LISTA SALDI -->
+  <servlet>
+  <servlet-name>DettagliProdotto</servlet-name>
+  <servlet-class>it.accenture.controller.DettagliProdotto
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>DettagliProdotto</servlet-name>
+  <url-pattern>/DettagliProdotto</url-pattern>
+  </servlet-mapping>
  
  
  

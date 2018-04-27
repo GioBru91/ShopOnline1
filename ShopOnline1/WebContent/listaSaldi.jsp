@@ -1,5 +1,5 @@
-<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Prodotto"%>
+<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista Prodotti</title>
+<title>Lista Saldi</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
@@ -16,7 +16,7 @@
 </head>
 <body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
-<% List<Prodotto> listaProdotti = (List<Prodotto>) request.getAttribute("listaProdotti"); %>
+<% List<Prodotto> listaSaldi = (List<Prodotto>) request.getAttribute("listaSaldi"); %>
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
@@ -109,34 +109,20 @@
 </tr>
 </thead>
 <tbody>
-<% for (Prodotto prodotto : listaProdotti) { %>
+<% for (Prodotto prodotto : listaSaldi) { %>
 <tr>
 <td><%= prodotto.getIdProdotto() %></td>
 <td><%= prodotto.getNome() %> </td>
 <td><%= prodotto.getCategoria().toString().replace("_", " ") %> </td>
 <td><%= prodotto.getMarca() %> </td>
 <td><%= prodotto.getPrezzo() %> </td>
-
-
-<%if(prodotto.isOfferta()) { %> 
-<td>
-<img src="img/vverde.png" width="20px">
-</td>
+<td><img src="img/vverde.png" width="20px"></td>
 <td><%= prodotto.getSconto() %> % </td>
-<%} else {%>
-<td>
-<img src="img/xrossa.png" width="20px">
-</td>
-<td>--</td>
-<%} %>
 <td><%= prodotto.getQuantitaDisponibile() %> </td>
 <td><%= prodotto.getImmagine() %></td>
 <td>
 <form action="EffettuaAcquisto" method="post" >
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
-<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
-<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
-<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
 <input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
 <%if (utente == null){ %>
 disabled
