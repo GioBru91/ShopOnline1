@@ -73,3 +73,16 @@ jumbotron{
 	display: block;
 	
 }
+
+.footer {
+ 
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   height: auto !important;
+  min-height: 100%;
+  position: relative;
+  margin: 0 auto -60px;
+}
