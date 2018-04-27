@@ -134,9 +134,18 @@
       
     </div>
 
-    
   </div>
 </div>
+
+
+<div class="footer">
+  <h3>ACCENTURE</h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.4772980985254!2d9.152721415622354!3d45.460188279100954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3df6824c499%3A0x26bf7ef8becd55e4!2sVia+Giorgio+Washington%2C+Milano+MI!5e0!3m2!1sit!2sit!4v1524825279204" width="200" height="200" frameborder="0" style="border:0; float:right" allowfullscreen></iframe>
+  <h5><a href="https://www.google.it/maps/@45.4601883,9.1527214,17z/data=!3m1!4b1!4m2!7m1!2e1">Indirizzo: Via Maurizio Quadrio, 17, 20154 Milano MI</a></h5>
+   <h5>Telefono: 02 7775 1111</h5>
+    <h5>Indirizzo: Via Maurizio Quadrio, 17, 20154 Milano MI</h5>
+</div>
+
  
  </body>
 </html>
