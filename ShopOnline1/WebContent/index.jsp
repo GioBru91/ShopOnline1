@@ -204,15 +204,15 @@
         <h3>TheOriginals</h3>
         <div id='skills'>
             <div class="skill">
-                <h4>CHI SIAMO</h4>
+                <h4><a href="contatti.jsp">CHI SIAMO</a></h4>
                
             </div>
             <div class="skill">
-                <h4>CONTATTI</h4>
+                <h4><a href="contatti.jsp">CONTATTI</h4>
                 
             </div>
             <div class="skill">
-                <h4>INDICAZIONI STRADALI</h4>
+                <h4><a href="contatti.jsp">INDICAZIONI STRADALI</h4>
                 
             </div>
         </div>
