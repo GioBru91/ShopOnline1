@@ -18,40 +18,33 @@ public class LoginFilter implements Filter {
 
 	@Override
 	public void destroy() {
-		
-		
+
 	}
 
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {
-     HttpServletRequest httpReq = (HttpServletRequest) req;
-     HttpServletResponse httpResp = (HttpServletResponse) resp;
-	 HttpSession session = httpReq.getSession();	
-     Utente utenteLoggato =
-    		 (Utente) session.getAttribute("utenteLoggato");
-     String url = httpReq.getRequestURL().toString();
-     System.out.println(url);
-     if(utenteLoggato == null && url.contains("ListaAcquisti"))	{	 
-		System.out.println("accesso negato");
-		httpResp.sendRedirect("index.jsp");
-     } else {
-		chain.doFilter(req, resp);
-	 if(utenteLoggato == null && url.contains("ListaOrdini")) {
-          System.out.println("accesso negato");
-      httpResp.sendRedirect("index.jsp");
-	 } else {
-		 chain.doFilter(req, resp);
-	 }
-     
-     
-     }	
+		HttpServletRequest httpReq = (HttpServletRequest) req;
+		HttpServletResponse httpResp = (HttpServletResponse) resp;
+		HttpSession session = httpReq.getSession();
+		Utente utenteLoggato = (Utente) session.getAttribute("utenteLoggato");
+		String url = httpReq.getRequestURL().toString();
+		System.out.println(url);
+		if (utenteLoggato == null && url.contains("ListaAcquisti")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.jsp");
+		} else if (utenteLoggato == null && url.contains("ListaOrdini")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.jsp");
+		} else {
+			chain.doFilter(req, resp);
+		}
+
 	}
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		
-		
+
 	}
 
 }
