@@ -16,7 +16,7 @@ public class DettagliProdotto extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Prodotto prodotto = new Prodotto();
-		int idProdotto = Integer.parseInt("idProdotto");
+		int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
 		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
 		prodotto = prodottoService.getProdottoById(idProdotto);
 		System.out.println(prodotto);

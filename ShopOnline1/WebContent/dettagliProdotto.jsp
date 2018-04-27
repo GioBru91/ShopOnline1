@@ -89,41 +89,47 @@
 </div>
 </nav> 
 <br>
-<div class="conteiner">
 
-<%= prodotto.getImmagine() %>
+<div class="conteiner" class="page-header align-left">
+<img src="<%= prodotto.getImmagine() %>" style="margin-left: 20px">
+</div>
 
-
-<div class="page-header text-center">
-
-<ol>
-<li><%=prodotto.getIdProdotto() %> </li>
-<li><%=prodotto.getNome() %> </li>
-<li><%=prodotto.getCategoria() %> </li>
-<li><%=prodotto.getMarca() %> </li>
-<li><%= prodotto.getPrezzo() %> </li>
+<center>
+<ul style="margin-top: -500px">
+<p>Marca: <%=prodotto.getMarca() %> </p>
+<p>Prezzo: <%= prodotto.getPrezzo() %> &euro</p>
 <%if(prodotto.isOfferta()) { %> 
-<li>
-<img src="img/vverde.png" width="20px">
-</li>
-<li><%= prodotto.getSconto() %> % </li>
+<p>
+Offerta: <img src="img/vverde.png" width="20px">
+</p>
+<p>Sconto: <%= prodotto.getSconto() %> % </p>
 <%} else {%>
-<li>
+<p>
 <img src="img/xrossa.png" width="20px">
-</li>
-<li>--</li>
+</p>
+<p>--</p>
 <%} %>
-<li><%= prodotto.getQuantitaDisponibile() %> </li>
-<li><%= prodotto.getImmagine() %></li>
+<p>Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %> </p>
+
+<form action="EffettuaAcquisto" method="post" >
+<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
+<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
+<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
+<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
+<input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
+<%if (utente == null){ %>
+disabled
+<%} %>
+>
+</form>
+
+</ul>
+</center>
 
 
-</ol>
 
 
 
 
-
-</div>
-</div>
 </body>
 </html>

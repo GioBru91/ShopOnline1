@@ -130,7 +130,7 @@
 <td>--</td>
 <%} %>
 <td><%= prodotto.getQuantitaDisponibile() %> </td>
-<td><%= prodotto.getImmagine() %></td>
+<td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
 <td>
 <form action="EffettuaAcquisto" method="post" >
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">

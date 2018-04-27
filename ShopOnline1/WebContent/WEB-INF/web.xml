@@ -92,7 +92,7 @@
   <url-pattern>/ListaSaldi</url-pattern>
   </servlet-mapping>
  
- <!-- LISTA SALDI -->
+ <!-- DETTAGLI PRODOTTO -->
   <servlet>
   <servlet-name>DettagliProdotto</servlet-name>
   <servlet-class>it.accenture.controller.DettagliProdotto

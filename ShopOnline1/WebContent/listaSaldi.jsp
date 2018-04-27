@@ -119,10 +119,13 @@
 <td><img src="img/vverde.png" width="20px"></td>
 <td><%= prodotto.getSconto() %> % </td>
 <td><%= prodotto.getQuantitaDisponibile() %> </td>
-<td><%= prodotto.getImmagine() %></td>
+<td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
 <td>
 <form action="EffettuaAcquisto" method="post" >
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
+<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
+<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
+<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
 <input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
 <%if (utente == null){ %>
 disabled
