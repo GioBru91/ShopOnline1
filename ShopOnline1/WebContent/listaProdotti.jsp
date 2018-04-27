@@ -25,7 +25,7 @@
 <a data-toggle="dropdown" href="#">
  <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style=margin:10px></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 81%;">
+<ul class="dropdown-menu" style="margin-left: 82%;">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>

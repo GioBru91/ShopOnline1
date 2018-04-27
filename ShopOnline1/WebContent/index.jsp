@@ -18,13 +18,14 @@
 
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
-     
+   
+   <div id="container">  
      
 <div class="dropdown" style="margin-right:5px;">
-<a data-toggle="dropdown" href="#">
- <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px"></button>
+<a data-toggle="dropdown">
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px"></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 81%;">
+<ul class="dropdown-menu" style="margin-left: 82%;">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -36,13 +37,13 @@
 						
    <li class="divider"></li>
 </ul>
-
-
-<a id="carrello" href="#">
-<button class="btn" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
-</a>
 </div>
 
+<a id="carrello" >
+<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
+</a>
+
+</div>
 
      
  
@@ -51,7 +52,7 @@
 <fieldset>
 <legend></legend>
 <input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: medium;font-weight: 200;"> 
-<button class="btn" id="cerca"><img src="img/icone_cerca.png" width="40%" style="margin:10px"></button>
+<button class="btnpc" id="cerca"><img src="img/icone_cerca.png" width="40%" style="margin:10px"></button>
 </fieldset>
 </form>
    
@@ -65,7 +66,8 @@
             <ul class="nav navbar-nav">
                
 <div class="dropdown">
-<a data-toggle="dropdown" href="#" class="btn btn-primary">
+
+<a data-toggle="dropdown" class="btn btn-primary">
 <div class="container" onmouseover="myFunction(this)" onclick="myFunction(this)" style="background-color: grey">
   <div class="bar1"></div>
   <div class="bar2"></div>
