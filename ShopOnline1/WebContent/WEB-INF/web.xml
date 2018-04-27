@@ -68,6 +68,17 @@
  
   </filter-mapping>
  
+ <!-- LISTA PRODOTTI -->
+  <servlet>
+  <servlet-name>ListaProdotti</servlet-name>
+  <servlet-class>it.accenture.controller.ListaProdotti
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaProdotti</servlet-name>
+  <url-pattern>/ListaProdotti</url-pattern>
+  </servlet-mapping>
  
  
  
