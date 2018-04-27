@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,7 +12,7 @@
 <script type= "text/javascript" src="js/gestioneForm.js"></script>
 </head>
 <body>
-
+<%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%String username= (String) request.getAttribute("username"); %>
 
 <div id="banner" align="right" style="margin-right: 20px">
@@ -23,11 +24,14 @@
  <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style=margin:10px></button>
 </a>
 <ul class="dropdown-menu" style="margin-left: 81%;">
-   						<li><a href="#">Login</a></li>
-						<li><a href="#">Registrazione</a></li>
-						<li><a href="#">I miei ordini</a></li>
-						<li><a href="#">I miei acquisti</a></li>
-						<li><a href="#">Logout</a></li>
+   						<%if(utente == null) {%>
+   						<li><a href="login.jsp">Login</a></li>
+						<li><a href="registrazione.jsp">Registrazione</a></li>
+						<%}else { %>
+						<li><a href="ListaOrdini">I miei ordini</a></li>
+						<li><a href="ListaAcquisti">I miei acquisti</a></li>
+						<li><a href="Logout">Logout</a></li>
+						<%} %>
    <li class="divider"></li>
 </ul>
 
