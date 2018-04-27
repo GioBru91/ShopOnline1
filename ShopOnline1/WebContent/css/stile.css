@@ -9,6 +9,7 @@ element.style {
 	height: 15px;
 }
 
+
 legend {
     display: block;
     width: 20%;
@@ -64,8 +65,8 @@ jumbotron{
 	align:center;
 	text-align: center;
 	color: white;
-	padding-top: 0px;
-    padding-bottom: 5px;
+	padding-top: 16px;
+    padding-bottom: 20px
 }
 
 
@@ -73,16 +74,50 @@ jumbotron{
 	display: block;
 	
 }
-
 .footer {
- 
+  
    left: 0;
    bottom: 0;
    width: 100%;
+ margin-top:5%;
    background-color: black;
    color: white;
-   height: auto !important;
-  min-height: 100%;
-  position: relative;
-  margin: 0 auto -60px;
+   text-align: center;
+   height: auto !important
+   
 }
+
+
+#skills-section{
+text-align: center; 
+margin-top: 50px; 
+}
+.skill{
+
+width: 28%;
+display: inline-block; 
+margin: 2%; 
+
+}
+
+.chisiamo{
+	float: left;
+	margin-left: 50px;
+}
+
+.maps{
+	float: right;
+	margin-top:60px;
+	margin-right: 120px;
+}
+
+.footerchi {
+  
+   left: 0;
+   bottom: 0;
+   width: 100%;
+ margin-top:600px;
+   background-color: white;
+   color: black;
+   text-align: center;
+   height: auto !important
