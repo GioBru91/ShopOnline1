@@ -20,7 +20,11 @@
      <div id="banner-content">  
    
    <div id="container">  
-     
+     <a id="carrello" >
+<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
+</a> 
+
+
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
  <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px"></button>
@@ -39,9 +43,7 @@
 </ul>
 </div>
 
-<a id="carrello" >
-<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
-</a>
+
 
 </div>
 
