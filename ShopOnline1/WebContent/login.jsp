@@ -73,7 +73,7 @@
    <li><a href="Elettronica">ELETTRONICA</a></li>
    <li><a href="Libri">LIBRI</a></li>
    <li><a>----------</a></li>
-   <li><a href="Libri" style="background-color: red;"> SALDI </a></li>
+   <li><a href="ListaSaldi" style="background-color: red;"> SALDI </a></li>
    <li><a>----------</a></li>
    <li><a href="ListaProdotti">TUTTI I PRODOTTI</a></li>
    <li class="divider"></li>
