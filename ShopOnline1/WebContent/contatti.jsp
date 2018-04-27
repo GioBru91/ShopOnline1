@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
+<title>Informazioni</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
@@ -94,132 +94,57 @@
 <br>
 <br>
 
-<div class="container">
-    
-  <div id="myCarousel" class="carousel slide" align="center" style="width: 100%">
-    
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="img/slide1.jpg" alt="Uomo" style="width:100%;">
-        <div class="carousel-caption">
-    <h3>Abbigliamento Donna</h3>
-  </div>
-      </div>
 
-      <div class="item">
-        <img src="img/slide2.jpg" alt="Donna" style="width:100%;">
-        <div class="carousel-caption">
-    <h3>Abbigliamento Uomo</h3>
-  </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide3.jpg" alt="Bambino" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Abbigliamento Bambini</h3>
-  </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide4.jpg" alt="Casa" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Tutto per la tua casa</h3>
-      </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide5.jpg" alt="Libri" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Angolo libri</h3>
-      </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide6.jpg" alt="Elettronica" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Elettronica</h3>
-      </div>
-      </div>
- 
-      
-    </div>
 
-  </div>
-</div>
+
+
+<div class="chisiamo" >
+<h1>TheOrignals</h1>
+  <h3>nasce in una stanza buia in via Washington in Milano</h3>
+  <h3>un progetto partorito da tre ragazzi</h3>
+  <h3>Giovanni Rucoletta, Domenico Schifio, Albachiara Wewe</h3>
+
 
 <br>
 <br>
 <br>
+<h3>CONTATTI</h3>
+  <h4>Indirizzo: Via vai e non torn mai</h4>
+  <h4>Telefono: 3336363636363</h4>
+  <h4>email: theoriginals@king.com</h4>
 
-<div class="jumbotron" style="align:center; font:initial; color: black;">
-<marquee scrolldelay="1">
-
-<h1>SALDI</h1>
-
-</marquee>
 </div>
 
 
-<div class="container">
-    
-  <div id="myCarousel" class="carousel slide" align="center" style="width: 100%">
-    
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="img/slide1.jpg" alt="Uomo" style="width:100%;">
-      </div>
+<div class="maps">
 
-      <div class="item">
-        <img src="img/slide2.jpg" alt="Donna" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide3.jpg" alt="Bambino" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide4.jpg" alt="Casa" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide5.jpg" alt="Libri" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide6.jpg" alt="CElettronica" style="width:100%;">
-      </div>
- 
-      
-    </div>
 
-  </div>
+
+<iframe src="https://www.google.com/maps/embed?pb" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 </div>
 
-<br>
-<br>
-<br>
+<div class="footerchi">
 
-
-
-
-<div class="footer">
-<center>
     <div class="container">
         <h3>TheOriginals</h3>
         <div id='skills'>
             <div class="skill">
-                <h4>CHI SIAMO</h4>
+                <h4>HOME</h4>
                
             </div>
             <div class="skill">
-                <h4>CONTATTI</h4>
+                <h4>LOGIN</h4>
                 
             </div>
             <div class="skill">
-                <h4>INDICAZIONI STRADALI</h4>
+                <h4>REGISTRATI</h4>
                 
             </div>
         </div>
     </div>
-    </center>
+   
 </div>
 
- 
- </body>
+</body>
 </html>
