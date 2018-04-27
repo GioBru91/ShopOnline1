@@ -76,20 +76,20 @@
    <li><a href="Elettronica">ELETTRONICA</a></li>
    <li><a href="Libri">LIBRI</a></li>
    <li><a>----------</a></li>
-   <li><a href="Libri">% SALDI %</a></li>
+   <li><a href="Libri" style="background-color: red;">% SALDI %</a></li>
    <li><a>----------</a></li>
    <li><a href="ListaProdotti">TUTTI I PRODOTTI</a></li>
    <li class="divider"></li>
     </ul>
 </div>
 </ul>
-        </div>
-       </nav> 
-
+</div>
+</nav> 
 <br>
 
-<div class="jumbotron" style="align:center; font:initial; color: white;">
-<img src="img/logo.png" class="img-rounded">
+<div class="jumbotron" style="align:center; font:initial; color: black;">
+<img src="img/easy.png" class="img-rounded" style="margin-left: 20px;margin-right: 800px" width="20%">
+<img src="img/easy.png" class="img-rounded" style="margin-right: 20px" width="20%">
 <center>
 <h1>SALDI</h1>
 </center>
