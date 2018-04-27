@@ -68,6 +68,7 @@
   <div class="bar2"></div>
   <div class="bar3"></div>
 </div></a>
+
 <ul class="dropdown-menu">
    <li><a href="Uomo">UOMO</a></li>
    <li><a href="Donna">DONNA</a></li>
@@ -76,7 +77,7 @@
    <li><a href="Elettronica">ELETTRONICA</a></li>
    <li><a href="Libri">LIBRI</a></li>
    <li><a>----------</a></li>
-   <li><a href="Libri" style="background-color: red;">% SALDI %</a></li>
+   <li><a href="ListaSaldi" style="background-color: red;">% SALDI %</a></li>
    <li><a>----------</a></li>
    <li><a href="ListaProdotti">TUTTI I PRODOTTI</a></li>
    <li class="divider"></li>
