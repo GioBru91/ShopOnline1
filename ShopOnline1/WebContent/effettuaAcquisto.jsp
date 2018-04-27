@@ -1,3 +1,4 @@
+<%@page import="java.time.LocalDate"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -6,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Dettagli Prodotto</title>
+<title>Effettua Acquisto</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
@@ -14,8 +15,9 @@
 <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
-<%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
+<%Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
 <% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto"); %>
+
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
@@ -110,26 +112,58 @@ Offerta: <img src="img/vverde.png" width="20px">
 <p>--</p>
 <%} %>
 <p>Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %> </p>
+</ul>
 <br><br>
-<form action="effettuaAcquisto.jsp" method="post" >
+
+<form action="EffettuaAcquisto" method="post">
+<div class="form-group">
+<label class="control-label col-md-5">Scegli la data di inizio spedizione</label>
+<div class="col-md-4" style="margin-top: 5px;">
+<input type="date" name="dataInizio" class="form-control" min="<%=LocalDate.now()%>" value="<%=LocalDate.now()%>"
+id="dataInizio">
+</div>
+<span class="col-md-3"></span>
+</div>
+<br><br>
+<div class="form-group">
+<label class="control-label col-md-5">Scegli il tipo di spedizione</label>
+<div class="col-md-4" style="margin-top: 10px;">
+<input type="radio" name="tipoSpedizione" value="ORDINARIA" checked>
+<span style="font-size: 20px;">Ordinaria</span>
+<br>
+<input type="radio" name="tipoSpedizione" value="PRIORITARIA">
+<span style="font-size: 20px;">Prioritaria</span>
+<br>
+<input type="radio" name="tipoSpedizione" value="PRIME">
+<span style="font-size: 20px;">Prime</span>
+<br><br>
+</div>
+<span class="col-md-3"></span>
+</div>
+<div class="col-md-4" style="margin-top: 5px;">
+<label class="control-label col-md-5">Scegli la quantità da acquistare</label>
+<input type="number" name="quantitaAcquistata" step="1" style="text-align: right;"  id="quantitaAcquistata" >
+<span class="col-md-3"></span> 
+</div>
+
+<br><br>
+<div class="form-group">
+<span class="col-md-5"></span>
+<div class="col-md-4" style="margin-top: 10px">
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
-<input type="submit" value ="Acquista" class = "btn btn-success" style="width: 90px; font-size: 20px;"
-<%if (utente == null){ %>
-disabled
-<%} %>
->
+<input type="submit" class="btn btn-primary" value="Acquista" style="width: 70px;">
+<input type="reset" class="btn btn-warning" value="Resetta" style="width: 70px;">
+</div>
+<span class="col-md-3"></span>
+</div>
 </form>
 
-</ul>
+</div>
+
+
 </center>
-
-
-
-
-
-
 </body>
 </html>

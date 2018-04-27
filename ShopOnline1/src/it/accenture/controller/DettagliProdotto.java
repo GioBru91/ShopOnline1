@@ -21,7 +21,7 @@ public class DettagliProdotto extends HttpServlet{
 		prodotto = prodottoService.getProdottoById(idProdotto);
 		System.out.println(prodotto);
 		prodottoService.close();
-		req.setAttribute("dettagliProdotto", prodotto);
+		req.setAttribute("prodotto", prodotto);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("dettagliProdotto.jsp");
 		dispatcher.forward(req, resp);
 		

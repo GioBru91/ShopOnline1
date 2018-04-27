@@ -92,6 +92,7 @@
 <br>
 
 <!-- CONTAINER -->
+<center>
 <div class = "container">
 <div class = "table-responsive">
 <table class="table">
@@ -115,7 +116,7 @@
 <td><%= prodotto.getNome() %> </td>
 <td><%= prodotto.getCategoria().toString().replace("_", " ") %> </td>
 <td><%= prodotto.getMarca() %> </td>
-<td><%= prodotto.getPrezzo() %> </td>
+<td><%= prodotto.getPrezzo() %> &euro; </td>
 
 
 <%if(prodotto.isOfferta()) { %> 
@@ -132,7 +133,7 @@
 <td><%= prodotto.getQuantitaDisponibile() %> </td>
 <td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
 <td>
-<form action="EffettuaAcquisto" method="post" >
+<form action="EffettuaAcquisto" method="get" >
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
@@ -156,5 +157,6 @@ disabled
 </table>
 </div>
 </div>
+</center>
 </body>
 </html>

@@ -30,18 +30,17 @@ public class AcquistoDaoImpl implements AcquistoDao {
 	@Override
 	public void insertAcquisto(Acquisto acquisto) {
 		String query = "insert into acquisto values ("
-					 + "acquisto_sequence.nextval, ?, ?, ?, ?, ?, ?, ?, ?";
+					 + "acquisto_sequence.nextval, ?, ?, ?, ?, ?, ?, ?, ?)";
 		try {
 			prepared = connection.prepareStatement(query);
-			prepared.setInt(1, acquisto.getIdAcquisto());
-			prepared.setString(2, acquisto.getTipoSpedizione().toString());
-			prepared.setDate(3, Date.valueOf(acquisto.getDataInizio()));
-			prepared.setDate(4, Date.valueOf(acquisto.getDataFine()));
-			prepared.setDouble(5, acquisto.getPrezzoDiSpedizione());
-			prepared.setInt(6, acquisto.getQuantitaAcquistata());
-			prepared.setInt(7, acquisto.getIdUtente());
-			prepared.setInt(8, acquisto.getIdProdotto());
-			prepared.setDouble(9, acquisto.getPrezzoTotale());
+			prepared.setString(1, acquisto.getTipoSpedizione().toString());
+			prepared.setDate(2, Date.valueOf(acquisto.getDataInizio()));
+			prepared.setDate(3, Date.valueOf(acquisto.getDataFine()));
+			prepared.setDouble(4, acquisto.getPrezzoDiSpedizione());
+			prepared.setInt(5, acquisto.getQuantitaAcquistata());
+			prepared.setInt(6, acquisto.getIdUtente());
+			prepared.setInt(7, acquisto.getIdProdotto());
+			prepared.setDouble(8, acquisto.getPrezzoTotale());
 			prepared.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
