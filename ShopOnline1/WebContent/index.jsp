@@ -30,7 +30,8 @@
      
    
    <div class="container">  
-   <a href="listaCarrello.jsp">
+   
+<a href="listaCarrello.jsp">
 <button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px">
 <%if (listaCarrello != null){ %>
 <%= listaCarrello.size() %>
@@ -38,7 +39,8 @@
 0
 <%} %>
 </button>
-</a>
+</a>   
+
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
@@ -56,6 +58,8 @@
 						
    <li class="divider"></li>
 </ul>
+
+
 </div>
 
 
