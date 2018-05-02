@@ -17,6 +17,7 @@
 <body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% List<Prodotto> listaProdotti = (List<Prodotto>) request.getAttribute("listaProdotti"); %>
+<%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
@@ -38,9 +39,10 @@
 </ul>
 
 
-<a data-toggle="dropdown" href="#">
+<a data-toggle="dropdown" href="listaCarrello.jsp">
 <button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
 </a>
+<%=listaCarrello %>
 </div>
 
 
