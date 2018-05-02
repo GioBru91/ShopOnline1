@@ -71,13 +71,3 @@ function validazioneFormLogin() {
 function myFunction(x) {
     x.classList.toggle("change");
 }
-
-function myEye("password") {
-	var tag=getElementById("password");
-    var tag2 = document.getElementById("showhide");
-    if (tag2.innerHTML == "password") {
-        x.type = "text";
-    } return x.type;
-        
-    
-}
