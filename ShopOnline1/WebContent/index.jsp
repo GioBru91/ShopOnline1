@@ -23,12 +23,12 @@
 
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
-     
-     <a id="home" href="index.jsp" >
+  <div class="logo">   
+<a id="home" href="index.jsp" >
 <button class="btnpc" id="carrello" style="float:  left;width:  29%;margin-left:  -60px;"
 ><img src="img/logo.jpg" width="40%" style="margin:10px"></button>
 </a> 
-   
+   </div>
    <div id="container">  
      <a id="carrello" >
 <button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
