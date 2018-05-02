@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.time.LocalDate"%>
 <%@page import="java.util.Date"%>
 <%@page import="it.accenture.model.Acquisto"%>
@@ -19,15 +20,34 @@
 <body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% List<Acquisto> listaOrdini = (List<Acquisto>) request.getAttribute("listaOrdini"); %>
-<div id="banner" align="right" style="margin-right: 20px">
+<%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<a id="home" href="index.jsp" >
+<button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%"
+><img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+</a> 
+
+
+
+<div id="banner" align="right" style="margin-right: 30px">
      <div id="banner-content">  
      
-     
-<div class="dropdown" style="margin-right:5px;">
-<a data-toggle="dropdown" href="#">
- <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style=margin:10px></button>
+   
+   <div class="container">  
+   <a href="listaCarrello.jsp">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px">
+<%if (listaCarrello != null){ %>
+<%= listaCarrello.size() %>
+<%} else {%>
+0
+<%} %>
+</button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 82%;">
+
+<div class="dropdown" style="margin-right:5px;">
+<a data-toggle="dropdown">
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
+</a>
+<ul class="dropdown-menu" style="margin-left: 76%; margin-top: -4%">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -36,24 +56,24 @@
 						<li><a href="ListaAcquisti">I miei acquisti</a></li>
 						<li><a href="Logout">Logout</a></li>
 						<%} %>
+						
    <li class="divider"></li>
 </ul>
-
-
-<a data-toggle="dropdown" href="#">
-<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
-</a>
 </div>
 
+
+
+</div>
 
      
  
    
-<form id="cerca" align="right"  action="" method="get"  width="2%" style="margin:10px">
+<form id="cerca" align="right" action="" method="get" width="2%" style="margin:0px">
 <fieldset>
 <legend></legend>
-<input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: medium;font-weight: 200;"> 
-<button class="btn" id="cerca"><img src="img/icone_cerca.png" width="40%" style=margin:10px></button>
+
+<button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
+<input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
 </fieldset>
 </form>
    
@@ -67,7 +87,8 @@
             <ul class="nav navbar-nav">
                
 <div class="dropdown">
-<a data-toggle="dropdown" href="#" class="btn btn-primary">
+
+<a data-toggle="dropdown" class="btn btn-primary">
 <div class="container" onmouseover="myFunction(this)" onclick="myFunction(this)" style="background-color: grey">
   <div class="bar1"></div>
   <div class="bar2"></div>
@@ -91,6 +112,9 @@
 </ul>
 </div>
 </nav> 
+
+<br>
+<br>
 <br>
 
 <!-- CONTAINER -->
