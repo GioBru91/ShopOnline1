@@ -12,10 +12,6 @@
 <script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
-<link rel="stylesheet" media="(max-width: 640px)" href="max-640px.css">
-    <link rel="stylesheet" media="(min-width: 640px)" href="min-640px.css">
-    <link rel="stylesheet" media="(orientation: portrait)" href="portrait.css">
-    <link rel="stylesheet" media="(orientation: landscape)" href="landscape.css">
 </head>
 <body>
 
@@ -24,25 +20,21 @@
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
-<a id="home" href="index.jsp" >
-<button class="btnpc" id="carrello" style="float:  left;width:  29%;margin-left:  -60px;"
-><img src="img/logo.jpg" width="40%" style="margin:10px"></button>
-</a> 
    
-   <div id="container">  
+   <div class="container">  
    <a id="home" href="index.jsp" >
-<button class="btnpc" id="carrello" style="float:  left;width:  29%;margin-left:  -60px;"
+<button class="btnpc" id="home" style="float:  left;width:  29%;margin-left:  -300px;"
 ><img src="img/logo.jpg" width="40%" style="margin:10px"></button>
 </a> 
    
      <a id="carrello" >
-<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
+<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="50%" style="margin:10px; margin-top: 60%;"></button>
 </a> 
 
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
- <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px"></button>
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="50%" style="margin:10px; margin-top:60%; "></button>
 </a>
 <ul class="dropdown-menu" style="margin-left: 82%;">
 						<%if(utente == null) {%>
@@ -66,9 +58,6 @@
  
    
 <form id="cerca" align="right" action="" method="get" width="2%" style="margin:10px">
-<br>
-<br>
-<br>
 <fieldset>
 <legend></legend>
 <input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
