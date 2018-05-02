@@ -1,5 +1,5 @@
-<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Prodotto"%>
+<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Lista Prodotti</title>
+<title>Lista Carrello</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
@@ -16,7 +16,6 @@
 </head>
 <body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
-<% List<Prodotto> listaProdotti = (List<Prodotto>) request.getAttribute("listaProdotti"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
@@ -39,17 +38,14 @@
 </ul>
 
 
-<a href="listaCarrello.jsp">
-<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px">
+<a data-toggle="dropdown" href="listaCarrello.jsp">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
+</a>
 <%if (listaCarrello != null){ %>
 <%= listaCarrello.size() %>
 <%} else {%>
 0
 <%} %>
-</button>
-</a>
-
-
 </div>
 
 
@@ -119,7 +115,7 @@
 </tr>
 </thead>
 <tbody>
-<% for (Prodotto prodotto : listaProdotti) { %>
+<% for (Prodotto prodotto : listaCarrello) { %>
 <tr>
 <td><%= prodotto.getIdProdotto() %></td>
 <td><%= prodotto.getNome() %> </td>
@@ -147,33 +143,17 @@
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
-<button class= "btn" id="Acquisto" 
+<input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
 <%if (utente == null){ %>
 disabled
 <%} %>
 >
-<img src="img/shop.png" style="width: 40px;">
-</button>
 </form>
 </td>
 <td>
 <form action="DettagliProdotto" method="post" >
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<button class= "btn" id="Dettagli">
-<img src="img/dettagli.png" style="width: 37px;">
-</button>
-</form>
-</td>
-<td>
-<form action="Carrello" method="get" >
-<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<button class= "btn" id="Carrello" 
-<%if (utente == null){ %>
-disabled
-<%} %>
->
-<img src="img/AddToCart.png" style="width: 40px;">
-</button>
+<input type="submit" value ="Dettagli" class = "btn btn-success" style="width: 70px">
 </form>
 <%} %>
 </td>

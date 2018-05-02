@@ -25,7 +25,7 @@ public class Carrello extends HttpServlet{
 		
 		List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello");
 		
-		if (listaCarrello == null) {
+		if(listaCarrello == null) {
 			listaCarrello = new ArrayList<>();
 		}
 		
@@ -37,6 +37,7 @@ public class Carrello extends HttpServlet{
 		
 		session.setAttribute("listaCarrello", listaCarrello);
 		
+		resp.sendRedirect("ListaProdotti");
 		
 		
 	}
