@@ -111,73 +111,78 @@
 </nav> 
 
 <br>
-<br>
-<br>
 
-<span class="col-md-2"></span>
-<div class="col-md-5">
+<div class="jumbotron" style="align:center; font:initial; color: black;">
+<marquee onmouseover=this.stop() onmouseout=this.start() scrolldelay="1">
+
+<h1><a href="ListaSaldi">SALDI</a></h1>
+
+</marquee>
+</div>
+
+
+<div>
+<center>
 <marquee onmouseover=this.stop() onmouseout=this.start() align="middle" direction="up" scrollamount="7" width="1000" height="600" >
 
-<h3>Abbigliamento Donna</h3>
+<h3 align="left">Abbigliamento Uomo</h3>
+<br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
-<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
+<img src="img/slide2.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
 </a>
 
 <br>
 <br>
-<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">
-<img src="img/slide2.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
+
+<h3 align="center">Abbigliamento Donna</h3>
 <br>
+<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">
+<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
+</a>
+
+<br>
+<br>
+
+<h3 align="right">Abbigliamento Bambino</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">
 <img src="img/slide3.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-
 </a>
+
 <br>
+<br>
+
+<h3 align="center">Tutto per la casa</h3>
 <br>
 <a href="ListaPerCategoria?categoria=CASA">
 <img src="img/slide4.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-
 </a>
+
 <br>
+<br>
+
+<h3 align="left">Il mondo in un chip</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ELETTRONICA">
-<img src="img/slide5.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-
+<img src="img/slide6.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
 </a>
+
 <br>
+<br>
+
+<h3 align="center">Angolo libri</h3>
 <br>
 <a a href="ListaPerCategoria?categoria=LIBRI">
-<img src="img/slide6.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-
+<img src="img/slide5.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
 </a>
-</marquee>
-</span class="col-md-5"></span>
-</div>
-
-
-
-      
-      
-      
-      
-      
-     
-
- 
-
-<br>
-<br>
-<br>
-
-<div class="jumbotron" style="align:center; font:initial; color: black;">
-<marquee scrolldelay="1">
-
-<h1>SALDI</h1>
 
 </marquee>
+</center>
 </div>
+
+<br>
+<div class="jumbotron" style="align:center; font:initial; color: black;"></div>
+
 
 
 <div class="container">
@@ -240,6 +245,7 @@
     </center>
 </div>
 
+ 
  
  </body>
 </html>

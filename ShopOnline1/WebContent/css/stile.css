@@ -79,12 +79,14 @@ legend {
 
 
 
-jumbotron{
+.jumbotron{
 	align:center;
 	text-align: center;
 	color: white;
 	padding-top: 16px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    margin-bottom: 21px;
+    
 }
 
 
@@ -159,3 +161,5 @@ margin: 2%;
 .form-control {
    
 }
+
+
