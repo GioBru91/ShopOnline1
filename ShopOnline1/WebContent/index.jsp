@@ -113,9 +113,9 @@
 <br>
 
 <div class="jumbotron" style="align:center; font:initial; color: black;">
-<marquee onmouseover=this.stop() onmouseout=this.start() scrolldelay="1">
+<marquee di>
 
-<h1><a href="ListaSaldi">SALDI</a></h1>
+<h1 align="center" direction="up"  scrollamount="8"><a href="ListaSaldi">SALDI</a></h1>
 
 </marquee>
 </div>
@@ -123,7 +123,7 @@
 
 <div>
 <center>
-<marquee onmouseover=this.stop() onmouseout=this.start() align="middle" direction="up" scrollamount="7" width="1000" height="600" >
+<marquee  align="middle" direction="up" scrollamount="6" width="1000" height="600" >
 
 <h3 align="left">Abbigliamento Uomo</h3>
 <br>
