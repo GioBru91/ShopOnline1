@@ -18,27 +18,27 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 
 <a id="home" href="index.jsp" >
-<button class="btnpc" id="home" style="float:  left;width:  40%;margin-left:  -120px; margin-top: 1%"
-><img src="img/logo.jpg" width="40%" style="margin:10px"></button>
+<button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%"
+><img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
 </a> 
 
 
 
-<div id="banner" align="right" style="margin-right: 20px">
+<div id="banner" align="right" style="margin-right: 30px">
      <div id="banner-content">  
      
    
    <div class="container">  
      <a id="carrello" >
-<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px; margin-top: 0%"></button>
+<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:48px; margin-top: -100%"></button>
 </a> 
 
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
- <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:0%; "></button>
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-100%; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 76%; margin-top: 3%">
+<ul class="dropdown-menu" style="margin-left: 76%; margin-top: -4%">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -59,11 +59,12 @@
      
  
    
-<form id="cerca" align="right" action="" method="get" width="2%" style="margin:10px">
+<form id="cerca" align="right" action="" method="get" width="2%" style="margin:0px">
 <fieldset>
 <legend></legend>
+
+<button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
 <input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
-<button class="btnpc" id="cerca"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
 </fieldset>
 </form>
    
@@ -113,7 +114,7 @@
 
 <h3>Abbigliamento Donna</h3>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
-<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
+<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="500px" border="0" >
 </a>
 
 <br>
