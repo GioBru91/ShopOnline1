@@ -140,4 +140,15 @@
   <url-pattern>/ListaPerCategoria</url-pattern>
   </servlet-mapping>
  
+ <!-- CARRELLO -->
+  <servlet>
+  <servlet-name>Carrello</servlet-name>
+  <servlet-class>it.accenture.controller.Carrello
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Carrello</servlet-name>
+  <url-pattern>/Carrello</url-pattern>
+  </servlet-mapping>
 </web-app>
