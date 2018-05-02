@@ -128,4 +128,16 @@
   <url-pattern>/ListaOrdini</url-pattern>
   </servlet-mapping>
  
+ <!-- LISTA PER CATEGORIA -->
+  <servlet>
+  <servlet-name>ListaPerCategoria</servlet-name>
+  <servlet-class>it.accenture.controller.ListaPerCategoria
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaPerCategoria</servlet-name>
+  <url-pattern>/ListaPerCategoria</url-pattern>
+  </servlet-mapping>
+ 
 </web-app>

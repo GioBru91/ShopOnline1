@@ -103,215 +103,43 @@ public class ProdottoDaoImpl implements ProdottoDao{
 
 	@Override
 	public List<Prodotto> getProdottoPerCategoria(Categoria categoria) {
-		String categoria1 = categoria.toString();
-		List<Prodotto> listaProdotti = new ArrayList<>();
+		List<Prodotto> listaPerCategoria = new ArrayList<>();
 		ResultSet rs = null;
-		switch (categoria1) {
-		case "ABBIGLIAMENTO_UOMO":
-			String query = "select * from prodotto where categoria = " + categoria1;
-			try {
-				statement = connection.createStatement();
-				rs = statement.executeQuery(query);
-				while (rs.next()) {
-					Prodotto prodotto = new Prodotto();
-					prodotto.setIdProdotto(rs.getInt(1));
-					prodotto.setNome(rs.getString(2));
-					prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
-					prodotto.setMarca(rs.getString(4));
-					prodotto.setPrezzo(rs.getDouble(5));
-					prodotto.setOfferta(rs.getBoolean(6));
-					prodotto.setSconto(rs.getInt(7));
-					prodotto.setQuantitaDisponibile(rs.getInt(8));
-					prodotto.setImmagine(rs.getString(9));
-					listaProdotti.add(prodotto);
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}finally {
-				try{
-					if(statement != null){
-						statement.close();
-					}
-					if (rs != null){
-						rs.close();
-					}
-				}catch (SQLException e) {
-					e.printStackTrace();
-				}
+		String query = "select * from prodotto where categoria = '" + categoria + "'";
+		try {
+			statement = connection.createStatement();
+			rs = statement.executeQuery(query);
+			while (rs.next()) {
+				Prodotto prodotto = new Prodotto();
+				prodotto.setIdProdotto(rs.getInt(1));
+				prodotto.setNome(rs.getString(2));
+				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
+				prodotto.setMarca(rs.getString(4));
+				prodotto.setPrezzo(rs.getDouble(5));
+				prodotto.setOfferta(rs.getBoolean(6));
+				prodotto.setSconto(rs.getInt(7));
+				prodotto.setQuantitaDisponibile(rs.getInt(8));
+				prodotto.setImmagine(rs.getString(9));
+				listaPerCategoria.add(prodotto);
 			}
-			break;
-			
-		case "ABBIGLIAMENTO_DONNA":
-			String query1 = "select * from prodotto where categoria = " + categoria1;
-			try {
-				statement = connection.createStatement();
-				rs = statement.executeQuery(query1);
-				while (rs.next()) {
-					Prodotto prodotto = new Prodotto();
-					prodotto.setIdProdotto(rs.getInt(1));
-					prodotto.setNome(rs.getString(2));
-					prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
-					prodotto.setMarca(rs.getString(4));
-					prodotto.setPrezzo(rs.getDouble(5));
-					prodotto.setOfferta(rs.getBoolean(6));
-					prodotto.setSconto(rs.getInt(7));
-					prodotto.setQuantitaDisponibile(rs.getInt(8));
-					prodotto.setImmagine(rs.getString(9));
-					listaProdotti.add(prodotto);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try{
+				if(statement != null){
+					statement.close();
 				}
-			} catch (SQLException e) {
+				if (rs != null){
+					rs.close();
+				}
+	
+			}catch (SQLException e) {
 				e.printStackTrace();
-			}finally {
-				try{
-					if(statement != null){
-						statement.close();
-					}
-					if (rs != null){
-						rs.close();
-					}
-				}catch (SQLException e) {
-					e.printStackTrace();
-				}
 			}
-			break;
-			
-		case "ABBIGLIAMENTO_BAMBINO":
-			String query2 = "select * from prodotto where categoria = " + categoria1;
-			try {
-				statement = connection.createStatement();
-				rs = statement.executeQuery(query2);
-				while (rs.next()) {
-					Prodotto prodotto = new Prodotto();
-					prodotto.setIdProdotto(rs.getInt(1));
-					prodotto.setNome(rs.getString(2));
-					prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
-					prodotto.setMarca(rs.getString(4));
-					prodotto.setPrezzo(rs.getDouble(5));
-					prodotto.setOfferta(rs.getBoolean(6));
-					prodotto.setSconto(rs.getInt(7));
-					prodotto.setQuantitaDisponibile(rs.getInt(8));
-					prodotto.setImmagine(rs.getString(9));
-					listaProdotti.add(prodotto);
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}finally {
-				try{
-					if(statement != null){
-						statement.close();
-					}
-					if (rs != null){
-						rs.close();
-					}
-				}catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-			break;
-			
-		case "CASA":
-			String query3 = "select * from prodotto where categoria = " + categoria1;
-			try {
-				statement = connection.createStatement();
-				rs = statement.executeQuery(query3);
-				while (rs.next()) {
-					Prodotto prodotto = new Prodotto();
-					prodotto.setIdProdotto(rs.getInt(1));
-					prodotto.setNome(rs.getString(2));
-					prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
-					prodotto.setMarca(rs.getString(4));
-					prodotto.setPrezzo(rs.getDouble(5));
-					prodotto.setOfferta(rs.getBoolean(6));
-					prodotto.setSconto(rs.getInt(7));
-					prodotto.setQuantitaDisponibile(rs.getInt(8));
-					prodotto.setImmagine(rs.getString(9));
-					listaProdotti.add(prodotto);
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}finally {
-				try{
-					if(statement != null){
-						statement.close();
-					}
-					if (rs != null){
-						rs.close();
-					}
-				}catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-			break;
-			
-		case "ELETTRONICA":
-			String query4 = "select * from prodotto where categoria = " + categoria1;
-			try {
-				statement = connection.createStatement();
-				rs = statement.executeQuery(query4);
-				while (rs.next()) {
-					Prodotto prodotto = new Prodotto();
-					prodotto.setIdProdotto(rs.getInt(1));
-					prodotto.setNome(rs.getString(2));
-					prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
-					prodotto.setMarca(rs.getString(4));
-					prodotto.setPrezzo(rs.getDouble(5));
-					prodotto.setOfferta(rs.getBoolean(6));
-					prodotto.setSconto(rs.getInt(7));
-					prodotto.setQuantitaDisponibile(rs.getInt(8));
-					prodotto.setImmagine(rs.getString(9));
-					listaProdotti.add(prodotto);
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}finally {
-				try{
-					if(statement != null){
-						statement.close();
-					}
-					if (rs != null){
-						rs.close();
-					}
-				}catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-			break;
-		case "LIBRI":
-			String query5 = "select * from prodotto where categoria = " + categoria1;
-			try {
-				statement = connection.createStatement();
-				rs = statement.executeQuery(query5);
-				while (rs.next()) {
-					Prodotto prodotto = new Prodotto();
-					prodotto.setIdProdotto(rs.getInt(1));
-					prodotto.setNome(rs.getString(2));
-					prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
-					prodotto.setMarca(rs.getString(4));
-					prodotto.setPrezzo(rs.getDouble(5));
-					prodotto.setOfferta(rs.getBoolean(6));
-					prodotto.setSconto(rs.getInt(7));
-					prodotto.setQuantitaDisponibile(rs.getInt(8));
-					prodotto.setImmagine(rs.getString(9));
-					listaProdotti.add(prodotto);
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}finally {
-				try{
-					if(statement != null){
-						statement.close();
-					}
-					if (rs != null){
-						rs.close();
-					}
-				}catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
-			break;
 		}
-		return listaProdotti;
+		return listaPerCategoria;
 	}
+			
 
 	@Override
 	public Prodotto getProdottoById(int idProdotto) {

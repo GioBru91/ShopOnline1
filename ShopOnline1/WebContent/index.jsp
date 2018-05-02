@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -77,12 +78,12 @@
 </div></a>
 
 <ul class="dropdown-menu">
-   <li><a href="Uomo">UOMO</a></li>
-   <li><a href="Donna">DONNA</a></li>
-   <li><a href="Bambino">BAMBINO</a></li>
-   <li><a href="Casa">CASA</a></li>
-   <li><a href="Elettronica">ELETTRONICA</a></li>
-   <li><a href="Libri">LIBRI</a></li>
+   <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">UOMO</a></li>
+   <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">DONNA</a></li>
+   <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">BAMBINO</a></li>
+   <li><a href="ListaPerCategoria?categoria=CASA">CASA</a></li>
+   <li><a href="ListaPerCategoria?categoria=ELETTRONICA">ELETTRONICA</a></li>
+   <li><a href="ListaPerCategoria?categoria=LIBRI">LIBRI</a></li>
    <li><a>----------</a></li>
    <li><a href="ListaSaldi" style="background-color: red;">% SALDI %</a></li>
    <li><a>----------</a></li>
