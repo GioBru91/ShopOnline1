@@ -127,7 +127,7 @@
 
 
 <td>
-<form action="effettuaAcquisto.jsp" method="get" >
+<form action="EffettuaAcquisto" method="get" >
 <input type="hidden" name="idProdotto" value="<%= acquisto.getIdProdotto()%>">
 <input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
 <%if (utente == null){ %>
@@ -137,7 +137,7 @@ disabled
 </form>
 </td>
 <td>
-<form action="inserisciRecensione.jsp" method="post" >
+<form action="inserisciRecensione.jsp">
 <input type="hidden" name="idProdotto" value="<%= acquisto.getIdProdotto()%>">
 <input type="submit" value ="Recensisci" class = "btn btn-success" style="width: 100px"
 <%if (utente == null){ %>
