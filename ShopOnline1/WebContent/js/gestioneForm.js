@@ -72,25 +72,32 @@ function myFunction(x) {
     x.classList.toggle("change");
 }
 
-function show() {
-    var p = document.getElementById('pwd');
-    p.setAttribute('type', 'text');
+function show()
+{
+var p = document.getElementById('pwd');
+p.setAttribute('type','text');  
 }
 
-function hide() {
-    var p = document.getElementById('pwd');
-    p.setAttribute('type', 'password');
+function hide()
+{
+   var p = document.getElementById('pwd');
+p.setAttribute('type','password');   
 }
 
-var pwShown = 0;
+function showHide()
+{
+    var pwShown = 0;
 
-document.getElementById("eye").addEventListener("click", function () {
-    if (pwShown == 0) {
-        pwShown = 1;
+document.getElementById("eye").addEventListener("click", function() {
+    if (pwShown == 0) 
+    {
+        pwShown = 1; 
         show();
-    } else {
-        pwShown = 0;
+    } 
+    else {
+        pwShow = 0;
         hide();
     }
-}, false);
+            }, false);
 
+}
