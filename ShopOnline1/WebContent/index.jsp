@@ -19,6 +19,11 @@
 
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
+     
+     <a id="home" href="index.jsp" >
+<button class="btnpc" id="carrello" style="float:  left;width:  29%;margin-left:  -60px;"
+><img src="img/logo.jpg" width="40%" style="margin:10px"></button>
+</a> 
    
    <div id="container">  
      <a id="carrello" >
@@ -52,10 +57,13 @@
  
    
 <form id="cerca" align="right" action="" method="get" width="2%" style="margin:10px">
+<br>
+<br>
+<br>
 <fieldset>
 <legend></legend>
-<input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: medium;font-weight: 200;"> 
-<button class="btnpc" id="cerca"><img src="img/icone_cerca.png" width="40%" style="margin:10px"></button>
+<input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
+<button class="btnpc" id="cerca"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
 </fieldset>
 </form>
    
@@ -99,58 +107,58 @@
 <br>
 <br>
 
-<div class="container">
-    
-  <div id="myCarousel" class="carousel slide" align="center" style="width: 100%">
-    
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="img/slide1.jpg" alt="Uomo" style="width:100%;">
-        <div class="carousel-caption">
-    <h3>Abbigliamento Donna</h3>
-  </div>
-      </div>
+<span class="col-md-2"></span>
+<div class="col-md-5">
+<marquee onmouseover=this.stop() onmouseout=this.start() align="middle" direction="up" scrollamount="7" width="1000" height="522" >
 
-      <div class="item">
-        <img src="img/slide2.jpg" alt="Donna" style="width:100%;">
-        <div class="carousel-caption">
-    <h3>Abbigliamento Uomo</h3>
-  </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide3.jpg" alt="Bambino" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Abbigliamento Bambini</h3>
-  </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide4.jpg" alt="Casa" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Tutto per la tua casa</h3>
-      </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide5.jpg" alt="Libri" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Angolo libri</h3>
-      </div>
-      </div>
-      
-      <div class="item">
-        <img src="img/slide6.jpg" alt="Elettronica" style="width:100%;">
-        <div class="carousel-caption">
-   <h3>Elettronica</h3>
-      </div>
-      </div>
- 
-      
-    </div>
+<h3>Abbigliamento Donna</h3>
+<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
+<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
+</a>
 
-  </div>
+<br>
+<br>
+<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">
+<img src="img/slide2.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
+</a>
+<br>
+<br>
+<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">
+<img src="img/slide3.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
+
+</a>
+<br>
+<br>
+<a href="ListaPerCategoria?categoria=CASA">
+<img src="img/slide4.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
+
+</a>
+<br>
+<br>
+<a href="ListaPerCategoria?categoria=ELETTRONICA">
+<img src="img/slide5.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
+
+</a>
+<br>
+<br>
+<a a href="ListaPerCategoria?categoria=LIBRI">
+<img src="img/slide6.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
+
+</a>
+</marquee>
+</span class="col-md-5"></span>
 </div>
+
+
+
+      
+      
+      
+      
+      
+     
+
+ 
 
 <br>
 <br>
