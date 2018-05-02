@@ -116,11 +116,11 @@
 
 <span class="col-md-2"></span>
 <div class="col-md-5">
-<marquee onmouseover=this.stop() onmouseout=this.start() align="middle" direction="up" scrollamount="7" width="1000" height="522" >
+<marquee onmouseover=this.stop() onmouseout=this.start() align="middle" direction="up" scrollamount="7" width="1000" height="500" >
 
 <h3>Abbigliamento Donna</h3>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
-<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="500px" border="0" >
+<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
 </a>
 
 <br>
