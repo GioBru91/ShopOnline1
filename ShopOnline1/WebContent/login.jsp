@@ -102,11 +102,10 @@
 
 <div class="form-group" >
 <label for="password"> Inserisci Password</label>
-<button  onclick="myEye('password');" id="showhide"><span class="glyphicon glyphicon-eye-open"></span></button>
-<div >
-<input type="password" style="width:53%" name ="password" placeholder="Inserisci password" class= "form-control" id="password">
- 
-</div>
+<input type="password" placeholder="Password" id="pwd" class="masked" name="password" />
+<button type="button" id="eye">
+    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
+</button>
 </div>
 
 
