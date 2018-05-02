@@ -1,3 +1,5 @@
+<%@page import="java.time.LocalDate"%>
+<%@page import="java.util.Date"%>
 <%@page import="it.accenture.model.Acquisto"%>
 <%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
@@ -105,6 +107,7 @@
 <th>Prezzo di spedizione</th>
 <th>Q. Acquistata</th>
 <th>Prezzo Torale</th>
+<th>Stato della Spedizione </th>
 
 </tr>
 </thead>
@@ -122,6 +125,10 @@
 
 <td>
 <!-- Barra di caricamento -->
+
+<progress value="<%=LocalDate.now().getDayOfMonth() %>" max="<%= acquisto.getDataFine().getDayOfMonth()%>" style="background-color: white;">
+
+</progress>
 </td>
 
 <td>
