@@ -104,6 +104,28 @@
   <url-pattern>/DettagliProdotto</url-pattern>
   </servlet-mapping>
  
+  <!-- LISTA ACQUISTI -->
+  <servlet>
+  <servlet-name>ListaAcquisti</servlet-name>
+  <servlet-class>it.accenture.controller.ListaAcquisti
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaAcquisti</servlet-name>
+  <url-pattern>/ListaAcquisti</url-pattern>
+  </servlet-mapping>
  
+  <!-- LISTA Ordini -->
+  <servlet>
+  <servlet-name>ListaOrdini</servlet-name>
+  <servlet-class>it.accenture.controller.ListaOrdini
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaOrdini</servlet-name>
+  <url-pattern>/ListaOrdini</url-pattern>
+  </servlet-mapping>
  
 </web-app>

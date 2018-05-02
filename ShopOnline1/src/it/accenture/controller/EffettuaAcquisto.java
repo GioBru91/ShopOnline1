@@ -80,7 +80,7 @@ public class EffettuaAcquisto extends HttpServlet {
 			
 			AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
 			acquistoService.insertAcquisto(acquisto);
-			resp.sendRedirect("ListaAcquisti");
+			resp.sendRedirect("ListaOrdini");
 				
 		}else {
 			Acquisto acquisto = new Acquisto();
@@ -97,7 +97,7 @@ public class EffettuaAcquisto extends HttpServlet {
 			
 			AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
 			acquistoService.insertAcquisto(acquisto);
-			resp.sendRedirect("ListaAcquisti");
+			resp.sendRedirect("ListaOrdini");
 		}
 	}
 

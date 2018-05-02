@@ -60,7 +60,7 @@ public class AcquistoDaoImpl implements AcquistoDao {
 	public List<Acquisto> getlListaAcquistiByUtente(int idUtente) {
 		List<Acquisto> listaAcquisti = new ArrayList<>();
 		ResultSet rs = null;
-		String query = "select * from acquisto where id_utente = " + idUtente;
+		String query = "select * from acquisto where sysdate > data_fine and id_utente = " + idUtente;
 		try {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
