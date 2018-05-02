@@ -30,8 +30,7 @@
      
    
    <div class="container">  
-   
-<a href="listaCarrello.jsp">
+   <a href="listaCarrello.jsp">
 <button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px">
 <%if (listaCarrello != null){ %>
 <%= listaCarrello.size() %>
@@ -39,12 +38,11 @@
 0
 <%} %>
 </button>
-</a>   
-
+</a>
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
- <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-100%; "></button>
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
 </a>
 <ul class="dropdown-menu" style="margin-left: 76%; margin-top: -4%">
 						<%if(utente == null) {%>
@@ -58,8 +56,6 @@
 						
    <li class="divider"></li>
 </ul>
-
-
 </div>
 
 
@@ -120,7 +116,7 @@
 
 <span class="col-md-2"></span>
 <div class="col-md-5">
-<marquee onmouseover=this.stop() onmouseout=this.start() align="middle" direction="up" scrollamount="7" width="1000" height="500" >
+<marquee onmouseover=this.stop() onmouseout=this.start() align="middle" direction="up" scrollamount="7" width="1000" height="600" >
 
 <h3>Abbigliamento Donna</h3>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
