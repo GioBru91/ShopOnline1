@@ -23,6 +23,7 @@
 </a> 
 
 
+
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
@@ -37,7 +38,7 @@
 <a data-toggle="dropdown">
  <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:0%; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 82%;">
+<ul class="dropdown-menu" style="margin-left: 76%; margin-top: 3%">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
