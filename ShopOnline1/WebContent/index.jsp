@@ -17,24 +17,25 @@
 
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 
+<a id="home" href="index.jsp" >
+<button class="btnpc" id="home" style="float:  left;width:  40%;margin-left:  -120px; margin-top: 1%"
+><img src="img/logo.jpg" width="40%" style="margin:10px"></button>
+</a> 
+
+
 <div id="banner" align="right" style="margin-right: 20px">
      <div id="banner-content">  
      
    
    <div class="container">  
-   <a id="home" href="index.jsp" >
-<button class="btnpc" id="home" style="float:  left;width:  40%;margin-left:  -300px; margin-top: 5%"
-><img src="img/logo.jpg" width="40%" style="margin:10px"></button>
-</a> 
-   
      <a id="carrello" >
-<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px; margin-top: 200%;"></button>
+<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px; margin-top: 0%"></button>
 </a> 
 
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
- <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:200%; "></button>
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:0%; "></button>
 </a>
 <ul class="dropdown-menu" style="margin-left: 82%;">
 						<%if(utente == null) {%>
