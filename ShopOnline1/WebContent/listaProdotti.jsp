@@ -150,6 +150,12 @@ disabled
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <input type="submit" value ="Dettagli" class = "btn btn-success" style="width: 70px">
 </form>
+</td>
+<td>
+<form action="Carrello" method="get" >
+<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
+<input type="submit" value ="Carrello" class = "btn btn-success" style="width: 70px">
+</form>
 <%} %>
 </td>
 </tr>
