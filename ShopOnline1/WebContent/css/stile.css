@@ -29,12 +29,12 @@ legend {
     padding: 0px;
     font-size: 16px;
     cursor: pointer;
-    width: 5%;
+    width: 7%;
     height: 5%;
 }
 
 .btnpc{
-	 background-color: white;
+	background-color: white;
     border: none;
     color: black;
     padding: 0px;
@@ -92,7 +92,7 @@ jumbotron{
    left: 0;
    bottom: 0;
    width: 100%;
- margin-top:5%;
+   margin-top:5%;
    background-color: black;
    color: white;
    text-align: center;

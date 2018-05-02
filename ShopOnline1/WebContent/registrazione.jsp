@@ -24,7 +24,7 @@
  <button class="btn" id="profilo"> <img src="img/icona-profilo.png" width="40%" style=margin:10px></button>
 </a>
 <ul class="dropdown-menu" style="margin-left: 82%;">
-						<%if(utente == null) {%>
+   						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
 						<%}else { %>
@@ -37,7 +37,7 @@
 
 
 <a data-toggle="dropdown" href="#">
-<button class="btn" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px"></button>
+<button class="btn" id="carrello"><img src="img/icona_carrello.png" width="40%" style=margin:10px></button>
 </a>
 </div>
 
@@ -45,7 +45,7 @@
      
  
    
-<form id="cerca" align="right"  action="" method="get"  width="2%" style="margin:10px">
+<form id="cerca" align="right"  action="" method="get"  width="2%" style= margin:10px>
 <fieldset>
 <legend></legend>
 <input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: medium;font-weight: 200;"> 
@@ -77,11 +77,11 @@
    <li><a href="Elettronica">ELETTRONICA</a></li>
    <li><a href="Libri">LIBRI</a></li>
    <li><a>----------</a></li>
-   <li><a href="ListaSaldi">% SALDI %</a></li>
+   <li><a href="ListaSaldi" style="background-color: red;"> SALDI </a></li>
    <li><a>----------</a></li>
    <li><a href="ListaProdotti">TUTTI I PRODOTTI</a></li>
    <li class="divider"></li>
-    </ul>
+</ul>
 </div>
 </ul>
         </div>
@@ -89,85 +89,53 @@
 
 <br>
 
-<div id="banner" align="right" style="margin-right: 30px">
-    <div id="banner-content">
-    
-    <img src="img/icona-profilo.png" width="2%" style= margin:10px> 
-    <img src="img/icone_cuore.png" width="2%" style=margin:10px> 
-    <img src="img/icona_carrello.png" width="2%" style=margin:10px> 
-   
-   
-    </div>
-  </div>
-  <div id="main-content">
-  <center>
-    <img src="img/icone_cerca.png" width="2%" style=margin:10px> 
-   <img src="img/text_box.png" width="2%" style=margin:10px>
-    </center>
-  </div>
-
-
-
-	<nav class="nav navbar-default">
-       <div class=" collapse navbar-collapse" style="margin-left:406px;">
-            <ul class="nav navbar-nav">
-               
-                <li><a href="" style="font-family: inherit;font-size: large;font-weight: 500;">UOMO</a></li>
-                <li><a href="" style="font-family: inherit;font-size: large;font-weight: 500;">DONNA</a></li>
-                <li><a href="" style="font-family: inherit;font-size: large;font-weight: 500;">BAMBINO</a></li>
-                <li><a href="" style="font-family: inherit;font-size: large;font-weight: 500;">CASA</a></li>
-                <li><a href="" style="font-family: inherit;font-size: large;font-weight: 500;">ELETTRONICA</a></li>
-                <li><a href="" style="font-family: inherit;font-size: large;font-weight: 500;">LIBRI</a></li>
-            </ul>
-        </div>
-       </nav> 
        
-<form class="form-horizontal" align="center"  action="Registrazione" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" >
+<form class="form-horizontal"  action="Registrazione" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" >
 
 
-<center>
+
 <div class="form-group" >
 <label> Inserisci Nome</label>
 <div>
 <input type="text" style="width:53%" name ="nome" placeholder="Inserisci nome" class= "form-control " id="nome">
 </div>
 </div>
-</center>
 
-<center>
+
+
 <div class="form-group" >
 <label > Inserisci Cognome</label>
 <div>
 <input type="text" style="width:53%"  name ="cognome" placeholder="Inserisci cognome" class= "form-control" id="cognome">
 </div>
 </div>
-</center>
 
-<center>
+
+
 <div class="form-group" >
 <label > Inserisci Indirizzo</label>
 <div>
 <input type="text" style="width:53%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
 </div>
 </div>
-</center>
 
-<center>
+
+
 <div class="form-group" >
 <label> Inserisci Username</label>
 <div >
 <input type="text" style="width:53%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
 </div>
 </div>
-</center>
-<center>
+
+
 <div class="form-group" >
 <label > Inserisci Password</label>
 <div >
 <input type="password" style="width:53%" name ="password" placeholder="Inserisci password" class= "form-control" id="password">
 </div>
 </div>
-</center>
+
 
 <!-- bottoni -->
 <div class="form-group">
@@ -177,7 +145,7 @@
 <input type="submit" value="Esci" class="btn btn-warning">
 </div>
 
-<span class="col-md-3"></span>
+
 
 
 </div>
@@ -191,15 +159,11 @@
 
 <!-- link -->
 <div class="row">
-<span class="col-md-5"></span>
-<div class="col-md-4">
-<p>Sei già registrato? </p>
-<p><a href="login.jsp">Clicca qui</a> per la login </p>
+<p style="margin-left: 628px;">Sei già registrato? </p>
+<p style="margin-left: 615px;"><a href="login.jsp">Clicca qui</a> per la login </p>
 
 </div>
-</span class="col-md-3"></span>
 
-</div>
 <!-- alert -->
 
 <div class="alert alert-danger" id="alert" style="display:none">

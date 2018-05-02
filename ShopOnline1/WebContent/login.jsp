@@ -101,11 +101,13 @@
 
 
 <div class="form-group" >
-<label for="password"> Inserisci Password</label>
-<input type="password" placeholder="Password" id="pwd" class="masked" name="password" />
-<button type="button" id="eye">
-    <img src="https://cdn0.iconfinder.com/data/icons/feather/96/eye-16.png" alt="eye" />
-</button>
+<label> Inserisci Password</label>
+<div>
+<input type="password" style="width:53%" placeholder="Password" id="pwd" class="masked" name="password" />
+        <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
+            <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>
+         </button>
+         </div>
 </div>
 
 
@@ -116,6 +118,8 @@
 <input type="submit" value="Esci" class="btn btn-warning">
 </div>
 </form>
+
+
 
 
 
