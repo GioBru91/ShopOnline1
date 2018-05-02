@@ -1,3 +1,4 @@
+<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -16,7 +17,7 @@
 <body>
 
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
-
+<%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <a id="home" href="index.jsp" >
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%"
 ><img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
@@ -29,10 +30,15 @@
      
    
    <div class="container">  
-     <a id="carrello" >
-<button class="btnpc" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:48px; margin-top: -100%"></button>
-</a> 
-
+   <a href="listaCarrello.jsp">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px">
+<%if (listaCarrello != null){ %>
+<%= listaCarrello.size() %>
+<%} else {%>
+0
+<%} %>
+</button>
+</a>
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
