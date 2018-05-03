@@ -126,7 +126,7 @@
 <center>
 <marquee  align="middle" direction="up" scrollamount="8" width="1000" height="600" >
 
-<h3 align="left">Abbigliamento Uomo</h3>
+<h3 align="center">Abbigliamento Uomo</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
 <img src="img/slide2.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
@@ -144,7 +144,7 @@
 <br>
 <br>
 
-<h3 align="right">Abbigliamento Bambino</h3>
+<h3 align="center">Abbigliamento Bambino</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">
 <img src="img/slide3.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
@@ -162,7 +162,7 @@
 <br>
 <br>
 
-<h3 align="left">Il mondo in un chip</h3>
+<h3 align="center">Il mondo in un chip</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ELETTRONICA">
 <img src="img/slide6.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
@@ -226,6 +226,24 @@
 
 
 <div class="footer">
+<div class="G2lBJZk">
+<div class="social_bar" data-testid="social-links-bar" style="margin-top: 1%; margin-bottom: 1%;">
+<a title="Facebook" class="social" href="https://www.facebook.com" target="_blank" data-testid="social-link"><img src="img/facebook-icon.png" alt="facebook" style="width: 2%"></a>
+<a title="Instagram" class="social" href="http://www.instagram.com" target="_blank" data-testid="social-link"><img src="img/icon_instagram.png" alt="instagram" style="width: 2%; margin-right: 2%;"></a>
+
+
+
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/mastercard-png" alt="mastercard" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/pay-pal-png" alt="paypal" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/visa-png" alt="visa" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/visa-electron-png" alt="visaelectron" style="width:3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/postepay-png" alt="postepay" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/cartasi-png" alt="cartasi" style="width:3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/american-express-png" alt="americanexpress" style="width: 3%"></span>
+</div>
+</div>
+
+<div class="G2lBJZk"></div>
 <HR width="1300" size="1" color="black" align="center">
 <center>
     <div class="container">
