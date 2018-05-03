@@ -20,10 +20,8 @@
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 
 <a id="home" href="index.jsp" >
-<center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
 <img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
-</center>
 </a> 
 
 
@@ -140,13 +138,17 @@
 </div>
 
 
-<div class="maps">
+<div class="maps" style="
+    margin-bottom: 39px !important;
+    position: absolute;
+    margin-left: 79%;">
 
 
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0" allowfullscreen ></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0;align right:;align right:;align right:;top:;margin-bottom:;" allowfullscreen=""></iframe>
 
 </div>
+
 </div>
 
 
@@ -159,24 +161,6 @@
 
 
 <div class="footer">
-<div class="G2lBJZk">
-<div class="social_bar" data-testid="social-links-bar" style="margin-top: 1%; margin-bottom: 1%;">
-<a title="Facebook" class="social" href="https://www.facebook.com" target="_blank" data-testid="social-link"><img src="img/facebook-icon.png" alt="facebook" style="width: 2%"></a>
-<a title="Instagram" class="social" href="http://www.instagram.com" target="_blank" data-testid="social-link"><img src="img/icon_instagram.png" alt="instagram" style="width: 2%; margin-right: 2%;"></a>
-
-
-
-<span class="pagamento"><img src="https://images.asos-media.com/navigation/mastercard-png" alt="mastercard" style="width: 3%"></span>
-<span class="pagamento"><img src="https://images.asos-media.com/navigation/pay-pal-png" alt="paypal" style="width: 3%"></span>
-<span class="pagamento"><img src="https://images.asos-media.com/navigation/visa-png" alt="visa" style="width: 3%"></span>
-<span class="pagamento"><img src="https://images.asos-media.com/navigation/visa-electron-png" alt="visaelectron" style="width:3%"></span>
-<span class="pagamento"><img src="https://images.asos-media.com/navigation/postepay-png" alt="postepay" style="width: 3%"></span>
-<span class="pagamento"><img src="https://images.asos-media.com/navigation/cartasi-png" alt="cartasi" style="width:3%"></span>
-<span class="pagamento"><img src="https://images.asos-media.com/navigation/american-express-png" alt="americanexpress" style="width: 3%"></span>
-</div>
-</div>
-
-<div class="G2lBJZk"></div>
 <HR width="1300" size="1" color="black" align="center">
 <center>
     <div class="container">
