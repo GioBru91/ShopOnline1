@@ -28,7 +28,7 @@
 
 
 <div id="banner" align="right" style="margin-right: 30px">
-     <div id="banner-content">  
+     <div id="banner-content"> 
      
    
    <div class="container">  

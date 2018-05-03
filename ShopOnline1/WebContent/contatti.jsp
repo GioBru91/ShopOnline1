@@ -132,21 +132,17 @@
 <br>
 <br>
 <br>
-<h3>CONTATTI</h3>
-  <h4>Indirizzo: Via Giorgio Washington, 50, Milano</h4>
-  <h4>Telefono: 3336363636</h4>
-  <h4>email: ohlovelyrose@gmail.com</h4>
 
-</div>
+<h3 align="left">CONTATTI</h3>
+  <h4 align="left">Indirizzo: Via Giorgio Washington, 50, Milano</h4>
+  <h4 align="left">Telefono: 3336363636</h4>
+  <h4 align="left">email: ohlovelyrose@gmail.com</h4>
+
+<div>
+
+<iframe align="left" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0; ;"></iframe>
 
 
-<div class="maps">
-
-
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0" allowfullscreen ></iframe>
-
-</div>
 </div>
 
 
