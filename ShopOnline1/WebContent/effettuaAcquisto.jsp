@@ -117,7 +117,7 @@
 <br>
 
 <div class="conteiner" class="page-header align-left">
-<img src="<%= prodotto.getImmagine() %>" style="margin-left: 20px">
+<img src="<%= prodotto.getImmagine() %>" style="margin-left: 20px" >
 </div>
 
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;">

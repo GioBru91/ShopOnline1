@@ -19,8 +19,8 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <a id="home" href="index.jsp" >
-<button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%"
-><img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+<button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
+<img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
 </a> 
 
 
@@ -44,7 +44,7 @@
 <a data-toggle="dropdown">
  <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 76%; margin-top: -4%">
+<ul class="dropdown-menu" style="margin-left: 78%; margin-top: -2%">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -87,9 +87,9 @@
 
 <a data-toggle="dropdown" class="btn btn-primary">
 <div class="container" onmouseover="myFunction(this)" onclick="myFunction(this)" style="background-color: grey">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
+  <div class="bar1" style="background-color: rgb(243, 217, 223);"></div>
+  <div class="bar2" style="background-color: rgb(243, 217, 223)"></div>
+  <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
 </div></a>
 
 <ul class="dropdown-menu">
@@ -113,9 +113,9 @@
 <br>
 
 <div class="jumbotron" style="align:center; font:initial; color: black;">
-<marquee di>
+<marquee scrollamount="10">
 
-<h1 align="center" direction="up"  scrollamount="8"><a href="ListaSaldi">SALDI</a></h1>
+<h1><a href="ListaSaldi" style="color: black">SALDI</a></h1>
 
 </marquee>
 </div>
@@ -123,7 +123,7 @@
 
 <div>
 <center>
-<marquee  align="middle" direction="up" scrollamount="6" width="1000" height="600" >
+<marquee  align="middle" direction="up" scrollamount="8" width="1000" height="600" >
 
 <h3 align="left">Abbigliamento Uomo</h3>
 <br>
@@ -181,8 +181,18 @@
 </div>
 
 <br>
-<div class="jumbotron" style="align:center; font:initial; color: black;"></div>
 
+<HR width="1000" size="1" color="black" align="center">
+
+<br>
+
+<h1 align="center"><a href="ListaProdotti" style="color: black">Scopri i nostri prodotti</a></h1>
+
+<br>
+
+<HR width="1000" size="1" color="black" align="center">
+
+<br>
 
 
 <div class="container">
@@ -207,7 +217,7 @@
         <img src="img/slide5.jpg" alt="Libri" style="width:100%;">
       </div>
       <div class="item">
-        <img src="img/slide6.jpg" alt="CElettronica" style="width:100%;">
+        <img src="img/slide6.jpg" alt="Elettronica" style="width:100%;">
       </div>
  
       
@@ -224,21 +234,25 @@
 
 
 <div class="footer">
+<HR width="1500" size="1" color="black" align="center">
 <center>
     <div class="container">
-        <h3>TheOriginals</h3>
+       <a id="home" href="index.jsp" >
+<button class="btnpc" id="home" style="float:  center;width:  50%;margin-left:  100px; margin-top: 1%; margin-right: 270px;">
+<img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+</a> 
         <div id='skills'>
             <div class="skill">
-                <h4><a href="contatti.jsp">CHI SIAMO</a></h4>
+                <h4><a href="contatti.jsp" style="color: black">CHI SIAMO</a></h4>
                
             </div>
             <div class="skill">
-                <h4><a href="contatti.jsp">CONTATTI</h4>
+                <h4><a href="contatti.jsp" style="color: black">CONTATTI</h4>
                 
             </div>
             <div class="skill">
-                <h4><a href="contatti.jsp">INDICAZIONI STRADALI</h4>
-                
+                <h4><a href="contatti.jsp" style="color: black">INDICAZIONI STRADALI</h4>
+               
             </div>
         </div>
     </div>
