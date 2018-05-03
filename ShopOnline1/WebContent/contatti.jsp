@@ -121,8 +121,8 @@
 
 
 <div class="chisiamo" >
-<h1>TheOrignals</h1>
-  <h3>nasce in una stanza buia in via Washington in Milano</h3>
+<h1>Oh lovely rose</h1>
+  <h3>nasce in una stanza buia in via Washington, 50, in Milano</h3>
   <h3>un progetto partorito da tre ragazzi</h3>
   <h3>Giovanni Rucoletta, Domenico Schifio, Albachiara Wewe</h3>
 
@@ -131,9 +131,9 @@
 <br>
 <br>
 <h3>CONTATTI</h3>
-  <h4>Indirizzo: Via vai e non torn mai</h4>
-  <h4>Telefono: 3336363636363</h4>
-  <h4>email: theoriginals@king.com</h4>
+  <h4>Indirizzo: Via Giorgio Washington, 50, Milano</h4>
+  <h4>Telefono: 3336363636</h4>
+  <h4>email: ohlovelyrose@gmail.com</h4>
 
 </div>
 
@@ -142,9 +142,12 @@
 
 
 
-<iframe src="https://www.google.com/maps/embed?pb" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 </div>
+
+
+
 
 <br>
 <br>
@@ -178,6 +181,7 @@
     </div>
     </center>
 </div>
+<HR width="1300" size="1" color="black" align="center">
 
 </body>
 </html>

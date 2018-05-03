@@ -49,6 +49,7 @@
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
 						<%}else { %>
+						
 						<li><a href="ListaOrdini">I miei ordini</a></li>
 						<li><a href="ListaAcquisti">I miei acquisti</a></li>
 						<li><a href="Logout">Logout</a></li>
@@ -207,6 +208,7 @@
     </div>
     </center>
 </div>
+<HR width="1300" size="1" color="black" align="center">
 
 </body>
 </html>

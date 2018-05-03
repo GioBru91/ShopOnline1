@@ -231,5 +231,6 @@ id="dataInizio" style="width: 50%">
     </div>
     </center>
 </div>
+<HR width="1300" size="1" color="black" align="center">
 </body>
 </html>
