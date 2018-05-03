@@ -116,6 +116,7 @@
 <br>
 <center><h1>Il mio account</h1></center>
 
+<div style="margin-left: 40px">
 <ul style="font-size: 20px">
 <li>Nome      : <%=utente.getNome() %> </li>
 <li>Cognome   : <%=utente.getCognome() %></li>
@@ -123,13 +124,12 @@
 <li>Indirizzo : <%=utente.getIndirizzo() %></li>
 </ul>
 <br>
+</div>
 
+<center>
 <p style="font-size: 20px">Clicca <a href="modificaAccount.jsp">qui</a> 
 per modificare i tuoi dati</p>
-
-
-
-
+</center>
 
 
 
