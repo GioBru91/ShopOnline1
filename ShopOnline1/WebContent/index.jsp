@@ -51,10 +51,10 @@
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
 						<%}else { %>
-						<li><a href="myAccount.jsp">My account</a></li>
-						<li><a href="ListaOrdini">I miei ordini</a></li>
-						<li><a href="ListaAcquisti">I miei acquisti</a></li>
-						<li><a href="Logout">Logout</a></li>
+						<li><a href="myAccount.jsp">My account <img src="img/emoij_flower.png" style="width: 7%"></a></li>
+						<li><a href="ListaOrdini">I miei ordini <img src="img/icona_ordini.jpg" style="width: 7%"></a></li>
+						<li><a href="ListaAcquisti">I miei acquisti <img src="img/icona_acquisti.jpg" style="width: 7%"></a></li>
+						<li><a href="Logout">Logout <img src="img/icona_logout.jpg" style="width: 7%"></a></li>
 						<%} %>
 						
    <li class="divider"></li>
