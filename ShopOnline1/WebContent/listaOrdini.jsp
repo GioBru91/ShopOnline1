@@ -21,9 +21,10 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% List<Acquisto> listaOrdini = (List<Acquisto>) request.getAttribute("listaOrdini"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+
 <a id="home" href="index.jsp" >
-<button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%"
-><img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+<button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
+<img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
 </a> 
 
 
@@ -47,7 +48,7 @@
 <a data-toggle="dropdown">
  <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 76%; margin-top: -4%">
+<ul class="dropdown-menu" style="margin-left: 78%; margin-top: -2%">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -89,10 +90,10 @@
 <div class="dropdown">
 
 <a data-toggle="dropdown" class="btn btn-primary">
-<div class="container" onmouseover="myFunction(this)" onclick="myFunction(this)" style="background-color: grey">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
+<div class="container" style="background-color: grey">
+  <div class="bar1" style="background-color: rgb(243, 217, 223);"></div>
+  <div class="bar2" style="background-color: rgb(243, 217, 223)"></div>
+  <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
 </div></a>
 
 <ul class="dropdown-menu">
@@ -114,6 +115,7 @@
 </nav> 
 
 <br>
+
 <br>
 <br>
 
@@ -168,5 +170,37 @@
 </div>
 </div>
 </center>
+
+<br>
+<br>
+
+
+
+
+<div class="footer">
+<HR width="1300" size="1" color="black" align="center">
+<center>
+    <div class="container">
+       <a id="home" href="index.jsp" >
+<button class="btnpc" id="home" style="float:  center;width:  50%;margin-left:  100px; margin-top: 1%; margin-right: 270px;">
+<img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+</a> 
+        <div id='skills'>
+            <div class="skill">
+                <h4><a href="contatti.jsp" style="color: black">CHI SIAMO</a></h4>
+               
+            </div>
+            <div class="skill">
+                <h4><a href="contatti.jsp" style="color: black">CONTATTI</h4>
+                
+            </div>
+            <div class="skill">
+                <h4><a href="contatti.jsp" style="color: black">INDICAZIONI STRADALI</h4>
+               
+            </div>
+        </div>
+    </div>
+    </center>
+</div>
 </body>
 </html>

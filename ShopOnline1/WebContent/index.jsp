@@ -86,7 +86,7 @@
 <div class="dropdown">
 
 <a data-toggle="dropdown" class="btn btn-primary">
-<div class="container" onmouseover="myFunction(this)" onclick="myFunction(this)" style="background-color: grey">
+<div class="container" style="background-color: grey">
   <div class="bar1" style="background-color: rgb(243, 217, 223);"></div>
   <div class="bar2" style="background-color: rgb(243, 217, 223)"></div>
   <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
@@ -200,9 +200,6 @@
 <div class="carousel-inner" >
 <div class="item ">
 <img class="img-carousel" src="img/scarpe1.jpg">
-<a href="javascript:;"
-    onClick="window.open('http://www.html.it', 'titolo', 'width=400, height=200, resizable, status, scrollbars=1, location');">
-Apri la pop-up</a>
 </div>
 <div class="item active">
 <img class="img-carousel" src="img/donna_rosso.jpg">
