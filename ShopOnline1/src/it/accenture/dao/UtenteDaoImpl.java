@@ -128,7 +128,7 @@ public class UtenteDaoImpl implements UtenteDao{
 
 	@Override
 	public void updateUtente(Utente utente) {
-		String query = "update utente set nome = ?, cognome = ?, username = ?, password = ?, indirizzo = ?";
+		String query = "update utente set nome = ?, cognome = ?, username = ?, password = ?, indirizzo = ? where id_utente = " + utente.getIdUtente();
 		
 		try {
 			prepared = connection.prepareStatement(query);
