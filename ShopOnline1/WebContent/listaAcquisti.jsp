@@ -21,10 +21,11 @@
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 
 <a id="home" href="index.jsp" >
+<center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
 <img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+</center>
 </a> 
-
 
 
 <div id="banner" align="right" style="margin-right: 30px">
