@@ -157,6 +157,7 @@ margin: 2%;
 hr {
     height: 3px;
     box-sizing: content-box;
+   display: block;
 }
 
 a {
@@ -164,3 +165,12 @@ a {
     text-decoration: none;
 }
 
+.img-carousel{
+	margin: auto;
+	width:20%;	
+}
+
+.carousel-indicators li {
+	width: 15 px;
+	height: 15px;
+}
