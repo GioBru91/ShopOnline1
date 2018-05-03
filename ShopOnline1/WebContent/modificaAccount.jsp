@@ -7,12 +7,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Informazioni</title>
-<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/gestioneForm.js"></script>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/stile.css">
+<title>Modifica Account</title>
+
+<link rel="stylesheet"  href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"  href="css/stile.css">
+
+<script type= "text/javascript" src="js/gestioneForm.js"></script>
 </head>
 <body>
 
@@ -20,8 +20,10 @@
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 
 <a id="home" href="index.jsp" >
+<center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
 <img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+</center>
 </a> 
 
 
@@ -116,46 +118,96 @@
 <br>
 <br>
 
+       
+<form class="form-horizontal"  action="ModificaAccount" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" >
 
 
-<div class=container>
 
-<div class="chisiamo" >
-<h1>Oh lovely rose</h1>
-  <h3>nasce in una stanza buia in via Washington, 50, in Milano</h3>
-  <h3>un progetto partorito da tre ragazzi</h3>
-  <h3>Giovanni Rucoletta, Domenico Schifio, Albachiara Wewe</h3>
-
-
-<br>
-<br>
-<br>
-
-<h3 align="left">CONTATTI</h3>
-  <h4 align="left">Indirizzo: Via Giorgio Washington, 50, Milano</h4>
-  <h4 align="left">Telefono: 3336363636</h4>
-  <h4 align="left">email: ohlovelyrose@gmail.com</h4>
-
+<div class="form-group" >
+<label> Inserisci Nuovo Nome</label>
 <div>
-
-<iframe align="left" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0; ;"></iframe>
-
-<div class="maps" style="
-    margin-bottom: 39px !important;
-    position: absolute;
-    margin-left: 79%;">
-
-
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0;align right:;align right:;align right:;top:;margin-bottom:;" allowfullscreen=""></iframe>
-
+<input type="text" style="width:53%" name ="nome" value="<%=utente.getNome() %>" class= "form-control " id="nome">
 </div>
-
 </div>
 
 
 
-<br>
+<div class="form-group" >
+<label > Inserisci Cognome</label>
+<div>
+<input type="text" style="width:53%"  name ="cognome" value="<%=utente.getCognome() %>" class= "form-control" id="cognome">
+</div>
+</div>
+
+
+
+<div class="form-group" >
+<label > Inserisci Indirizzo</label>
+<div>
+<input type="text" style="width:53%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
+</div>
+</div>
+
+
+
+<div class="form-group" >
+<label> Inserisci Username</label>
+<div >
+<input type="text" style="width:53%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
+</div>
+</div>
+
+
+<div class="form-group" >
+<label > Inserisci Password</label>
+<div >
+<input type="password" style="width:53%" name ="password" placeholder="Inserisci password" class= "form-control" id="password">
+</div>
+</div>
+
+
+<!-- bottoni -->
+<div class="form-group">
+
+
+<input type="submit" value="Registrati" class="btn btn-warning">
+<input type="submit" value="Esci" class="btn btn-warning">
+</div>
+
+
+
+
+</div>
+
+
+
+
+</form>
+
+
+
+<!-- link -->
+<div class="row">
+<p style="margin-left: 628px;">Sei già registrato? </p>
+<p style="margin-left: 615px;"><a href="login.jsp">Clicca qui</a> per la login </p>
+
+</div>
+
+<!-- alert -->
+
+<div class="alert alert-danger" id="alert" style="display:none">
+<h1>Devi inserire i valori per tutti i campi</h1>
+</div>
+
+<%if (request.getAttribute("errore1") != null){ %>
+<div class="alert alert-danger"  style = margin-top:20px">
+<h4>Username già utilizzato</h4>
+</div>
+<% } %>
+
+
+</div> <!--container-->
+       
 <br>
 <br>
 
@@ -163,6 +215,24 @@
 
 
 <div class="footer">
+<div class="G2lBJZk">
+<div class="social_bar" data-testid="social-links-bar" style="margin-top: 1%; margin-bottom: 1%;">
+<a title="Facebook" class="social" href="https://www.facebook.com" target="_blank" data-testid="social-link"><img src="img/facebook-icon.png" alt="facebook" style="width: 2%"></a>
+<a title="Instagram" class="social" href="http://www.instagram.com" target="_blank" data-testid="social-link"><img src="img/icon_instagram.png" alt="instagram" style="width: 2%; margin-right: 2%;"></a>
+
+
+
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/mastercard-png" alt="mastercard" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/pay-pal-png" alt="paypal" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/visa-png" alt="visa" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/visa-electron-png" alt="visaelectron" style="width:3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/postepay-png" alt="postepay" style="width: 3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/cartasi-png" alt="cartasi" style="width:3%"></span>
+<span class="pagamento"><img src="https://images.asos-media.com/navigation/american-express-png" alt="americanexpress" style="width: 3%"></span>
+</div>
+</div>
+
+<div class="G2lBJZk"></div>
 <HR width="1300" size="1" color="black" align="center">
 <center>
     <div class="container">
@@ -188,6 +258,5 @@
     </center>
 </div>
 <HR width="1300" size="1" color="black" align="center">
-
 </body>
 </html>
