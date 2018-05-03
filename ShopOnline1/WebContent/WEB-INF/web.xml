@@ -151,4 +151,28 @@
   <servlet-name>Carrello</servlet-name>
   <url-pattern>/Carrello</url-pattern>
   </servlet-mapping>
+  
+  <!-- INSERISCI RECENSIONE -->
+  <servlet>
+  <servlet-name>InserisciRecensione</servlet-name>
+  <servlet-class>it.accenture.controller.InserisciRecensione
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>InserisciRecensione</servlet-name>
+  <url-pattern>/InserisciRecensione</url-pattern>
+  </servlet-mapping>
+  
+  <!-- INSERISCI RECENSIONE -->
+  <servlet>
+  <servlet-name>ListaRecensioni</servlet-name>
+  <servlet-class>it.accenture.controller.ListaRecensioni
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaRecensioni</servlet-name>
+  <url-pattern>/ListaRecensioni</url-pattern>
+  </servlet-mapping>
 </web-app>

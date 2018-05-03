@@ -34,7 +34,8 @@ public class RecensioniDaoImpl implements RecensioniDao {
 			prepared.setString(1, recensioni.getTitolo());
 			prepared.setString(2, recensioni.getContenuto());
 			prepared.setInt(3, recensioni.getIdUtente());
-			prepared.setInt(3, recensioni.getIdProdotto());
+			prepared.setInt(4, recensioni.getIdProdotto());
+			prepared.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}  finally {

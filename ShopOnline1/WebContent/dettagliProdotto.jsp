@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Recensioni"%>
 <%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="it.accenture.model.Utente"%>
@@ -18,6 +19,7 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<% List<Recensioni> listaRecensioni = (List<Recensioni>) request.getAttribute("listaRecensioni"); %>
 <a id="home" href="index.jsp" >
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%"
 ><img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
@@ -145,6 +147,23 @@ Offerta: <img src="img/vverde.png" width="20px">
 disabled
 <%} %>
 >
+</form>
+<br>
+<br>
+<br>
+<form action="ListaRecensioni" method="get">
+<%if (listaRecensioni != null){ %>
+<ul>
+<%for(Recensioni recensioni : listaRecensioni){ %>
+<h3 style="font: bold;"><%=recensioni.getTitolo() %></h3>
+<h5><%=recensioni.getContenuto() %></h5>
+<%} %>
+</ul>
+<%}else{ %>
+<p>Non ci sono recensioni su questo prodotto </p>
+<%} %>
+
+
 </form>
 
 </ul>

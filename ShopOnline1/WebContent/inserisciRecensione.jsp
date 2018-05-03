@@ -1,3 +1,4 @@
+<%@page import="it.accenture.model.Acquisto"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
@@ -17,6 +18,7 @@
 <body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<%int idProdotto = Integer.parseInt(request.getParameter("idProdotto")); %>
 <a id="home" href="index.jsp" >
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%"
 ><img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
@@ -113,7 +115,7 @@
 <br>
 <br>
 
-<form class="form-horizontal"  action="Registrazione" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" >
+<form class="form-horizontal"  action="InserisciRecensione" method ="post" id="formRecensione" >
 
 
 
@@ -142,6 +144,7 @@
 
 <input type="submit" value="Inserisci" class="btn btn-warning">
 <input type="reset" value="Resetta" class="btn btn-warning">
+<input type="hidden" name="idProdotto" value="<%=idProdotto %>">
 </div>
 
 
