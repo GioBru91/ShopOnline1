@@ -152,6 +152,13 @@ disabled
 <%} %>
 >
 </form>
+
+<div class="img-magnifier-container">
+  <img id="myimage" src="img_fjords.jpg" width="600" height="400">
+</div>
+
+
+
 <br>
 <br>
 <br>

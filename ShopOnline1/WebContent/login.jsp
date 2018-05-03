@@ -144,8 +144,8 @@
 
 
 <div class="form-group">
-<input type="submit" value="Login" class="btn btn-warning">
-<input type="submit" value="Esci" class="btn btn-warning">
+<input type="submit" value="Login" class="btn">
+<input type="submit" value="Esci" class="btn">
 </div>
 </form>
 
