@@ -150,11 +150,13 @@
 <td>
 <form action="EffettuaAcquisto" method="get" >
 <input type="hidden" name="idProdotto" value="<%= acquisto.getIdProdotto()%>">
-<input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
+<button class= "btn" id="Acquisto" 
 <%if (utente == null){ %>
 disabled
 <%} %>
 >
+<img src="img/shop.png" style="width: 40px;">
+</button>
 </form>
 </td>
 <td>
@@ -171,7 +173,9 @@ disabled
 <td>
 <form action="DettagliProdotto" method="post" >
 <input type="hidden" name="idProdotto" value="<%=acquisto.getIdProdotto()%>">
-<input type="submit" value ="Dettagli" class = "btn btn-success" style="width: 70px">
+<button class= "btn" id="Dettagli">
+<img src="img/dettagli.png" style="width: 37px;">
+</button>
 </form>
 <%} %>
 </td>

@@ -165,17 +165,33 @@
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
-<input type="submit" value ="Acquista" class = "btn btn-success" style="width: 70px"
+<button class= "btn" id="Acquisto" 
 <%if (utente == null){ %>
 disabled
 <%} %>
 >
+<img src="img/shop.png" style="width: 40px;">
+</button>
 </form>
 </td>
 <td>
 <form action="DettagliProdotto" method="post" >
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
-<input type="submit" value ="Dettagli" class = "btn btn-success" style="width: 70px">
+<button class= "btn" id="Dettagli">
+<img src="img/dettagli.png" style="width: 37px;">
+</button>
+</form>
+</td>
+<td>
+<form action="Carrello" method="get" >
+<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
+<button class= "btn" id="Carrello" 
+<%if (utente == null){ %>
+disabled
+<%} %>
+>
+<img src="img/AddToCart.png" style="width: 40px;">
+</button>
 </form>
 <%} %>
 </td>

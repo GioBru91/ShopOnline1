@@ -162,7 +162,9 @@
 <td>
 <form action="DettagliProdotto" method="post" >
 <input type="hidden" name="idProdotto" value="<%=acquisto.getIdProdotto()%>">
-<input type="submit" value ="Dettagli" class = "btn btn-success" style="width: 70px">
+<button class= "btn" id="Dettagli">
+<img src="img/dettagli.png" style="width: 37px;">
+</button>
 </form>
 <%} %>
 </td>
