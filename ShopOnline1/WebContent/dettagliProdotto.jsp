@@ -121,7 +121,14 @@
 <br>
 
 <div class="conteiner" class="page-header align-left">
-<img src="<%= prodotto.getImmagine() %>" style="margin-left: 20px">
+<div class="img-magnifier-container">
+<img id="myimage" src="<%= prodotto.getImmagine() %>" style="margin-left: 20px">
+</div>
+<script>
+/* Initiate Magnify Function
+with the id of the image, and the strength of the magnifier glass:*/
+magnify("myimage", 2);
+</script>
 </div>
 
 <center>
@@ -153,9 +160,7 @@ disabled
 >
 </form>
 
-<div class="img-magnifier-container">
-  <img id="myimage" src="img_fjords.jpg" width="600" height="400">
-</div>
+
 
 
 
