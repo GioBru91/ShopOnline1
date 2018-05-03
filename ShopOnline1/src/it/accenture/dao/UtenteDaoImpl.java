@@ -62,6 +62,7 @@ public class UtenteDaoImpl implements UtenteDao{
 				utente.setCognome(rs.getString(3));
 				utente.setUsername(username);
 				utente.setPassword(password);
+				utente.setIndirizzo(rs.getString(6));
 				
 			}
 		} catch (SQLException e) {
