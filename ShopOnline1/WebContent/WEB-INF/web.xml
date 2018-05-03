@@ -175,4 +175,16 @@
   <servlet-name>ListaRecensioni</servlet-name>
   <url-pattern>/ListaRecensioni</url-pattern>
   </servlet-mapping>
+  
+  <!-- MODIFICA ACCOUNT -->
+  <servlet>
+  <servlet-name>ModificaAccount</servlet-name>
+  <servlet-class>it.accenture.controller.ModificaAccount
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ModificaAccount</servlet-name>
+  <url-pattern>/ModificaAccount</url-pattern>
+  </servlet-mapping>
 </web-app>

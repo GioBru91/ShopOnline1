@@ -125,6 +125,35 @@ public class UtenteDaoImpl implements UtenteDao{
 		return utente;
 	}
 
+	@Override
+	public void updateUtente(Utente utente) {
+		String query = "update utente set nome = ?, cognome = ?, username = ?, password = ?, indirizzo = ?";
+		
+		try {
+			prepared = connection.prepareStatement(query);
+			prepared.setString(1, utente.getNome());
+			prepared.setString(2, utente.getCognome());
+			prepared.setString(3, utente.getUsername());
+			prepared.setString(4, utente.getPassword());
+			prepared.setString(5, utente.getIndirizzo());
+			prepared.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (prepared != null){
+				try {
+					prepared.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			
+		}
+		
+		
+		
+	}
+
 
 	
 }

@@ -8,6 +8,8 @@ public interface UtenteDao {
 	
 	public Utente controlloUsername(String username);
 	
+	public void updateUtente (Utente utente);
+	
 	public Utente login(String username, String password);
 	
 	public void close();
