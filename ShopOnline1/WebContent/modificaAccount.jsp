@@ -133,7 +133,7 @@
 
 
 <div class="form-group" >
-<label > Inserisci Cognome</label>
+<label > Inserisci Nuovo Cognome</label>
 <div>
 <input type="text" style="width:53%"  name ="cognome" value="<%=utente.getCognome() %>" class= "form-control" id="cognome">
 </div>
@@ -142,27 +142,31 @@
 
 
 <div class="form-group" >
-<label > Inserisci Indirizzo</label>
+<label > Inserisci Nuovo Indirizzo</label>
 <div>
-<input type="text" style="width:53%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
+<input type="text" style="width:53%"  name ="indirizzo" value="<%=utente.getIndirizzo() %>" class= "form-control" id="indirizzo">
 </div>
 </div>
 
 
 
 <div class="form-group" >
-<label> Inserisci Username</label>
+<label> Inserisci Nuovo Username</label>
 <div >
-<input type="text" style="width:53%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
+<input type="text" style="width:53%" name ="username" value="<%=utente.getUsername() %>" class= "form-control" id="username">
 </div>
 </div>
 
 
 <div class="form-group" >
-<label > Inserisci Password</label>
-<div >
-<input type="password" style="width:53%" name ="password" placeholder="Inserisci password" class= "form-control" id="password">
-</div>
+<label > Inserisci Nuova Password</label>
+<div>
+<input type="password" style="width:53%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;
+		background-image: none;border: 1px solid #ccc;border-radius: 4px;" placeholder="Inserisci password" id="pwd" class="masked" name="password">
+        <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
+            <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>
+         </button>
+  </div>
 </div>
 
 
@@ -170,8 +174,8 @@
 <div class="form-group">
 
 
-<input type="submit" value="Registrati" class="btn btn-warning">
-<input type="submit" value="Esci" class="btn btn-warning">
+<input type="submit" value="Aggiorna" class="btn btn-warning">
+<input type="reset" value="Esci" class="btn btn-warning">
 </div>
 
 
@@ -185,13 +189,6 @@
 </form>
 
 
-
-<!-- link -->
-<div class="row">
-<p style="margin-left: 628px;">Sei già registrato? </p>
-<p style="margin-left: 615px;"><a href="login.jsp">Clicca qui</a> per la login </p>
-
-</div>
 
 <!-- alert -->
 

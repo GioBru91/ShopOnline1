@@ -132,7 +132,8 @@
 <div class="form-group" >
 <label> Inserisci Password</label>
 <div>
-<input type="password" style="width:53%" placeholder="Password" id="pwd" class="masked" name="password" />
+<input type="password" style="width:53%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;
+		background-image: none;border: 1px solid #ccc;border-radius: 4px;" placeholder="Inserisci password" id="pwd" class="masked" name="password">
         <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
             <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>
          </button>
