@@ -193,40 +193,34 @@
 <HR width="1000" size="1" color="black" align="center">
 
 <br>
-
-
-<div class="container">
-    
-  <div id="myCarousel" class="carousel slide" align="center" style="width: 100%">
-    
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="img/slide1.jpg" alt="Uomo" style="width:100%;">
-      </div>
-
-      <div class="item">
-        <img src="img/slide2.jpg" alt="Donna" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide3.jpg" alt="Bambino" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide4.jpg" alt="Casa" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide5.jpg" alt="Libri" style="width:100%;">
-      </div>
-      <div class="item">
-        <img src="img/slide6.jpg" alt="Elettronica" style="width:100%;">
-      </div>
- 
-      
-    </div>
-
-  </div>
+<br>
+<h3 align="center">Prodotti più venduti</h3>
+<br>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
+<div class="carousel-inner" >
+<div class="item ">
+<img class="img-carousel" src="img/scarpe1.jpg">
+<a href="javascript:;"
+    onClick="window.open('http://www.html.it', 'titolo', 'width=400, height=200, resizable, status, scrollbars=1, location');">
+Apri la pop-up</a>
+</div>
+<div class="item active">
+<img class="img-carousel" src="img/donna_rosso.jpg">
+</div>
+<div class="item">
+<img class="img-carousel" src="img/donna_tuta.jpg">
 </div>
 
-<br>
+
+<a class="left carousel-control" href="#myCarousel" data-slide ="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#myCarousel" data-slide ="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+
+</div>
+
 <br>
 <br>
 
@@ -234,7 +228,7 @@
 
 
 <div class="footer">
-<HR width="1500" size="1" color="black" align="center">
+<HR width="1300" size="1" color="black" align="center">
 <center>
     <div class="container">
        <a id="home" href="index.jsp" >
