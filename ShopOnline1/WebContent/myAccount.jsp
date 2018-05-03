@@ -1,13 +1,13 @@
-<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Prodotto"%>
+<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" name="viewport" content="width=device-width">
-<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>My Account</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
@@ -112,118 +112,29 @@
 </nav> 
 
 <br>
+<center><h1>Il mio account</h1></center>
 
-<div class="jumbotron" style="align:center; font:initial; color: black;">
-<marquee scrollamount="10">
-
-<h1><a href="ListaSaldi" style="color: black">SALDI</a></h1>
-
-</marquee>
-</div>
-
-
-<div>
-<center>
-<marquee  align="middle" direction="up" scrollamount="8" width="1000" height="600" >
-
-<h3 align="left">Abbigliamento Uomo</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
-<img src="img/slide2.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
-</a>
-
-<br>
+<ul style="font-size: 20px">
+<li>Nome      : <%=utente.getNome() %> </li>
+<li>Cognome   : <%=utente.getCognome() %></li>
+<li>Username  : <%=utente.getUsername() %></li>
+<li>Indirizzo : <%=utente.getIndirizzo() %></li>
+</ul>
 <br>
 
-<h3 align="center">Abbigliamento Donna</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">
-<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
+<p style="font-size: 20px">Clicca <a href="modificaAccount.jsp">qui</a> 
+per modificare i tuoi dati</p>
+
+
+
+
+
+
+
+
 
 <br>
 <br>
-
-<h3 align="right">Abbigliamento Bambino</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">
-<img src="img/slide3.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-<br>
-<br>
-
-<h3 align="center">Tutto per la casa</h3>
-<br>
-<a href="ListaPerCategoria?categoria=CASA">
-<img src="img/slide4.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-<br>
-<br>
-
-<h3 align="left">Il mondo in un chip</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ELETTRONICA">
-<img src="img/slide6.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-<br>
-<br>
-
-<h3 align="center">Angolo libri</h3>
-<br>
-<a a href="ListaPerCategoria?categoria=LIBRI">
-<img src="img/slide5.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-</marquee>
-</center>
-</div>
-
-<br>
-
-<HR width="1000" size="1" color="black" align="center">
-
-<br>
-
-<h1 align="center"><a href="ListaProdotti" style="color: black">Scopri i nostri prodotti</a></h1>
-
-<br>
-
-<HR width="1000" size="1" color="black" align="center">
-
-<br>
-<br>
-<h3 align="center">Prodotti più venduti</h3>
-<br>
-<div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
-<div class="carousel-inner" >
-<div class="item ">
-<img class="img-carousel" src="img/scarpe1.jpg">
-</div>
-<div class="item active">
-<img class="img-carousel" src="img/donna_rosso.jpg">
-</div>
-<div class="item">
-<img class="img-carousel" src="img/donna_tuta.jpg">
-</div>
-
-
-<a class="left carousel-control" href="#myCarousel" data-slide ="prev">
-<span class="glyphicon glyphicon-chevron-left"></span>
-</a>
-<a class="right carousel-control" href="#myCarousel" data-slide ="next">
-<span class="glyphicon glyphicon-chevron-right"></span>
-</a>
-
-</div>
-
-<br>
-<br>
-
-
-
 
 <div class="footer">
 <HR width="1300" size="1" color="black" align="center">
