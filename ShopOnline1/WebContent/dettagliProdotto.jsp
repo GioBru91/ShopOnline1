@@ -151,20 +151,21 @@ disabled
 <br>
 <br>
 <br>
-<form action="ListaRecensioni" method="get">
+
+
 <%if (listaRecensioni != null){ %>
+<h3><u>Recensioni Prodotto</u></h3> <br>
 <ul>
 <%for(Recensioni recensioni : listaRecensioni){ %>
-<h3 style="font: bold;"><%=recensioni.getTitolo() %></h3>
-<h5><%=recensioni.getContenuto() %></h5>
+<h4><b><i><%=recensioni.getTitolo() %></i></b></h4>
+<h4><%=recensioni.getContenuto() %></h4>
 <%} %>
-</ul>
+</ul> 
+<br> 
+<br>
 <%}else{ %>
 <p>Non ci sono recensioni su questo prodotto </p>
 <%} %>
-
-
-</form>
 
 </ul>
 </center>

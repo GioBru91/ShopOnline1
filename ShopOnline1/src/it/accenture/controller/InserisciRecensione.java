@@ -1,6 +1,8 @@
 package it.accenture.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +17,7 @@ import it.accenture.model.Utente;
 
 public class InserisciRecensione extends HttpServlet{
 	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession sessione = req.getSession();
@@ -38,10 +41,11 @@ public class InserisciRecensione extends HttpServlet{
 		
 		recensioniService.insertRecensioni(recensioni);
 		recensioniService.close();
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("DettagliProdotto");
-	    dispatcher.forward(req, resp);
+		dispatcher.forward(req, resp);
 		
-		
+	    
 		
 	}
 	
