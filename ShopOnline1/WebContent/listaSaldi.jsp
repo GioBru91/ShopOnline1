@@ -145,7 +145,7 @@
 <td><%= prodotto.getQuantitaDisponibile() %> </td>
 <td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
 <td>
-<form action="effettuaAcquisto.jsp" method="post" >
+<form action="EffettuaAcquisto" method="get" >
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
