@@ -22,8 +22,10 @@
 <% List<Recensioni> listaRecensioni = (List<Recensioni>) request.getAttribute("listaRecensioni"); %>
 
 <a id="home" href="index.jsp" >
+<center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
 <img src="img/logo_lovely.jpg" width="40%" style="margin:10px"></button>
+</center>
 </a> 
 
 
