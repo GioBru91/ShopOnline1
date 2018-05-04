@@ -222,5 +222,47 @@ public class ProdottoDaoImpl implements ProdottoDao{
 		}
 		return prodotto;
 	}
+	
+	@Override
+	public List<Prodotto> prodottiPiuVenduti() {
+		List<Prodotto> listaPiuVenduti = new ArrayList<>();
+		ResultSet rs = null;
+		String query = "select * from prodotto p, "
+					 + "(select id_prodotto, count(id_prodotto) as venduti "
+					 + "from acquisto group by id_prodotto order by venduti desc fetch first 3 rows only) a "
+					 + "where p.id_prodotto = a.id_prodotto";
+		try {
+			statement = connection.createStatement();
+			rs = statement.executeQuery(query);
+			while (rs.next()) {
+				Prodotto prodotto = new Prodotto();
+				prodotto.setIdProdotto(rs.getInt(1));
+				prodotto.setNome(rs.getString(2));
+				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
+				prodotto.setMarca(rs.getString(4));
+				prodotto.setPrezzo(rs.getDouble(5));
+				prodotto.setOfferta(rs.getBoolean(6));
+				prodotto.setSconto(rs.getInt(7));
+				prodotto.setQuantitaDisponibile(rs.getInt(8));
+				prodotto.setImmagine(rs.getString(9));
+				listaPiuVenduti.add(prodotto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try{
+				if(statement != null){
+					statement.close();
+				}
+				if (rs != null){
+					rs.close();
+				}
+			}catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}	
+		
+		return listaPiuVenduti;
+	}
 
 }

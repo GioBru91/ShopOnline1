@@ -17,6 +17,8 @@ public interface ProdottoDao {
 	
 	public Prodotto getProdottoByNome(String nomeProdotto);
 	
+	public List<Prodotto> prodottiPiuVenduti();
+	
 	public void close();
 	
 }

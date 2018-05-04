@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import it.accenture.model.Acquisto;
+import it.accenture.model.Prodotto;
 import it.accenture.model.Spedizione;
 import it.accenture.utilities.DBUtilityConnection;
 import oracle.net.aso.a;
