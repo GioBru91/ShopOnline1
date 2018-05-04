@@ -113,20 +113,26 @@
 </div>
 </nav> 
 
+
+
+
+x
+
+
 <br>
-<h1 style="margin-left: 250px">Inserisci i tuoi dati</h1>
+<h1 style="margin-left: 100px">Inserisci i tuoi dati</h1>
 <br>
 <br>
 
        
-<form class="form-horizontal"  action="Registrazione" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" >
+<form class="form-horizontal"  action="Registrazione" method ="post"  onsubmit="return validazioneForm()" id="formRegistrazione" style="margin-left: 50px">
 
 
 
 <div class="form-group" >
 <label> Inserisci Nome</label>
 <div>
-<input type="text" style="width:53%" name ="nome" placeholder="Inserisci nome" class= "form-control " id="nome">
+<input type="text" style="width:30%" name ="nome" placeholder="Inserisci nome" class= "form-control " id="nome">
 </div>
 </div>
 
@@ -135,16 +141,18 @@
 <div class="form-group" >
 <label > Inserisci Cognome</label>
 <div>
-<input type="text" style="width:53%"  name ="cognome" placeholder="Inserisci cognome" class= "form-control" id="cognome">
+<input type="text" style="width:30%"  name ="cognome" placeholder="Inserisci cognome" class= "form-control" id="cognome">
 </div>
 </div>
+
+
 
 
 
 <div class="form-group" >
 <label > Inserisci Indirizzo</label>
 <div>
-<input type="text" style="width:53%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
+<input type="text" style="width:30%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
 </div>
 </div>
 
@@ -153,7 +161,7 @@
 <div class="form-group" >
 <label> Inserisci Username</label>
 <div >
-<input type="text" style="width:53%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
+<input type="text" style="width:30%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
 </div>
 </div>
 
@@ -162,7 +170,7 @@
 <label > Inserisci Password</label>
 <div>
 
-<input type="password" style="width:53%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;
+<input type="password" style="width:30%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;
 		background-image: none;border: 1px solid #ccc;border-radius: 4px;" placeholder="Inserisci password" id="pwd" class="masked" name="password">
         <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
             <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>
@@ -176,40 +184,36 @@
 <br>
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- bottoni -->
 <div class="form-group">
 
 
-<input type="submit" value="Registrati" class="btn btn-warning">
-<input type="submit" value="Esci" class="btn btn-warning">
+<input type="submit" value="Registrati" class="btn">
+<input type="submit" value="Esci" class="btn">
 </div>
 
-
-
-
 </div>
-
-
-
 
 </form>
 
-
+<div class="rowgrid"   style="width: 100%;margin-left: 650px;margin-top: -450px;"> 
+  <div class="column">
+    <img src="img/donna_maglia.jpg" style="width:70%">
+    
+  </div>
+  <div class="column">
+    <img src="img/donna_maglia.jpg" style="width:30%">
+    <img src="img/donna_maglia.jpg" style="width:60%">
+  </div>  
+  
+</div>
 
 <!-- link -->
-<div class="row">
-<p style="margin-left: 628px;">Sei già registrato? </p>
-<p style="margin-left: 615px;"><a href="login.jsp">Clicca qui</a> per la login </p>
+<div class="row" style="margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 200px;">
+<p style="margin-left: 370px;">Sei già registrato? </p>
+<p style="margin-left: 360px;"><a href="login.jsp">Clicca qui</a> per la login </p>
 
 </div>
 

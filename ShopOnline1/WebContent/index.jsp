@@ -66,7 +66,24 @@
 
 </div>
 
-     
+     <div class="rowgrid"> 
+  <div class="column">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+  </div>
+  <div class="column">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+  </div>  
+  <div class="column">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+  </div>
+  <div class="column">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+  </div>
+</div>
  
    
 <form id="cerca" align="right" action="" method="get" width="2%" style="margin:0px">

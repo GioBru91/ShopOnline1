@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <title>Login</title>
 <link rel="stylesheet"  href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet"  href="css/stile.css">
@@ -114,20 +115,21 @@
 </nav> 
 
 <br>
-
-<h1 style="margin-left: 250px">Inserisci i tuoi dati</h1>
-
-<br>
 <br>
 
+<h1 style="margin-left: 100px">Inserisci i tuoi dati</h1>
+
+<br>
 
 
-<form class="form-horizontal" action="Login" method ="post" onsubmit="return validazioneFormLogin()" id="formLogin">
+
+
+<form class="form-horizontal" action="Login" method ="post" onsubmit="return validazioneFormLogin()" id="formLogin" style="margin-left: 50px">
 
 <div class="form-group" >
 <label > Inserisci Username</label>
 <div >
-<input type="text" style="width:53%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
+<input type="text" style="width:30%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
 </div>
 </div>
 
@@ -135,7 +137,7 @@
 <div class="form-group" >
 <label> Inserisci Password</label>
 <div>
-<input type="password" style="width:53%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;
+<input type="password" style="width:30%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;
 		background-image: none;border: 1px solid #ccc;border-radius: 4px;" placeholder="Inserisci password" id="pwd" class="masked" name="password">
         <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
             <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>
@@ -145,20 +147,34 @@
 
 
 
-
 <div class="form-group">
 <input type="submit" value="Login" class="btn">
+
 <input type="submit" value="Esci" class="btn">
 </div>
 </form>
+
+
+<div class="rowgrid"   style="width: 100%;margin-left: 750px;margin-top: -180px;"> 
+  <div class="column">
+    <img src="img/bambina_nero.jpg" style="width:60%">
+    <img src="img/bambina_nero.jpg" style="width:30%">
+  </div>
+  <div class="column">
+    
+    <img src="img/bambina_nero.jpg" style="width:40%">
+  </div>  
+  
+</div>
+
 
 
 
 <div class="row">
 
 <div class=>
-<p style="margin-left: 628px;">Non sei registrato? </p>
-<p style="margin-left: 615px;"><a href="registrazione.jsp">Clicca qui</a> per registrarti </p>
+<p style="margin-left: 350px;">Non sei registrato? </p>
+<p style="margin-left: 330px;"><a href="registrazione.jsp">Clicca qui</a> per registrarti </p>
 
 </div>
 
