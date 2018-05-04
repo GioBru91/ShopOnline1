@@ -14,10 +14,11 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
-<body>
+<body >
 
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<%List<Prodotto> listaPiuVenduti = (List<Prodotto>) session.getAttribute("listaPiuVenduti"); %>
 <a id="home" href="index.jsp" >
 <center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
@@ -199,19 +200,33 @@
 <br>
 <h3 align="center">Prodotti più venduti</h3>
 <br>
+
+<%if(listaPiuVenduti == null) {%>
+<h2>Non ci sono prodotti nella lista</h2>
+<%}else{ %>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
 <div class="carousel-inner" >
-<div class="item ">
-<img class="img-carousel" src="img/scarpe1.jpg">
+<%for (Prodotto prodotto : listaPiuVenduti){ %>
+<div
+<%if(listaPiuVenduti.indexOf(prodotto) == 0) { %>
+class="item active"
+<% } else { %>
+ class="item"
+<% } %>
+>
+<img class="img-carousel" src="<%= prodotto.getImmagine()%>" id="popoverImg" rel="popover" data-content="
+<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,
+<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %> &euro;,
+<%if(prodotto.isOfferta()) { %> 
+Offerta: <%= prodotto.getSconto() %>%,
+<%} else {%>
+Non in offerta,
+<%} %>
+Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>" data-trigger="focus">
 </div>
-<div class="item active">
-<img class="img-carousel" src="img/donna_rosso.jpg">
+<%} %>
 </div>
-<div class="item">
-<img class="img-carousel" src="img/donna_tuta.jpg">
-</div>
-
-
+<%} %>
 <a class="left carousel-control" href="#myCarousel" data-slide ="prev">
 <span class="glyphicon glyphicon-chevron-left"></span>
 </a>
@@ -224,7 +239,9 @@
 <br>
 <br>
 
-
+<script>
+	$('#popoverImg').popover(); 
+</script>
 
 
 <div class="footer">
