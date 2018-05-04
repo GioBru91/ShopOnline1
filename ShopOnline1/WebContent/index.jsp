@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
@@ -42,7 +42,7 @@
 <%} %>
 </button>
 </a>
-
+</div>
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
  <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
@@ -86,8 +86,10 @@
                
 <div class="dropdown">
 
-<a data-toggle="dropdown" class="btn btn-primary">
-<div class="container" style="background-color: grey">
+<a data-toggle="dropdown" class="btn btn-primary"    style=" color: #fff;
+    background-color: grey;
+    border-color: grey;">
+<div class="container" style="background-color: grey; ">
   <div class="bar1" style="background-color: rgb(243, 217, 223);"></div>
   <div class="bar2" style="background-color: rgb(243, 217, 223)"></div>
   <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
