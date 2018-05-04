@@ -86,7 +86,7 @@
 </div>
  
    
-<form id="cerca" align="right" action="" method="get" width="2%" style="margin:0px">
+<form id="cerca" align="right" action="CercaProdotto" method="get" width="2%" style="margin:0px">
 <fieldset>
 <legend></legend>
 
@@ -221,9 +221,13 @@
 <%if(listaPiuVenduti == null) {%>
 <h2>Non ci sono prodotti nella lista</h2>
 <%}else{ %>
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
+<!-- data-ride="carousel" -->
+
 <div class="carousel-inner" >
 <%for (Prodotto prodotto : listaPiuVenduti){ %>
+
 <div
 <%if(listaPiuVenduti.indexOf(prodotto) == 0) { %>
 class="item active"
@@ -231,18 +235,15 @@ class="item active"
  class="item"
 <% } %>
 >
-<img class="img-carousel" src="<%= prodotto.getImmagine()%>" id="popoverImg" rel="popover" data-content="
-<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,
-<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %> &euro;,
-<%if(prodotto.isOfferta()) { %> 
-Offerta: <%= prodotto.getSconto() %>%,
-<%} else {%>
-Non in offerta,
-<%} %>
-Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>" data-trigger="focus">
+<a style="display:table" data-toggle="popover" data-trigger="hover" title="Prodotti più venduti" data-content="<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %>&euro;, <%if(prodotto.isOfferta()) { %> Offerta : <%= prodotto.getSconto() %>%, <%} else {%> Non in offerta <%}%>, Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>">
+<img  src="<%= prodotto.getImmagine()%>">
+<!-- class="img-carousel" -->
+</a>
+
 </div>
 <%} %>
 </div>
+
 <%} %>
 <a class="left carousel-control" href="#myCarousel" data-slide ="prev">
 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -250,15 +251,17 @@ Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>" data-trigger="fo
 <a class="right carousel-control" href="#myCarousel" data-slide ="next">
 <span class="glyphicon glyphicon-chevron-right"></span>
 </a>
-
 </div>
 
-<br>
-<br>
-
 <script>
-	$('#popoverImg').popover(); 
+$(document).ready(function() {
+  $('[data-toggle="popover"]').popover();
+}); 
 </script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<br>
+<br>
 
 
 <div class="footer">
