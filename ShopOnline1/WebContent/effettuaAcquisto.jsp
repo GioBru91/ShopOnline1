@@ -116,7 +116,6 @@
 </nav> 
 
 <br>
-
 <br>
 <br>
 
@@ -199,13 +198,8 @@ id="dataInizio" style="width: 50%">
 </div>
 
 
-</center>
-
-
 <br>
 <br>
-
-
 
 
 <div class="footer">

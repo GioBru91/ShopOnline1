@@ -133,29 +133,7 @@
 <br>
 </div>
 
-<div class="row" style="width: 55%; float: right; margin-right: ; margin-left: ; margin-top: -250px"> 
-  <div class="column">
-    <img src="img/pantaloni1.jpg" style="width:15%">
-    <img src="img/bambina_nero.jpg" style="width:15%">
-    <img src="img/camicia1.jpg" style="width:15%">
-    <img src="img/donna_rosso.jpg" style="width:15%">
-    <img src="img/cucina-isola-moderna-578634.jpg" style="width:15%">
-  </div>
-  <div class="column">
-    <img src="img/cucina-isola-moderna-578634.jpg" style="width:15%">
-    <img src="img/donna_rosso.jpg" style="width:15%">
-    <img src="img/pantaloni1.jpg" style="width:15%">
-    <img src="img/bambina_nero.jpg" style="width:15%">
-    <img src="img/camicia1.jpg" style="width:15%">
-  </div> 
-  <div class="column">
-   <img src="img/pantaloni1.jpg" style="width:15%">
-    <img src="img/bambina_nero.jpg" style="width:15%">
-    <img src="img/camicia1.jpg" style="width:15%">
-    <img src="img/donna_rosso.jpg" style="width:15%">
-    <img src="img/pantaloni1.jpg" style="width:15%">
-  </div> 
-</div>
+
  <br>
 <br>
 <p style="margin-left: 220px;font-size: 20px; margin-top: 80px;">Clicca <a href="modificaAccount.jsp">qui</a> 

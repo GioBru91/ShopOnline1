@@ -121,8 +121,8 @@
 <br>
 
 <div class="conteiner" class="page-header align-left">
-<div class="img-magnifier-container">
-<img id="myimage" src="<%= prodotto.getImmagine() %>" style="margin-left: 20px">
+<div class="img-magnifier-container" style="margin-left: 35px;">
+<img id="myimage" src="<%= prodotto.getImmagine() %>" style="margin-left: 30px; width: 20%">
 </div>
 <script>
 /* Initiate Magnify Function
@@ -133,7 +133,7 @@ magnify("myimage", 2);
 
 <center>
 
-<ul style="margin-top: -500px; font-size: 20px">
+<ul style=" margin-top: -220px; font-size: 20px">
 <p>Marca: <%=prodotto.getMarca() %> </p>
 <p>Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
 <%if(prodotto.isOfferta()) { %> 
@@ -158,8 +158,11 @@ Offerta: <img src="img/vverde.png" width="20px">
 <br>
 <br>
 <br>
+<img src="img/separator.png" width="100%" align="center" >
+<div align="center" style="margin-left:356px;">
 
-<div align="center">
+
+
 <%if (listaRecensioni != null){ %>
 <h3><u>Recensioni Prodotto</u></h3> <br>
 <ul>
@@ -189,7 +192,7 @@ Offerta: <img src="img/vverde.png" width="20px">
 disabled
 <%} %>
 >
-<img src="img/shop.png" style="width: 40px;">
+<img src="img/shop.png" style="width: 40px;margin-left: 45px;margin-top: -300px;">
 </button>
 
 </form>
