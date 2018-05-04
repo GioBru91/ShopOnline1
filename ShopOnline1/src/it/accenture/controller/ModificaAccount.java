@@ -37,7 +37,7 @@ public class ModificaAccount extends HttpServlet {
 	    utenteService.updateUtente(utente);
 		System.out.println(utente);
 		utenteService.close();
-		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
 		dispatcher.forward(req, resp);
 		
 		

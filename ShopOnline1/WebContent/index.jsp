@@ -214,7 +214,15 @@ class="item active"
  class="item"
 <% } %>
 >
-<img class="img-carousel" src="<%= prodotto.getImmagine()%>">
+<img class="img-carousel" src="<%= prodotto.getImmagine()%>" id="popoverImg" rel="popover" data-content="
+<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,
+<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %> &euro;,
+<%if(prodotto.isOfferta()) { %> 
+Offerta: <%= prodotto.getSconto() %>%,
+<%} else {%>
+Non in offerta,
+<%} %>
+Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>" data-trigger="focus">
 </div>
 <%} %>
 </div>
@@ -231,7 +239,9 @@ class="item active"
 <br>
 <br>
 
-
+<script>
+	$('#popoverImg').popover(); 
+</script>
 
 
 <div class="footer">
