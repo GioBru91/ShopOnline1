@@ -2,6 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>ShopOnline1</display-name>
  
+ <welcome-file-list><welcome-file>index.html</welcome-file></welcome-file-list>
  <!-- REGISTRAZIONE -->
   <servlet>
   <servlet-name>Registrazione</servlet-name>
@@ -186,5 +187,17 @@
   <servlet-mapping>
   <servlet-name>ModificaAccount</servlet-name>
   <url-pattern>/ModificaAccount</url-pattern>
+  </servlet-mapping>
+  
+  <!-- LISTA PIU VENDUTI -->
+  <servlet>
+  <servlet-name>ListaPiuVenduti</servlet-name>
+  <servlet-class>it.accenture.controller.ListaPiuVenduti
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaPiuVenduti</servlet-name>
+  <url-pattern>/ListaPiuVenduti</url-pattern>
   </servlet-mapping>
 </web-app>

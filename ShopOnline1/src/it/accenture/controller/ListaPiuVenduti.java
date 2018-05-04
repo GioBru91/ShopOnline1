@@ -20,9 +20,13 @@ public class ListaPiuVenduti extends HttpServlet{
 		List<Prodotto> listaPiuVenduti = new ArrayList<>();
 		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
 		listaPiuVenduti = prodottoService.prodottiPiuVenduti();
-		System.out.println("i prodotti sono : " + listaPiuVenduti.size());
+		System.out.println("i prodotti più venduti sono : " + listaPiuVenduti.size());
+		for (Prodotto prodotto : listaPiuVenduti) {
+			System.out.println(prodotto);
+		}
 		prodottoService.close();
-		req.setAttribute("listaPiuVenduti", listaPiuVenduti);
+		req.getSession().setAttribute("listaPiuVenduti", listaPiuVenduti);
+		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 		dispatcher.forward(req, resp);
 		
