@@ -188,14 +188,15 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	}
 
 	@Override
-	public Prodotto getProdottoByNome(String nomeProdotto) {
-		Prodotto prodotto = new Prodotto();
+	public List<Prodotto> getProdottoByNome(String nomeProdotto) {
+		List<Prodotto> listaCerca = new ArrayList<>();
 		ResultSet rs = null;
-		String query = "select * from prodotto where nome = " + nomeProdotto;
+		String query = "select * from prodotto where upper(nome) like " + "upper('%" + nomeProdotto + "%')";
 		try {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
 			if(rs.next()) {
+				Prodotto prodotto = new Prodotto();
 				prodotto.setIdProdotto(rs.getInt(1));
 				prodotto.setNome(nomeProdotto);
 				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
@@ -205,6 +206,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 				prodotto.setSconto(rs.getInt(7));
 				prodotto.setQuantitaDisponibile(rs.getInt(8));
 				prodotto.setImmagine(rs.getString(9));
+				listaCerca.add(prodotto);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -220,7 +222,7 @@ public class ProdottoDaoImpl implements ProdottoDao{
 				e.printStackTrace();
 			}
 		}
-		return prodotto;
+		return listaCerca;
 	}
 	
 	@Override

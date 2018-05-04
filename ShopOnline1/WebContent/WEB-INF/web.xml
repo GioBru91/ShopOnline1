@@ -200,4 +200,16 @@
   <servlet-name>ListaPiuVenduti</servlet-name>
   <url-pattern>/ListaPiuVenduti</url-pattern>
   </servlet-mapping>
+  
+  <!-- LISTA PRODOTTI -->
+  <servlet>
+  <servlet-name>CercaProdotto</servlet-name>
+  <servlet-class>it.accenture.controller.CercaProdotto
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>CercaProdotto</servlet-name>
+  <url-pattern>/CercaProdotto</url-pattern>
+  </servlet-mapping>
 </web-app>

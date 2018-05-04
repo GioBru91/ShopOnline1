@@ -1,5 +1,5 @@
-<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Prodotto"%>
+<%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -7,18 +7,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
+<title>Cerca Prodotto</title>
 <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
 </head>
-<body >
-
+<body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
+<% List<Prodotto> listaCerca = (List<Prodotto>) request.getAttribute("listaCerca"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
-<%List<Prodotto> listaPiuVenduti = (List<Prodotto>) session.getAttribute("listaPiuVenduti"); %>
+
+
 <a id="home" href="index.jsp" >
 <center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
@@ -29,12 +30,12 @@
 
 
 <div id="banner" align="right" style="margin-right: 30px">
-     <div id="banner-content"> 
+     <div id="banner-content">  
      
    
    <div class="container">  
    <a href="listaCarrello.jsp">
-<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="55%" style="margin:8px">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px">
 <%if (listaCarrello != null){ %>
 <%= listaCarrello.size() %>
 <%} else {%>
@@ -52,7 +53,6 @@
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
 						<%}else { %>
-						
 						<li><a href="ListaOrdini">I miei ordini</a></li>
 						<li><a href="ListaAcquisti">I miei acquisti</a></li>
 						<li><a href="Logout">Logout</a></li>
@@ -66,14 +66,15 @@
 
 </div>
 
+     
  
    
-<form id="cerca" align="right" action="CercaProdotto" method="get" width="2%" style="margin:0px">
+<form id="cerca" align="right" action="" method="get" width="2%" style="margin:0px">
 <fieldset>
 <legend></legend>
 
 <button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
-<input type="text" width="3%" name="nomeProdotto" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
+<input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
 </fieldset>
 </form>
    
@@ -88,10 +89,8 @@
                
 <div class="dropdown">
 
-<a data-toggle="dropdown" class="btn btn-primary"    style=" color: #fff;
-    background-color: grey;
-    border-color: grey;">
-<div class="container" style="background-color: grey; ">
+<a data-toggle="dropdown" class="btn btn-primary">
+<div class="container" style="background-color: grey">
   <div class="bar1" style="background-color: rgb(243, 217, 223);"></div>
   <div class="bar2" style="background-color: rgb(243, 217, 223)"></div>
   <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
@@ -117,135 +116,97 @@
 
 <br>
 
-<div class="jumbotron" style="align:center; font:initial; color: black;">
-<marquee scrollamount="10">
+<br>
+<br>
 
-<h1><a href="ListaSaldi" style="color: black">SALDI</a></h1>
-
-</marquee>
-</div>
-
-
-<div>
+<!-- CONTAINER -->
 <center>
-<marquee  align="middle" direction="up" scrollamount="8" width="1000" height="600" >
+<div class = "container">
+<div class = "table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th>N° Prodotto</th>
+<th>Nome</th>
+<th>Categoria</th>
+<th>Marca</th>
+<th>Prezzo</th>
+<th>Offerta</th>
+<th>Sconto</th>
+<th>Quantità Disponibile</th>
+<th>Immagine</th>
+</tr>
+</thead>
+<tbody>
+<% for (Prodotto prodotto : listaCerca) { %>
+<tr>
+<td><%= prodotto.getIdProdotto() %></td>
+<td><%= prodotto.getNome() %> </td>
+<td><%= prodotto.getCategoria().toString().replace("_", " ") %> </td>
+<td><%= prodotto.getMarca() %> </td>
+<td><%= prodotto.getPrezzo() %> &euro; </td>
 
-<h3 align="center">Abbigliamento Uomo</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
-<img src="img/slide2.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
-</a>
 
-<br>
-<br>
-
-<h3 align="center">Abbigliamento Donna</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">
-<img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-<br>
-<br>
-
-<h3 align="center">Abbigliamento Bambino</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">
-<img src="img/slide3.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-<br>
-<br>
-
-<h3 align="center">Tutto per la casa</h3>
-<br>
-<a href="ListaPerCategoria?categoria=CASA">
-<img src="img/slide4.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-<br>
-<br>
-
-<h3 align="center">Il mondo in un chip</h3>
-<br>
-<a href="ListaPerCategoria?categoria=ELETTRONICA">
-<img src="img/slide6.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-<br>
-<br>
-
-<h3 align="center">Angolo libri</h3>
-<br>
-<a a href="ListaPerCategoria?categoria=LIBRI">
-<img src="img/slide5.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
-</a>
-
-</marquee>
-</center>
-</div>
-
-<br>
-
-<HR width="1000" size="1" color="black" align="center">
-
-<br>
-
-<h1 align="center"><a href="ListaProdotti" style="color: black">Scopri i nostri prodotti</a></h1>
-
-<br>
-
-<HR width="1000" size="1" color="black" align="center">
-
-<br>
-<br>
-<h3 align="center">Prodotti più venduti</h3>
-<br>
-
-<%if(listaPiuVenduti == null) {%>
-<h2>Non ci sono prodotti nella lista</h2>
-<%}else{ %>
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
-<!-- data-ride="carousel" -->
-
-<div class="carousel-inner" >
-<%for (Prodotto prodotto : listaPiuVenduti){ %>
-
-<div
-<%if(listaPiuVenduti.indexOf(prodotto) == 0) { %>
-class="item active"
-<% } else { %>
- class="item"
-<% } %>
+<%if(prodotto.isOfferta()) { %> 
+<td>
+<img src="img/vverde.png" width="20px">
+</td>
+<td><%= prodotto.getSconto() %> % </td>
+<%} else {%>
+<td>
+<img src="img/xrossa.png" width="20px">
+</td>
+<td>--</td>
+<%} %>
+<td><%= prodotto.getQuantitaDisponibile() %> </td>
+<td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
+<td>
+<form action="EffettuaAcquisto" method="get" >
+<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
+<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
+<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
+<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
+<button class= "btn" id="Acquisto" 
+<%if (utente == null){ %>
+disabled
+<%} %>
 >
-<a style="display:table" data-toggle="popover" data-trigger="hover" title="Prodotti più venduti" data-content="<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %>&euro;, <%if(prodotto.isOfferta()) { %> Offerta : <%= prodotto.getSconto() %>%, <%} else {%> Non in offerta <%}%>, Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>">
-<img  src="<%= prodotto.getImmagine()%>">
-<!-- class="img-carousel" -->
-</a>
-
-</div>
+<img src="img/shop.png" style="width: 40px;">
+</button>
+</form>
+</td>
+<td>
+<form action="DettagliProdotto" method="post" >
+<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
+<button class= "btn" id="Dettagli">
+<img src="img/dettagli.png" style="width: 37px;">
+</button>
+</form>
+</td>
+<td>
+<form action="Carrello" method="get" >
+<input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
+<button class= "btn" id="Carrello" 
+<%if (utente == null){ %>
+disabled
 <%} %>
-</div>
-
+>
+<img src="img/AddToCart.png" style="width: 40px;">
+</button>
+</form>
 <%} %>
-<a class="left carousel-control" href="#myCarousel" data-slide ="prev">
-<span class="glyphicon glyphicon-chevron-left"></span>
-</a>
-<a class="right carousel-control" href="#myCarousel" data-slide ="next">
-<span class="glyphicon glyphicon-chevron-right"></span>
-</a>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-
-<script>
-$(document).ready(function() {
-  $('[data-toggle="popover"]').popover();
-}); 
-</script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</div>
+</center>
 
 <br>
 <br>
+
+
 
 
 <div class="footer">
@@ -291,8 +252,6 @@ $(document).ready(function() {
     </div>
     </center>
 </div>
-
- <HR width="1300" size="1" color="black" align="center">
- 
- </body>
+<HR width="1300" size="1" color="black" align="center">
+</body>
 </html>
