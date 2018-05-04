@@ -162,11 +162,13 @@ disabled
 <td>
 <form action="inserisciRecensione.jsp">
 <input type="hidden" name="idProdotto" value="<%= acquisto.getIdProdotto()%>">
-<input type="submit" value ="Recensisci" class = "btn btn-success" style="width: 100px"
+<button class= "btn" id="Recensisci" 
 <%if (utente == null){ %>
 disabled
 <%} %>
 >
+<img src="img/icona_recensioni.png" style="width: 40px;">
+</button>
 </form>
 </td>
 
