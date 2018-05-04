@@ -132,6 +132,7 @@ magnify("myimage", 2);
 </div>
 
 <center>
+
 <ul style="margin-top: -500px; font-size: 20px">
 <p>Marca: <%=prodotto.getMarca() %> </p>
 <p>Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
