@@ -114,7 +114,7 @@
 </nav> 
 
 <br>
-
+<h1 style="margin-left: 250px">Inserisci i tuoi dati</h1>
 <br>
 <br>
 
@@ -168,6 +168,45 @@
          </button>
   </div>
 </div>
+
+
+
+<div class="row" style="width: 55%; float: right; margin-right: -280px ; margin-left: ; margin-top: -480px"> 
+  <div class="column">
+    <img src="img/pantaloni1.jpg" style="width:15%">
+    <img src="img/bambina_nero.jpg" style="width:15%">
+    <img src="img/camicia1.jpg" style="width:15%">
+    
+  </div>
+  <div class="column">
+    <img src="img/cucina-isola-moderna-578634.jpg" style="width:15%">
+    <img src="img/donna_rosso.jpg" style="width:15%">
+    <img src="img/pantaloni1.jpg" style="width:15%">
+    
+  </div> 
+  <div class="column">
+   <img src="img/camicia1.jpg" style="width:15%">
+    <img src="img/bambina_nero.jpg" style="width:15%">
+   <img src="img/donna_rosso.jpg" style="width:15%">
+    
+  </div> 
+  <div class="column">
+    <img src="img/pantaloni1.jpg" style="width:15%">
+    <img src="img/bambina_nero.jpg" style="width:15%">
+    <img src="img/camicia1.jpg" style="width:15%">
+    
+  </div>
+   <div class="column">
+    <img src="img/cucina-isola-moderna-578634.jpg" style="width:15%">
+    <img src="img/donna_rosso.jpg" style="width:15%">
+    <img src="img/pantaloni1.jpg" style="width:15%">
+    
+  </div> 
+</div>
+ <br>
+<br>
+
+
 
 
 <!-- bottoni -->

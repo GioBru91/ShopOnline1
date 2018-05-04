@@ -114,9 +114,16 @@
 </nav> 
 
 <br>
-<center><h1>Il mio account</h1></center>
+<br>
+<br>
+<br>
+<h1 style="margin-left: 250px">My Account <img src="img/emoij_flower.png" style="width: 3%"></h1>
 
-<div style="margin-left: 40px">
+<br>
+<br>
+
+
+<div style="margin-left: 250px">
 <ul style="font-size: 20px">
 <li>Nome      : <%=utente.getNome() %> </li>
 <li>Cognome   : <%=utente.getCognome() %></li>
@@ -126,10 +133,33 @@
 <br>
 </div>
 
-<center>
-<p style="font-size: 20px">Clicca <a href="modificaAccount.jsp">qui</a> 
+<div class="row" style="width: 55%; float: right; margin-right: ; margin-left: ; margin-top: -250px"> 
+  <div class="column">
+    <img src="img/pantaloni1.jpg" style="width:15%">
+    <img src="img/bambina_nero.jpg" style="width:15%">
+    <img src="img/camicia1.jpg" style="width:15%">
+    <img src="img/donna_rosso.jpg" style="width:15%">
+    <img src="img/cucina-isola-moderna-578634.jpg" style="width:15%">
+  </div>
+  <div class="column">
+    <img src="img/cucina-isola-moderna-578634.jpg" style="width:15%">
+    <img src="img/donna_rosso.jpg" style="width:15%">
+    <img src="img/pantaloni1.jpg" style="width:15%">
+    <img src="img/bambina_nero.jpg" style="width:15%">
+    <img src="img/camicia1.jpg" style="width:15%">
+  </div> 
+  <div class="column">
+   <img src="img/pantaloni1.jpg" style="width:15%">
+    <img src="img/bambina_nero.jpg" style="width:15%">
+    <img src="img/camicia1.jpg" style="width:15%">
+    <img src="img/donna_rosso.jpg" style="width:15%">
+    <img src="img/pantaloni1.jpg" style="width:15%">
+  </div> 
+</div>
+ <br>
+<br>
+<p style="margin-left: 220px;font-size: 20px; margin-top: 80px;">Clicca <a href="modificaAccount.jsp">qui</a> 
 per modificare i tuoi dati</p>
-</center>
 
 
 
