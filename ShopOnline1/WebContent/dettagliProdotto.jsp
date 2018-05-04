@@ -148,21 +148,8 @@ Offerta: <img src="img/vverde.png" width="20px">
 <p>--</p>
 <%} %>
 <p>Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %> </p>
-<br><br>
-
-<form action="EffettuaAcquisto" method="get">
-<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
-<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
-<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
-<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
-<button class= "btn" id="Acquisto" 
-<%if (utente == null){ %>
-disabled
-<%} %>
->
-<img src="img/shop.png" style="width: 40px;">
-</button>
-</form>
+</center>
+<br><br><br>
 
 
 
@@ -172,7 +159,7 @@ disabled
 <br>
 <br>
 
-
+<div align="center">
 <%if (listaRecensioni != null){ %>
 <h3><u>Recensioni Prodotto</u></h3> <br>
 <ul>
@@ -188,7 +175,32 @@ disabled
 <%} %>
 
 </ul>
-</center>
+</div>
+
+
+<div align="center">
+<form action="EffettuaAcquisto" method="get">
+<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
+<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
+<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
+<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
+<button class= "btn" id="Acquisto" 
+<%if (utente == null){ %>
+disabled
+<%} %>
+>
+<img src="img/shop.png" style="width: 40px;">
+</button>
+
+</form>
+</div>
+
+
+
+
+
+
+
 
 
 <br>
