@@ -148,16 +148,19 @@ Offerta: <img src="img/vverde.png" width="20px">
 <%} %>
 <p>Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %> </p>
 <br><br>
-<form action="EffettuaAcquisto" method="get" >
+
+<form action="EffettuaAcquisto" method="get">
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
-<input type="submit" value ="Acquista" class = "btn btn-success" style="width: 90px; font-size: 20px;"
+<button class= "btn" id="Acquisto" 
 <%if (utente == null){ %>
 disabled
 <%} %>
 >
+<img src="img/shop.png" style="width: 40px;">
+</button>
 </form>
 
 
