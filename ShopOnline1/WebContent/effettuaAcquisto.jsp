@@ -123,9 +123,9 @@
 <img src="<%= prodotto.getImmagine() %>" style="margin-left: 20px" >
 </div>
 
-<div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;">
+<div style="line-height: 34px; width: 40%; float: right; margin-right: 20%;">
 <center>
-<ul style="margin-top: -500px;  font-size: 20px">
+<ul style="margin-top: -563px;  font-size: 20px">
 <p><b><%=prodotto.getNome() %></b></p>
 <p>Marca: <%=prodotto.getMarca() %> </p>
 <p>Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
@@ -145,10 +145,9 @@ Offerta: <img src="img/vverde.png" width="20px">
 </center>
 </div>
 
-
 <form action="EffettuaAcquisto" method="post">
-
-<div class="form-group" style="line-height: 34px; width: 40%; float: right; margin-right: 15%; margin-top: -220px;">
+<div class="form-group"  style="margin-left: 300px;">
+<div style="line-height: 34px; width: 40%; float: right; margin-right: 15%; margin-top: -220px;">
 <label>Scegli la data di inizio spedizione</label>
 <div  style="margin-top: 5px;">
 <input type="date" name="dataInizio" class="form-control" min="<%=LocalDate.now()%>" value="<%=LocalDate.now()%>"
@@ -159,7 +158,7 @@ id="dataInizio" style="width: 50%">
 <br>
 
 
-<div class="form-group" style="line-height: 34px; width: 40%; float: right; margin-right: 15%;margin-top: -140px;">
+<div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;margin-top: -140px;">
 <label>Scegli il tipo di spedizione</label>
 <div style="margin-top: 5px;">
 <input type="radio" name="tipoSpedizione" value="ORDINARIA" checked>
@@ -177,12 +176,12 @@ id="dataInizio" style="width: 50%">
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;margin-top: -20px;">
 <label>Scegli la quantità da acquistare</label>
 <input type="number" name="quantitaAcquistata" step="1" min="0" max="<%=prodotto.getQuantitaDisponibile() %>" style="text-align: right;width: 60px;margin-left: 2%;"  id="quantitaAcquistata" >
+
 </div>
-
 <br>
 <br>
-
-<div class="form-group" style="line-height: 34px; width: 40%; float: right; margin-right: 6%; margin-top: 2%">
+</div>
+<div  style="line-height: 34px; width: 40%; float: right; margin-right: 6%; margin-top: 2%">
 <center>
 <div style="margin-top: 10px">
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
@@ -190,6 +189,7 @@ id="dataInizio" style="width: 50%">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
 <input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
+
 <button class= "btn" id="Acquisto" 
 <%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
 disabled
@@ -197,13 +197,13 @@ disabled
 >
 <img src="img/shop.png" style="width: 40px;">
 </button>
-
+<h4><u>Acquista</u></h4>
 </div>
 </center>
 </div>
 </form>
 
-</div>
+
 
 
 <br>
