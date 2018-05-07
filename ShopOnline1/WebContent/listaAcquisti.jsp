@@ -19,6 +19,7 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% List<Acquisto> listaAcquisti = (List<Acquisto>) request.getAttribute("listaAcquisti"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<%Prodotto prodotto = (Prodotto) request.getAttribute("prodotto"); %>
 
 <a id="home" href="index.jsp" >
 <center>
@@ -151,7 +152,7 @@
 <form action="EffettuaAcquisto" method="get" >
 <input type="hidden" name="idProdotto" value="<%= acquisto.getIdProdotto()%>">
 <button class= "btn" id="Acquisto" 
-<%if (utente == null){ %>
+<%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
 disabled
 <%} %>
 >

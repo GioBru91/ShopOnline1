@@ -19,6 +19,8 @@ public interface ProdottoDao {
 	
 	public List<Prodotto> prodottiPiuVenduti();
 	
+	public void updateQuantità (int nuovaQuantita, int idProdotto);
+	
 	public void close();
 	
 }

@@ -212,4 +212,16 @@
   <servlet-name>CercaProdotto</servlet-name>
   <url-pattern>/CercaProdotto</url-pattern>
   </servlet-mapping>
+  
+  <!-- RIMUOVI CARRELLO -->
+  <servlet>
+  <servlet-name>RimuoviCarrello</servlet-name>
+  <servlet-class>it.accenture.controller.RimuoviCarrello
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>RimuoviCarrello</servlet-name>
+  <url-pattern>/RimuoviCarrello</url-pattern>
+  </servlet-mapping>
 </web-app>
