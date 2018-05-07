@@ -50,8 +50,8 @@
 </a>
 <ul class="dropdown-menu" style="margin-left: 73%; margin-right:8%; margin-top: -1%; font-size: 20px;">
 						<%if(utente == null) {%>
-   						<li><a href="login.jsp">Login</a></li>
-						<li><a href="registrazione.jsp">Registrazione</a></li>
+   						<li><a href="login.jsp">Login <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="27%"></a></li>
+						<li><a href="registrazione.jsp">Registrazione <img src="img/Free-Watercolor-Border-Flowers-PNG.png" width="27%"></a></li>
 						<%}else { %>
 						<li><a href="myAccount.jsp">My account <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="27%"></a></li>
 						<li><a href="ListaOrdini">I miei ordini <img src="img/icona_ordini.png" width="20%"></a></li>
@@ -84,14 +84,12 @@
 
  
 	<nav class="nav navbar-default">
-       <div class=" collapse navbar-collapse" style="margin-left:4px;background-color: grey;">
+       <div class=" collapse navbar-collapse" style="margin-left:4px; background-color: grey;">
             <ul class="nav navbar-nav">
                
 <div class="dropdown">
 
-<a data-toggle="dropdown" class="btn btn-primary"    style=" color: #fff;
-    background-color: grey;
-    border-color: grey;">
+<a data-toggle="dropdown" class="btn btn-primary" style=" color: #fff; background-color: grey; border-color: grey;">
 <div class="container" style="background-color: grey; ">
   <div class="bar1" style="background-color: rgb(243, 217, 223);"></div>
   <div class="bar2" style="background-color: rgb(243, 217, 223)"></div>
