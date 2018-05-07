@@ -30,11 +30,11 @@
 
 
 <div id="banner" align="right" style="margin-right: 30px">
-     <div id="banner-content"> 
-     
-   
-   <div class="container">  
-   <a href="listaCarrello.jsp">
+
+<div id="banner-content"> 
+       
+<div class="container">  
+<a href="listaCarrello.jsp">
 <button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="57%" style="margin:8px; margin-bottom: 0px;">
 <%if (listaCarrello != null){ %>
 <%= listaCarrello.size() %>
@@ -46,8 +46,9 @@
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
- <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-50%; margin-left: -100px; "></button>
+<button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-50%; margin-left: -100px; "></button>
 </a>
+
 <ul class="dropdown-menu" style="margin-left: 73%; margin-right:8%; margin-top: -1%; font-size: 20px;">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="27%"></a></li>
@@ -57,35 +58,28 @@
 						<li><a href="ListaOrdini">I miei ordini <img src="img/icona_ordini.png" width="20%"></a></li>
 						<li><a href="ListaAcquisti">I miei acquisti <img src="img/icona_acquistipng.png" width="15%"></a></li>
 						<li><a href="Logout">Logout <img src="img/icona_logout.png" width="12%"></a></li>
-						<%} %>
-						
-   <li class="divider"></li>
+						<%} %>					
+<li class="divider"></li>
 </ul>
 </div>
 
-
-
 </div>
 
- 
    
 <form id="cerca" align="right" action="CercaProdotto" method="get" width="2%" style="margin:0px">
 <fieldset>
 <legend></legend>
-
 <button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
 <input type="text" width="3%" name="nomeProdotto" placeholder=" Cerca il prodotto" style="font-family: inherit;font-size: 18px;font-weight: normal;width: 210px;margin-top: 5px;"> 
 </fieldset>
 </form>
    
-    </div>
-  </div>
+</div>
+</div>
   
-
- 
-	<nav class="nav navbar-default">
-       <div class=" collapse navbar-collapse" style="margin-left:4px; background-color: grey;">
-            <ul class="nav navbar-nav">
+<nav class="nav navbar-default">
+<div class=" collapse navbar-collapse" style="margin-left:4px; background-color: grey;">
+<ul class="nav navbar-nav">
                
 <div class="dropdown">
 
@@ -109,7 +103,7 @@
    <li><a>----------</a></li>
    <li><a href="ListaProdotti">TUTTI I PRODOTTI</a></li>
    <li class="divider"></li>
-    </ul>
+</ul>
 </div>
 </ul>
 </div>
@@ -120,12 +114,7 @@
 <div class="jumbotron" style="align:center; font:initial; color: black;">
 <marquee scrollamount="10">
 
-<h1><a href="ListaSaldi" style="color: black;
-    font-size: 80px;
-    font-style: oblique;
-    font-family: Old Standard TT;
-    font-weight: inherit;">SALDI</a></h1>
-
+<h1><a href="ListaSaldi" style="color: black; font-size: 80px; font-style: oblique; font-family: Old Standard TT; font-weight: inherit;">SALDI</a></h1>
 </marquee>
 </div>
 
@@ -134,7 +123,6 @@
 <div>
 <center>
 <marquee  align="middle" direction="up" scrollamount="8" width="1000" height="600" >
-
 <h3 align="center" style="font-size: 50px;" >Abbigliamento Uomo</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
@@ -204,7 +192,9 @@
 
 <br>
 <br>
+
 <h3 align="center" style=" font-size: 35px;">Prodotti più venduti</h3>
+
 <br>
 
 <%if(listaPiuVenduti == null) {%>
@@ -224,6 +214,7 @@ class="item active"
  class="item"
 <% } %>
 >
+
 <a style="display:table" data-toggle="popover" data-trigger="hover" title="Prodotti più venduti" data-content="<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %>&euro;, <%if(prodotto.isOfferta()) { %> Offerta : <%= prodotto.getSconto() %>%, <%} else {%> Non in offerta <%}%>, Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>">
 <img  src="<%= prodotto.getImmagine()%>">
 <!-- class="img-carousel" -->
@@ -297,7 +288,7 @@ $(document).ready(function() {
     </center>
 </div>
 
- <HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
+<HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
  
- </body>
+</body>
 </html>
