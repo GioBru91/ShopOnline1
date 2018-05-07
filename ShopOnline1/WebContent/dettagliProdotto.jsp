@@ -187,10 +187,9 @@ disabled
 <div id="recension1" align="center" style="margin-left:356px;">
 
 <%if (listaRecensioni != null){ %>
-<h3><u style="margin-right: 500px;
-    margin-left: -880px;"
+<h3><u style="margin-right: 500px; margin-left: -800px; font-size: 150%"
 >Recensioni Prodotto <img src="img/recensioni_prodotto.png" width="5%"></u></h3> <br>
-<ul>
+<ul id="idrecensioni" style=" margin-left: -1400px;">
 <%for(Recensioni recensioni : listaRecensioni){ %>
 <h4><b><i><%=recensioni.getTitolo() %></i></b></h4>
 <h4><%=recensioni.getContenuto() %></h4>
