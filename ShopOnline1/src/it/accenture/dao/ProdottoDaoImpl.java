@@ -267,4 +267,26 @@ public class ProdottoDaoImpl implements ProdottoDao{
 		return listaPiuVenduti;
 	}
 
+	@Override
+	public void updateQuantità(int nuovaQuantita, int idProdotto) {
+		String query = "update prodotto set quantita_disponibile = ? where id_prodotto = " + idProdotto;
+		Prodotto prodotto = null;
+		try {
+			prepared = connection.prepareStatement(query);
+			prodotto = new Prodotto();
+			prepared.setInt(1, nuovaQuantita);
+			prepared.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			if (prepared != null){
+				try {
+					prepared.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+
 }

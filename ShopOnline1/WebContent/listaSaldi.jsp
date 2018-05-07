@@ -156,7 +156,7 @@
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
 <input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
 <button class= "btn" id="Acquisto" 
-<%if (utente == null){ %>
+<%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
 disabled
 <%} %>
 >

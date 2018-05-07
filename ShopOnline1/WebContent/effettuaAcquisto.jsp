@@ -126,6 +126,7 @@
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;">
 <center>
 <ul style="margin-top: -500px;  font-size: 20px">
+<p><b><%=prodotto.getNome() %></b></p>
 <p>Marca: <%=prodotto.getMarca() %> </p>
 <p>Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
 <%if(prodotto.isOfferta()) { %> 
@@ -175,7 +176,7 @@ id="dataInizio" style="width: 50%">
 
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;margin-top: -20px;">
 <label>Scegli la quantità da acquistare</label>
-<input type="number" name="quantitaAcquistata" step="1" style="text-align: right;width: 60px;margin-left: 2%;"  id="quantitaAcquistata" >
+<input type="number" name="quantitaAcquistata" step="1" min="0" max="<%=prodotto.getQuantitaDisponibile() %>" style="text-align: right;width: 60px;margin-left: 2%;"  id="quantitaAcquistata" >
 </div>
 
 <br>
@@ -189,8 +190,14 @@ id="dataInizio" style="width: 50%">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
 <input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
-<input type="submit" class="btn btn-primary" value="Acquista" style="width: 70px;">
-<input type="reset" class="btn btn-warning" value="Resetta" style="width: 70px;">
+<button class= "btn" id="Acquisto" 
+<%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
+disabled
+<%} %>
+>
+<img src="img/shop.png" style="width: 40px;">
+</button>
+
 </div>
 </center>
 </div>

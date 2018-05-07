@@ -19,7 +19,7 @@ public class Carrello extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-		Utente utenteLoggato = (Utente) req.getAttribute("utenteLoggato");
+		Utente utenteLoggato = (Utente) session.getAttribute("utenteLoggato");
 		
 		int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
 		

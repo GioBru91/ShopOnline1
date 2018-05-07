@@ -51,6 +51,8 @@ public class EffettuaAcquisto extends HttpServlet {
 		int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
 		boolean offerta = Boolean.parseBoolean(req.getParameter("offerta"));
 		int percSconto = Integer.parseInt(req.getParameter("sconto"));
+		int qProdotto = Integer.parseInt(req.getParameter("qProdotto"));
+		
 		int quantitaAcquistata = Integer.parseInt(req.getParameter("quantitaAcquistata"));
 		
 		HttpSession sessione = req.getSession();
@@ -58,6 +60,7 @@ public class EffettuaAcquisto extends HttpServlet {
 		
 		
 		double prezzoTotale = (prezzoProdotto * quantitaAcquistata) + tipoSpedizione1.getPrezzoSpedizione(); 
+		int nuovaQuantità = qProdotto - quantitaAcquistata;
 		double sconto = 0;
 		double prezzoScontato = 0;
 		
@@ -76,11 +79,18 @@ public class EffettuaAcquisto extends HttpServlet {
 			
 			System.out.println(acquisto.getDataInizio());
 			System.out.println(acquisto.getDataFine());
+			System.out.println("la nuova quantità è :" + nuovaQuantità);
 			System.out.println(acquisto);
 			
 			AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
+			ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
 			acquistoService.insertAcquisto(acquisto);
+			prodottoService.updateQuantità(nuovaQuantità, idProdotto);
+			acquistoService.close();
+			prodottoService.close();
 			resp.sendRedirect("ListaOrdini");
+			
+		
 				
 		}else {
 			Acquisto acquisto = new Acquisto();
@@ -94,9 +104,14 @@ public class EffettuaAcquisto extends HttpServlet {
 			acquisto.setPrezzoTotale(prezzoTotale);
 			
 			System.out.println(acquisto);
+			System.out.println("la nuova quantità è :" + nuovaQuantità);
 			
 			AcquistoDaoImpl acquistoService = new AcquistoDaoImpl();
+			ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
 			acquistoService.insertAcquisto(acquisto);
+			prodottoService.updateQuantità(nuovaQuantità, idProdotto);
+			acquistoService.close();
+			prodottoService.close();
 			resp.sendRedirect("ListaOrdini");
 		}
 	}
