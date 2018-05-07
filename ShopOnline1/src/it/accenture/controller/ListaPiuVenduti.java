@@ -25,7 +25,7 @@ public class ListaPiuVenduti extends HttpServlet{
 			System.out.println(prodotto);
 		}
 		prodottoService.close();
-		req.getSession().setAttribute("listaPiuVenduti", listaPiuVenduti);
+		req.getSession(true).setAttribute("listaPiuVenduti", listaPiuVenduti);
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
 		dispatcher.forward(req, resp);

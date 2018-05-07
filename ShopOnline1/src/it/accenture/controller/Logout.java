@@ -11,16 +11,16 @@ import javax.servlet.http.HttpSession;
 
 public class Logout extends HttpServlet {
 
-@Override
-protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	HttpSession sessione = req.getSession();
-	sessione.invalidate();
-	RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
-	dispatcher.forward(req, resp);
-	
-	
-	
-}	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		req.getSession().removeAttribute("utenteLoggato");
+		System.out.println("Logout avvenuto con successo");
+		resp.sendRedirect("index.html");
+		
+		
+		
+	}	
 	
 	
 	
