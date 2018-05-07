@@ -161,7 +161,7 @@ disabled
 </form>
 </td>
 <td>
-<form action="prendiProdotto" method="get">
+<form action="PrendiProdotto" method="get">
 <input type="hidden" name="idProdotto" value="<%= acquisto.getIdProdotto()%>">
 <button class= "btn" id="Recensisci" 
 <%if (utente == null){ %>
