@@ -149,10 +149,10 @@
 
 
 <td>
-<form action="EffettuaAcquisto" method="get" >
+<form action="EffettuaAcquisto" method="get">
 <input type="hidden" name="idProdotto" value="<%= acquisto.getIdProdotto()%>">
 <button class= "btn" id="Acquisto" 
-<%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
+<%if (utente == null){ %>
 disabled
 <%} %>
 >
