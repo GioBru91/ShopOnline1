@@ -13,9 +13,9 @@
 <script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
-<link href="https://fonts.googleapis.com/css?family=Katibeh" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
 </head>
-<body style="font-family: 'Katibeh', serif;">
+<body style="font-family: 'Old Standard TT', serif;">
 
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
@@ -35,7 +35,7 @@
    
    <div class="container">  
    <a href="listaCarrello.jsp">
-<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="55%" style="margin:8px">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="57%" style="margin:8px; margin-bottom: 0px;">
 <%if (listaCarrello != null){ %>
 <%= listaCarrello.size() %>
 <%} else {%>
@@ -46,17 +46,17 @@
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
- <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-50%; margin-left: -100px; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 78%; margin-top: -2%; font-size: 25px;">
+<ul class="dropdown-menu" style="margin-left: 70%; margin-right:40%; margin-top: -1%; font-size: 20px;">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
 						<%}else { %>
-						<li><a href="myAccount.jsp">My account</a></li>
-						<li><a href="ListaOrdini">I miei ordini</a></li>
-						<li><a href="ListaAcquisti">I miei acquisti</a></li>
-						<li><a href="Logout">Logout</a></li>
+						<li><a href="myAccount.jsp">My account <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="25%"></a></li>
+						<li><a href="ListaOrdini">I miei ordini <img src="img/icona_ordini.png" width="20%"></a></li>
+						<li><a href="ListaAcquisti">I miei acquisti <img src="img/icona_acquistipng.png" width="15%"></a></li>
+						<li><a href="Logout">Logout <img src="img/icona_logout.png" width="12%"></a></li>
 						<%} %>
 						
    <li class="divider"></li>
@@ -74,7 +74,7 @@
 <legend></legend>
 
 <button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
-<input type="text" width="3%" name="nomeProdotto" placeholder=" Cerca il prodotto" style="font-family: inherit;font-size: 20px;font-weight: normal;width: 210px;margin-top: 5px;"> 
+<input type="text" width="3%" name="nomeProdotto" placeholder=" Cerca il prodotto" style="font-family: inherit;font-size: 18px;font-weight: normal;width: 210px;margin-top: 5px;"> 
 </fieldset>
 </form>
    
@@ -98,7 +98,8 @@
   <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
 </div></a>
 
-<ul class="dropdown-menu" style="font-size: 22px;">
+<ul class="dropdown-menu" style="font-size: 20px; margin-top: -30px;
+    margin-left: 41px;">
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">UOMO</a></li>
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">DONNA</a></li>
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">BAMBINO</a></li>
@@ -122,14 +123,15 @@
 <marquee scrollamount="10">
 
 <h1><a href="ListaSaldi" style="color: black;
-    font-size: 120px;
+    font-size: 80px;
     font-style: oblique;
-    font-family: Katibeh;
+    font-family: Old Standard TT;
     font-weight: inherit;">SALDI</a></h1>
 
 </marquee>
 </div>
 
+<br>
 
 <div>
 <center>
@@ -192,19 +194,19 @@
 
 <br>
 
-<HR width="1000" size="1" color="black" align="center">
+<HR width="1000" size="2" color="black" align="center" style="border-top: 3px solid;">
 
 <br>
 
-<h1 align="center"><a href="ListaProdotti" style="color: black">Scopri i nostri prodotti</a></h1>
+<h1 align="center"><a href="ListaProdotti" style="color: black; font-size: 35px; font-style: italic;">Scopri i nostri prodotti</a></h1>
 
 <br>
 
-<HR width="1000" size="1" color="black" align="center">
+<HR width="1000" size="2" color="black" align="center" style="border-top: 3px solid;">
 
 <br>
 <br>
-<h3 align="center">Prodotti più venduti</h3>
+<h3 align="center" style=" font-size: 35px;">Prodotti più venduti</h3>
 <br>
 
 <%if(listaPiuVenduti == null) {%>
@@ -272,7 +274,7 @@ $(document).ready(function() {
 </div>
 
 <div class="G2lBJZk"></div>
-<HR width="1300" size="1" color="black" align="center">
+<HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
 <center>
     <div class="container">
        <a id="home" href="index.jsp" >
@@ -281,15 +283,15 @@ $(document).ready(function() {
 </a> 
         <div id='skills'>
             <div class="skill">
-                <h4><a href="contatti.jsp" style="color: black">CHI SIAMO</a></h4>
+                <h4><a href="contatti.jsp" style="color: black; font-size: 20px;">CHI SIAMO</a></h4>
                
             </div>
             <div class="skill">
-                <h4><a href="contatti.jsp" style="color: black">CONTATTI</h4>
+                <h4><a href="contatti.jsp" style="color: black; font-size: 20px;">CONTATTI</h4>
                 
             </div>
             <div class="skill">
-                <h4><a href="contatti.jsp" style="color: black">INDICAZIONI STRADALI</h4>
+                <h4><a href="contatti.jsp" style="color: black; font-size: 20px;">INDICAZIONI STRADALI</h4>
                
             </div>
         </div>
@@ -297,7 +299,7 @@ $(document).ready(function() {
     </center>
 </div>
 
- <HR width="1300" size="1" color="black" align="center">
+ <HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
  
  </body>
 </html>
