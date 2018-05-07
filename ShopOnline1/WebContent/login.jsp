@@ -171,8 +171,7 @@
 
 
 
-<div class="row" style="margin-right: 42px;
-    margin-left: 31px;">
+<div class="row" style="margin-right: 42px; margin-left: 31px;">
 
 <div class=>
 <p style="margin-left: 350px;font-size: 110%" >Non sei registrato? </p>
