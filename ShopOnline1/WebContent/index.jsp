@@ -13,8 +13,9 @@
 <script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
+<link href="https://fonts.googleapis.com/css?family=Katibeh" rel="stylesheet">
 </head>
-<body >
+<body style="font-family: 'Katibeh', serif;">
 
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
@@ -47,7 +48,7 @@
 <a data-toggle="dropdown">
  <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 78%; margin-top: -2%">
+<ul class="dropdown-menu" style="margin-left: 78%; margin-top: -2%; font-size: 25px;">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
@@ -73,7 +74,7 @@
 <legend></legend>
 
 <button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
-<input type="text" width="3%" name="nomeProdotto" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
+<input type="text" width="3%" name="nomeProdotto" placeholder=" Cerca il prodotto" style="font-family: inherit;font-size: 20px;font-weight: normal;width: 210px;margin-top: 5px;"> 
 </fieldset>
 </form>
    
@@ -97,7 +98,7 @@
   <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
 </div></a>
 
-<ul class="dropdown-menu">
+<ul class="dropdown-menu" style="font-size: 22px;">
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">UOMO</a></li>
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">DONNA</a></li>
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">BAMBINO</a></li>
@@ -120,7 +121,11 @@
 <div class="jumbotron" style="align:center; font:initial; color: black;">
 <marquee scrollamount="10">
 
-<h1><a href="ListaSaldi" style="color: black">SALDI</a></h1>
+<h1><a href="ListaSaldi" style="color: black;
+    font-size: 120px;
+    font-style: oblique;
+    font-family: Katibeh;
+    font-weight: inherit;">SALDI</a></h1>
 
 </marquee>
 </div>
@@ -130,7 +135,7 @@
 <center>
 <marquee  align="middle" direction="up" scrollamount="8" width="1000" height="600" >
 
-<h3 align="center">Abbigliamento Uomo</h3>
+<h3 align="center" style="font-size: 50px;" >Abbigliamento Uomo</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">
 <img src="img/slide2.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0" >
@@ -139,7 +144,7 @@
 <br>
 <br>
 
-<h3 align="center">Abbigliamento Donna</h3>
+<h3 align="center" style="font-size: 50px;">Abbigliamento Donna</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">
 <img src="img/slide1.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
@@ -148,7 +153,7 @@
 <br>
 <br>
 
-<h3 align="center">Abbigliamento Bambino</h3>
+<h3 align="center" style="font-size: 50px;">Abbigliamento Bambino</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">
 <img src="img/slide3.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
@@ -157,7 +162,7 @@
 <br>
 <br>
 
-<h3 align="center">Tutto per la casa</h3>
+<h3 align="center" style="font-size: 50px;">Tutto per la casa</h3>
 <br>
 <a href="ListaPerCategoria?categoria=CASA">
 <img src="img/slide4.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
@@ -166,7 +171,7 @@
 <br>
 <br>
 
-<h3 align="center">Il mondo in un chip</h3>
+<h3 align="center" style="font-size: 50px;">Il mondo in un chip</h3>
 <br>
 <a href="ListaPerCategoria?categoria=ELETTRONICA">
 <img src="img/slide6.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">
@@ -175,7 +180,7 @@
 <br>
 <br>
 
-<h3 align="center">Angolo libri</h3>
+<h3 align="center" style="font-size: 50px;">Angolo libri</h3>
 <br>
 <a a href="ListaPerCategoria?categoria=LIBRI">
 <img src="img/slide5.jpg"  width="larghezza_pixel_foto" height="altezza_pixel_foto" border="0">

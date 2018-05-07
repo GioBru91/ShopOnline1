@@ -1,5 +1,9 @@
 @charset "ISO-8859-1";
 
+
+
+
+
 body {
 margin: 0;
 padding: 0px;
@@ -83,9 +87,10 @@ legend {
 	align:center;
 	text-align: center;
 	color: white;
-	padding-top: 16px;
-    padding-bottom: 20px;
+	padding-top: 0px;
+    padding-bottom: 30px;
     margin-bottom: 21px;
+    font: 'Katibeh';'
     
 }
 
