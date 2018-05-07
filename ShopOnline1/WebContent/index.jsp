@@ -48,12 +48,12 @@
 <a data-toggle="dropdown">
  <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-50%; margin-left: -100px; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 70%; margin-right:40%; margin-top: -1%; font-size: 20px;">
+<ul class="dropdown-menu" style="margin-left: 73%; margin-right:8%; margin-top: -1%; font-size: 20px;">
 						<%if(utente == null) {%>
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
 						<%}else { %>
-						<li><a href="myAccount.jsp">My account <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="25%"></a></li>
+						<li><a href="myAccount.jsp">My account <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="27%"></a></li>
 						<li><a href="ListaOrdini">I miei ordini <img src="img/icona_ordini.png" width="20%"></a></li>
 						<li><a href="ListaAcquisti">I miei acquisti <img src="img/icona_acquistipng.png" width="15%"></a></li>
 						<li><a href="Logout">Logout <img src="img/icona_logout.png" width="12%"></a></li>
