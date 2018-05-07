@@ -166,6 +166,7 @@
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
+<input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
 <button class= "btn" id="Acquisto" 
 <%if (utente == null){ %>
 disabled

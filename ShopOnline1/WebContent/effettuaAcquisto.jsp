@@ -188,6 +188,7 @@ id="dataInizio" style="width: 50%">
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
 <input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
+<input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
 <input type="submit" class="btn btn-primary" value="Acquista" style="width: 70px;">
 <input type="reset" class="btn btn-warning" value="Resetta" style="width: 70px;">
 </div>
