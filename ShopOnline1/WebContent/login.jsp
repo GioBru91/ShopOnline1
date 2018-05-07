@@ -11,7 +11,6 @@
 <title>Login</title>
 <link rel="stylesheet"  href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet"  href="css/stile.css">
-
 <script type= "text/javascript" src="js/gestioneForm.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
 </head>
@@ -115,6 +114,7 @@
 </nav> 
 
 <br>
+
 <br>
 <br>
 
@@ -156,14 +156,14 @@
 </form>
 
 
-<div class="rowgrid"   style="width: 100%;margin-left: 740px;margin-top: -180px;"> 
-  <div class="column">
-    <img src="img/bambina_nero.jpg" style="width:60%">
-    <img src="img/bambina_nero.jpg" style="width:30%">
+<div class="rowgrid"   style="width: 40%;margin-left: 800px;margin-top: -180px;"> 
+  <div class="column" style="margin-left: 60px">
+    <img src="img/bambina_nero.jpg" style="width:60%; margin: 15px; ">
+    <img src="img/bambina_nero.jpg" style="width:100%; margin-left: 60px">
   </div>
   <div class="column">
     
-    <img src="img/bambina_nero.jpg" style="width:40%">
+    <img src="img/bambina_nero.jpg" style="width:80%; margin-left: px; margin-top: -12px;">
   </div>  
   
 </div>
@@ -171,10 +171,11 @@
 
 
 
-<div class="row">
+<div class="row" style="margin-right: 42px;
+    margin-left: 31px;">
 
 <div class=>
-<p style="margin-left: 350px;;font-size: 110%" >Non sei registrato? </p>
+<p style="margin-left: 350px;font-size: 110%" >Non sei registrato? </p>
 <p style="margin-left: 330px;font-size: 110%"><a href="registrazione.jsp" style="font-weight: 600;font-size: 120%">Clicca qui</a> per registrarti </p>
 
 </div>
@@ -217,7 +218,7 @@
 </div>
 
 <div class="G2lBJZk"></div>
-<HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
+<HR width="1300" size="1" color="black" align="center" style="border-top: 1px solid;">
 <center>
     <div class="container">
        <a id="home" href="index.jsp" >
@@ -242,6 +243,7 @@
     </center>
 </div>
 
- <HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
+ <HR width="1300" size="1" color="black" align="center" style="border-top: 1px solid;">
+ 
 </body>
 </html>

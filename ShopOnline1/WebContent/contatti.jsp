@@ -182,7 +182,7 @@
 </div>
 
 <div class="G2lBJZk"></div>
-<HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
+<HR width="1300" size="1" color="black" align="center" style="border-top: 1px solid;">
 <center>
     <div class="container">
        <a id="home" href="index.jsp" >
@@ -207,7 +207,7 @@
     </center>
 </div>
 
- <HR width="1300" size="1" color="black" align="center" style="border-top: 3px solid;">
+ <HR width="1300" size="1" color="black" align="center" style="border-top: 1px solid;">
 
 </body>
 </html>
