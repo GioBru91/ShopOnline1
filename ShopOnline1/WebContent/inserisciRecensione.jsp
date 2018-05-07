@@ -22,6 +22,7 @@
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <%List<Prodotto> listaPiuVenduti = (List<Prodotto>) session.getAttribute("listaPiuVenduti"); %>
 <% int idProdotto = Integer.parseInt(request.getParameter("idProdotto")); %>
+<%Prodotto prodotto = (Prodotto) request.getAttribute("prodotto"); %>
 <a id="home" href="index.jsp" >
 <center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
@@ -164,12 +165,12 @@
 
 <div class="rowgrid"   style="width: 40%;margin-left: 850px;margin-top: -400px;"> 
   <div class="column" style="margin-left: 60px">
-    <img src="img/cellulare1.jpg" style="width:100%; margin: 15px; ">
-    <img src="img/cellulare1.jpg" style="width:80%; margin-left: 60px">
+    <img src="<%=prodotto.getImmagine() %>" style="width:100%; margin: 15px; ">
+    <img src="<%=prodotto.getImmagine() %>" style="width:80%; margin-left: 60px">
   </div>
   <div class="column">
     
-    <img src="img/cellulare1.jpg" style="width:60%; margin-left: px; margin-top: -15px;margin: 40px;">
+    <img src="<%=prodotto.getImmagine() %>" style="width:60%; margin-left: px; margin-top: -15px;margin: 40px;">
   </div>  
   
 </div>
