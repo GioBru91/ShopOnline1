@@ -51,6 +51,7 @@
    						<li><a href="login.jsp">Login</a></li>
 						<li><a href="registrazione.jsp">Registrazione</a></li>
 						<%}else { %>
+						<li><a href="myAccount.jsp">My account</a></li>
 						<li><a href="ListaOrdini">I miei ordini</a></li>
 						<li><a href="ListaAcquisti">I miei acquisti</a></li>
 						<li><a href="Logout">Logout</a></li>
@@ -64,15 +65,14 @@
 
 </div>
 
-     
  
    
-<form id="cerca" align="right" action="" method="get" width="2%" style="margin:0px">
+<form id="cerca" align="right" action="CercaProdotto" method="get" width="2%" style="margin:0px">
 <fieldset>
 <legend></legend>
 
 <button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
-<input type="text" width="3%" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
+<input type="text" width="3%" name="nomeProdotto" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
 </fieldset>
 </form>
    
