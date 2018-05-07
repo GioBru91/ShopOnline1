@@ -160,7 +160,7 @@ Offerta: <img src="img/vverde.png" width="20px">
 <br>
 <br>
 <img src="img/separator.png" width="100%" align="center" >
-<div align="center" style="margin-left:356px;">
+<div id="recension1" align="center" style="margin-left:356px;">
 
 
 
@@ -196,7 +196,7 @@ Offerta: <img src="img/vverde.png" width="20px">
 disabled
 <%} %>
 >
-<img src="img/shop.png" style="width: 50px;margin-left: -1260px;margin-top: -300px;">
+<img  id="shop" src="img/shop.png" style="width: 50px;margin-left: -1260px;margin-top: -300px;">
 </button>
 
 </form>
