@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import it.accenture.dao.ProdottoDaoImpl;
 import it.accenture.dao.RecensioniDaoImpl;
+import it.accenture.model.Prodotto;
 import it.accenture.model.Recensioni;
 import it.accenture.model.Utente;
 
@@ -25,10 +27,14 @@ public class InserisciRecensione extends HttpServlet{
 		
 		
 		int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
+		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
+		Prodotto prodotto = new Prodotto();
+		prodotto = prodottoService.getProdottoById(idProdotto);
+		prodottoService.close();
 		String titolo = req.getParameter("titolo");
 		String contenuto = req.getParameter("recensione");
 
-				
+		req.setAttribute("prodotto", prodotto);		
 		Recensioni recensioni = new Recensioni();
 		recensioni.setIdUtente(utenteLoggato.getIdUtente());
 		recensioni.setIdProdotto(idProdotto);
@@ -36,6 +42,7 @@ public class InserisciRecensione extends HttpServlet{
 		recensioni.setContenuto(contenuto);
 		
 		System.out.println(recensioni);
+		System.out.println(prodotto);
 		
 		RecensioniDaoImpl recensioniService = new RecensioniDaoImpl();
 		
