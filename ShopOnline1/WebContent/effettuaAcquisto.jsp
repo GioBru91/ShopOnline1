@@ -14,8 +14,10 @@
 <script type="text/javascript" src="js/gestioneForm.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/stile.css">
+<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Old Standard TT', serif;">
+
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato"); %>
 <% Prodotto prodotto = (Prodotto) request.getAttribute("prodotto"); %>
 
@@ -31,12 +33,12 @@
 
 
 <div id="banner" align="right" style="margin-right: 30px">
-     <div id="banner-content">  
+     <div id="banner-content"> 
      
    
    <div class="container">  
    <a href="listaCarrello.jsp">
-<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="40%" style="margin:10px">
+<button class="btn ui-li-count" id="carrello"><img src="img/icona_carrello.png" width="41%" style="margin:10px; margin-bottom: 5px;">
 <%if (listaCarrello != null){ %>
 <%= listaCarrello.size() %>
 <%} else {%>
@@ -47,17 +49,17 @@
 
 <div class="dropdown" style="margin-right:5px;">
 <a data-toggle="dropdown">
- <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-56%; margin-left: -100px; "></button>
+ <button class="btnpc" id="profilo"> <img src="img/icona-profilo.png" width="40%" style="margin:10px; margin-top:-50%; margin-left: -100px; "></button>
 </a>
-<ul class="dropdown-menu" style="margin-left: 78%; margin-top: -2%">
+<ul class="dropdown-menu" style="margin-left: 73%; margin-right:8%; margin-top: -1%; font-size: 20px;">
 						<%if(utente == null) {%>
-   						<li><a href="login.jsp">Login</a></li>
-						<li><a href="registrazione.jsp">Registrazione</a></li>
+   						<li><a href="login.jsp">Login <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="27%"></a></li>
+						<li><a href="registrazione.jsp">Registrazione <img src="img/Free-Watercolor-Border-Flowers-PNG.png" width="27%"></a></li>
 						<%}else { %>
-						<li><a href="myAccount.jsp">My account</a></li>
-						<li><a href="ListaOrdini">I miei ordini</a></li>
-						<li><a href="ListaAcquisti">I miei acquisti</a></li>
-						<li><a href="Logout">Logout</a></li>
+						<li><a href="myAccount.jsp">My account <img src="img/Flowers-Vectors-Clipart-PNG-Image-05.png" width="27%"></a></li>
+						<li><a href="ListaOrdini">I miei ordini <img src="img/icona_ordini.png" width="20%"></a></li>
+						<li><a href="ListaAcquisti">I miei acquisti <img src="img/icona_acquistipng.png" width="15%"></a></li>
+						<li><a href="Logout">Logout <img src="img/icona_logout.png" width="12%"></a></li>
 						<%} %>
 						
    <li class="divider"></li>
@@ -75,7 +77,7 @@
 <legend></legend>
 
 <button class="btnpc" id="cerca" style="margin-right: -28px;"><img src="img/icone_cerca.png" width="40%" style="margin:10px; margin-top: -1%;"></button>
-<input type="text" width="3%" name="nomeProdotto" placeholder="Cerca il prodotto" style="font-family: inherit;font-size: inherit;font-weight: normal;width: 210px;margin-top: 5px;"> 
+<input type="text" width="3%" name="nomeProdotto" placeholder=" Cerca il prodotto" style="font-family: inherit;font-size: 18px;font-weight: normal;width: 210px;margin-top: 5px;"> 
 </fieldset>
 </form>
    
@@ -85,19 +87,19 @@
 
  
 	<nav class="nav navbar-default">
-       <div class=" collapse navbar-collapse" style="margin-left:4px;background-color: grey;">
+       <div class=" collapse navbar-collapse" style="margin-left:4px; background-color: grey;">
             <ul class="nav navbar-nav">
                
 <div class="dropdown">
 
-<a data-toggle="dropdown" class="btn btn-primary">
-<div class="container" style="background-color: grey">
+<a data-toggle="dropdown" class="btn btn-primary" style=" color: #fff; background-color: grey; border-color: grey;">
+<div class="container" style="background-color: grey; ">
   <div class="bar1" style="background-color: rgb(243, 217, 223);"></div>
   <div class="bar2" style="background-color: rgb(243, 217, 223)"></div>
   <div class="bar3" style="background-color: rgb(243, 217, 223);"></div>
 </div></a>
 
-<ul class="dropdown-menu">
+<ul class="dropdown-menu" style="font-size: 20px; margin-top: -22px; margin-left: 30px;">
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_UOMO">UOMO</a></li>
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_DONNA">DONNA</a></li>
    <li><a href="ListaPerCategoria?categoria=ABBIGLIAMENTO_BAMBINO">BAMBINO</a></li>
@@ -116,31 +118,40 @@
 </nav> 
 
 <br>
+
 <br>
 <br>
 
 <div class="conteiner" class="page-header align-left">
-<img src="<%= prodotto.getImmagine() %>" style="margin-left: 20px" >
+<div class="img-magnifier-container" style="margin-left: 35px;">
+<img id ="myimage" src="<%= prodotto.getImmagine() %>" style="margin-left: 30px; width: 25%" >
 </div>
+<script>
+/* Initiate Magnify Function
+with the id of the image, and the strength of the magnifier glass:*/
+magnify("myimage", 2);
+</script>
+</div>
+
+
+
 
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 20%;">
 <center>
-<ul style="margin-top: -563px;  font-size: 20px">
-<p><b><%=prodotto.getNome() %></b></p>
-<p>Marca: <%=prodotto.getMarca() %> </p>
-<p>Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
+<ul style="margin-top: -300px;  font-size: 20px">
+<p style="font-size: 300%"><b><%=prodotto.getNome() %></b></p>
+<p style="font-weight: 600; font-size: 200%">Marca: <%=prodotto.getMarca() %> </p>
+<p style="font-size: 150%">Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
 <%if(prodotto.isOfferta()) { %> 
-<p>
-Offerta: <img src="img/vverde.png" width="20px">
-</p>
-<p>Sconto: <%= prodotto.getSconto() %> % </p>
+<p style="font-size: 150%">Offerta: <img src="img/vverde.png" width="20px"></p>
+<p style="font-size: 150%">Sconto: <%= prodotto.getSconto() %> % </p>
 <%} else {%>
 <p>
 <img src="img/xrossa.png" width="20px">
 </p>
 <p>--</p>
 <%} %>
-<p>Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %> </p>
+<p style="font-size: 150%">Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %> </p>
 </ul>
 </center>
 </div>
@@ -229,7 +240,7 @@ disabled
 </div>
 
 <div class="G2lBJZk"></div>
-<HR width="1300" size="1" color="black" align="center">
+<HR width="1300" size="1" color="black" align="center" style="border-top: 1px solid;">
 <center>
     <div class="container">
        <a id="home" href="index.jsp" >
@@ -238,21 +249,23 @@ disabled
 </a> 
         <div id='skills'>
             <div class="skill">
-                <h4><a href="contatti.jsp" style="color: black">CHI SIAMO</a></h4>
+                <h4><a href="contatti.jsp" style="color: black; font-size: 20px;">CHI SIAMO</a></h4>
                
             </div>
             <div class="skill">
-                <h4><a href="contatti.jsp" style="color: black">CONTATTI</h4>
+                <h4><a href="contatti.jsp" style="color: black; font-size: 20px;">CONTATTI</h4>
                 
             </div>
             <div class="skill">
-                <h4><a href="contatti.jsp" style="color: black">INDICAZIONI STRADALI</h4>
+                <h4><a href="contatti.jsp" style="color: black; font-size: 20px;">INDICAZIONI STRADALI</h4>
                
             </div>
         </div>
     </div>
     </center>
 </div>
-<HR width="1300" size="1" color="black" align="center">
+
+ <HR width="1300" size="1" color="black" align="center" style="border-top: 1px solid;">
+ 
 </body>
 </html>
