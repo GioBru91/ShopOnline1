@@ -155,9 +155,48 @@ magnify("myimage", 2);
 </ul>
 </center>
 </div>
+ <br>
+  <br>
+   <br>
+
+<div>
+
+<form action="EffettuaAcquisto" method="get">
+<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
+<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
+<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
+<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
+<input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
+<center>
+<button  style="margin-left: 30px"  class= "btn" id="Acquisto" 
+<%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
+disabled
+<%} %>
+>
+
+<img src="img/shop.png" style="width: 50%">
+<h4 style="font-weight: 600"><u>Acquista</u></h4>
+
+</button>
+</center>
+</form>
+</div>
+
+<br>
+<br>
+<br>
+
+<center>
+<img src="img/separatore1.png" width="50%">
+</center>
+
+
+
+
+
 
 <form action="EffettuaAcquisto" method="post">
-<div class="form-group"  style="margin-left: 300px;">
+<div class="form-group"  style="margin-left: 300px; margin-top: 338px;">
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%; margin-top: -220px;">
 <label>Scegli la data di inizio spedizione</label>
 <div  style="margin-top: 5px;">
@@ -165,9 +204,7 @@ magnify("myimage", 2);
 id="dataInizio" style="width: 50%">
 </div>
 </div>
-
 <br>
-
 
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;margin-top: -140px;">
 <label>Scegli il tipo di spedizione</label>
@@ -192,33 +229,13 @@ id="dataInizio" style="width: 50%">
 <br>
 <br>
 </div>
-<div  style="line-height: 34px; width: 40%; float: right; margin-right: 6%; margin-top: 2%">
-<center>
-<div style="margin-top: 10px">
-<input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
-<input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
-<input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
-<input type="hidden" name="sconto" value="<%= prodotto.getSconto()%>">
-<input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
 
-<button class= "btn" id="Acquisto" 
-<%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
-disabled
-<%} %>
->
-<img src="img/shop.png" style="width: 40px;">
-</button>
-<h4><u>Acquista</u></h4>
-</div>
-</center>
-</div>
 </form>
 
 
 
 
-<br>
-<br>
+
 
 
 <div class="footer">
