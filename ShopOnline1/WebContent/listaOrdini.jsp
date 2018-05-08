@@ -159,6 +159,8 @@
 </progress>
 </td>
 
+
+
 <td>
 <form action="DettagliProdotto" method="post" >
 <input type="hidden" name="idProdotto" value="<%=acquisto.getIdProdotto()%>">
