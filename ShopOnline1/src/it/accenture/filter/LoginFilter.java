@@ -33,12 +33,19 @@ public class LoginFilter implements Filter {
 		Utente utenteLoggato = (Utente) session.getAttribute("utenteLoggato");
 		String url = httpReq.getRequestURL().toString();
 		System.out.println(url);
-		if (utenteLoggato == null && url.contains("ListaAcquisti")) {
+		if(url.contains("index.jsp")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
+		}else if (utenteLoggato == null && url.contains("ListaAcquisti")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");	
+			
 		} else if (utenteLoggato == null && url.contains("ListaOrdini")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
+		} else if (utenteLoggato == null && url.contains("EffettuaAcquisto")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");	
 		} else {
 			chain.doFilter(req, resp);
 		}

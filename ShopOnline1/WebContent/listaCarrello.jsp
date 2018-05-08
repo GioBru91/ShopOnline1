@@ -122,7 +122,9 @@
 <div class = "container">
 <div class = "table-responsive">
 <table class="table">
-<%if (listaCarrello != null){ %>
+<%if (utente == null){ %>
+<h2 style="text-align: center;">EFFETTUA LA LOGIN PER SALVARE PRODOTTI SUL TUO CARRELLO</h2>
+<%} else if (listaCarrello != null && listaCarrello.size() > 0){ %>
 <thead>
 <tr>
 <th>N° Prodotto</th>
@@ -136,6 +138,7 @@
 <th>Immagine</th>
 </tr>
 </thead>
+
 <tbody>
 <% for (Prodotto prodotto : listaCarrello) { %>
 <tr>
@@ -194,9 +197,11 @@ disabled
 </td>
 </tr>
 </tbody>
+
 <%} else { %>
 <h2 style="text-align: center;">NON HAI SALVATO PRODOTTI SUL TUO CARRELLO</h2>
 <%} %>
+
 </table>
 </div>
 </div>
