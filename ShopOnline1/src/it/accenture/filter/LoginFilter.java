@@ -36,6 +36,9 @@ public class LoginFilter implements Filter {
 		if(url.contains("index.jsp")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
+		} else if (utenteLoggato == null && url.contains("Logout")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
 		}else if (utenteLoggato == null && url.contains("ListaAcquisti")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");	
@@ -45,16 +48,27 @@ public class LoginFilter implements Filter {
 		}else if (utenteLoggato == null && url.contains("modificaAccount.jsp")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
-			
+		}else if (utenteLoggato == null && url.contains("Carrello")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
 		} else if (utenteLoggato == null && url.contains("ListaOrdini")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
 		} else if (utenteLoggato == null && url.contains("EffettuaAcquisto")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
+		} else if (utenteLoggato == null && url.contains("PrendiProdotto")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
 		} else if (utenteLoggato == null && url.contains("effettuaAcquisto.jsp")) {
 			System.out.println("accesso negato");
-			httpResp.sendRedirect("index.html");	
+			httpResp.sendRedirect("index.html");
+		} else if (utenteLoggato == null && url.contains("InserisciRecensione")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
+		} else if (utenteLoggato == null && url.contains("inserisciRecensione.jsp")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
 		} else {
 			chain.doFilter(req, resp);
 		}

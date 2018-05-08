@@ -34,8 +34,19 @@ public class Carrello extends HttpServlet{
 		prodotto = prodottoService.getProdottoById(idProdotto);
 		prodottoService.close();
 		listaCarrello.add(prodotto);
+		double prezzoTotale = 0;
+		double sconto = 0;
+		for (Prodotto prodotto2 : listaCarrello) {
+			if(prodotto2.isOfferta()) {
+				
+			}
+			prezzoTotale += prodotto2.getPrezzo();
+			System.out.println(prezzoTotale);
+		}
 		
 		session.setAttribute("listaCarrello", listaCarrello);
+		session.setAttribute("prezzoTotale", prezzoTotale);
+		
 		
 		resp.sendRedirect("ListaProdotti");
 		

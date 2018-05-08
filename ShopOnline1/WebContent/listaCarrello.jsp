@@ -17,6 +17,7 @@
 <body>
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<%double prezzoTotale = (double) session.getAttribute("prezzoTotale"); %>
 
 <a id="home" href="index.jsp" >
 <center>
@@ -197,6 +198,8 @@ disabled
 </td>
 </tr>
 </tbody>
+
+<h2>Il prezzo totale del carrello è : <%=prezzoTotale %></h2>
 
 <%} else { %>
 <h2 style="text-align: center;">NON HAI SALVATO PRODOTTI SUL TUO CARRELLO</h2>
