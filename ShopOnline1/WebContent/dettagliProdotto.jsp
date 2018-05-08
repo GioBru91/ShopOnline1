@@ -138,6 +138,7 @@ magnify("myimage", 2);
 
 <ul style=" margin-top: -360px; font-size: 20px">
 <p style="font-size: 300%"><b><%=prodotto.getNome() %> </b></p>
+<br>
 <p style="font-weight: 600; font-size: 200%">Marca: <%=prodotto.getMarca() %> </p>
 <p style="font-size: 150%">Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
 <%if(prodotto.isOfferta()) { %> 
