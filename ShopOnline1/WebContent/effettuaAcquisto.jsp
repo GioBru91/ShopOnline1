@@ -212,11 +212,10 @@ id="dataInizio" style="width: 50%">
 <br>
 </div>
 
-</form>
+
 <br>
 <br>
 
-<form action="EffettuaAcquisto" method="get">
 <input type="hidden" name="idProdotto" value="<%= prodotto.getIdProdotto()%>">
 <input type="hidden" name="prezzoProdotto" value="<%= prodotto.getPrezzo()%>">
 <input type="hidden" name="offerta" value="<%= prodotto.isOfferta()%>">
@@ -233,8 +232,9 @@ disabled
 <h4 style="font-weight: 600"><u>Acquista</u></h4>
 
 </button>
-</center>
 </form>
+</center>
+
 </div>
 
 
