@@ -88,10 +88,8 @@ public class EffettuaAcquisto extends HttpServlet {
 			prodottoService.updateQuantità(nuovaQuantità, idProdotto);
 			acquistoService.close();
 			prodottoService.close();
-			resp.sendRedirect("ListaOrdini");
-			
-		
-				
+			RequestDispatcher dispatcher = req.getRequestDispatcher("RimuoviCarrelloAcquisto");
+			dispatcher.forward(req, resp);
 		}else {
 			Acquisto acquisto = new Acquisto();
 			acquisto.setTipoSpedizione(tipoSpedizione1);
@@ -112,7 +110,8 @@ public class EffettuaAcquisto extends HttpServlet {
 			prodottoService.updateQuantità(nuovaQuantità, idProdotto);
 			acquistoService.close();
 			prodottoService.close();
-			resp.sendRedirect("ListaOrdini");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("RimuoviCarrelloAcquisto");
+			dispatcher.forward(req, resp);
 		}
 	}
 

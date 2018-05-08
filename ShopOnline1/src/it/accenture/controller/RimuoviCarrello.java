@@ -17,9 +17,11 @@ import it.accenture.model.Utente;
 public class RimuoviCarrello extends HttpServlet {
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 		HttpSession session = req.getSession();
 		Utente utenteLoggato = (Utente) session.getAttribute("utenteLoggato");
+		
 		
 		double prezzoTotale = 0;
 		double sconto = 0;
@@ -42,18 +44,16 @@ public class RimuoviCarrello extends HttpServlet {
 						System.out.println(prezzoTotale);
 					}
 				}
-				System.out.println("oggetto rimosso, size : " + l.size());
+				
 			}else {
 				i++;
-			}
-			
-			
+			}	
 		}
 		
+		System.out.println("oggetto rimosso, size : " + l.size());
 		List<Prodotto> l1 = (List<Prodotto>) session.getAttribute("listaCarrello");
 		session.setAttribute("prezzoTotale", prezzoTotale);
 		System.out.println("nuova size : " + l1.size());
-		
 		resp.sendRedirect("listaCarrello.jsp");
 	}
 

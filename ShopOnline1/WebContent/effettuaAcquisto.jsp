@@ -178,7 +178,7 @@ magnify("myimage", 2);
 
 
 
-<form action="EffettuaAcquisto" method="post">
+<form action="EffettuaAcquisto" method="post" id="formAcquisto" onsubmit="return validazioneFormAcquisto()">
 <div id="spedizione" class="form-group" align="left" style="margin-left: -1060px; margin-top: 170px;">
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%; margin-top: -220px;">
 <label style="font-size: 120%; font-weight: inherit">Scegli la data di inizio spedizione</label>
@@ -206,7 +206,7 @@ id="dataInizio" style="width: 50%">
 <br>
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%;margin-top: -20px;">
 <label style="font-size: 120%; font-weight: inherit">Scegli la quantità da acquistare</label>
-<input type="number" name="quantitaAcquistata" step="1" min="0" max="<%=prodotto.getQuantitaDisponibile() %>" style="text-align: right;width: 60px;margin-left: 2%;"  id="quantitaAcquistata" >
+<input type="number" name="quantitaAcquistata" step="1" value="1" min="1" max="<%=prodotto.getQuantitaDisponibile() %>" style="text-align: right;width: 60px;margin-left: 2%;"  id="quantitaAcquistata" >
 </div>
 <br>
 <br>
@@ -236,7 +236,9 @@ disabled
 </center>
 
 </div>
-
+<div class="alert alert-danger" id="alert" style="display:none">
+<h1>Devi inserire i valori per tutti i campi</h1>
+</div>
 
 
 

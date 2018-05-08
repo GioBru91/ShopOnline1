@@ -236,4 +236,16 @@
   <servlet-name>PrendiProdotto</servlet-name>
   <url-pattern>/PrendiProdotto</url-pattern>
   </servlet-mapping>
+  
+   <!-- RIMUOVI CARRELLO ACQUISTO -->
+  <servlet>
+  <servlet-name>RimuoviCarrelloAcquisto</servlet-name>
+  <servlet-class>it.accenture.controller.RimuoviCarrelloAcquisto
+  </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>RimuoviCarrelloAcquisto</servlet-name>
+  <url-pattern>/RimuoviCarrelloAcquisto</url-pattern>
+  </servlet-mapping>
 </web-app>

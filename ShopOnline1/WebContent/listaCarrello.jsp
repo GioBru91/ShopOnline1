@@ -191,7 +191,7 @@ disabled
 </form>
 </td>
 <td>
-<form action="RimuoviCarrello" method="get">
+<form action="RimuoviCarrello" method="post">
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <button class= "btn" id="Elimina">
 <img src="img/cestino.png" style="width: 37px;">

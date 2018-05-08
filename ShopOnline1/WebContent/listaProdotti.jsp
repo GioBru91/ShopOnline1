@@ -209,6 +209,11 @@ disabled
 <br>
 <br>
 
+<%if (request.getAttribute("errore1") != null){ %>
+<div class="alert alert-danger"  style = "margin-top:20px;">
+<h4>Hai già inserito questo prodotto nel carrello</h4>
+</div>
+<% } %>
 
 
 

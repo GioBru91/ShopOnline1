@@ -39,6 +39,17 @@ function validazioneForm() {
 	return controllo;
 }
 
+function validazioneFormAcquisto() {
+	var quantita = document.getElementById('quantitaAcquistata').value;
+	var controllo = true;
+	if (quantita == ""){
+		document.getElementById('quantitaAcquistata').placeholder='Campo Obbligatorio';
+		document.getElementById('quantitaAcquistata').classList.add('alert-danger');
+		controllo=false;
+	}
+	return controllo;
+}
+
 function validazioneFormLogin() {
 	var username=  document.getElementById('username').value;
 	var password=  document.getElementById('password').value;
