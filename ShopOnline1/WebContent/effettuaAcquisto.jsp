@@ -139,7 +139,7 @@ magnify("myimage", 2);
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 20%;">
 <center>
 <ul style="margin-top: -300px;  font-size: 20px">
-<p style="font-size: 300%"><b><%=prodotto.getNome() %></b></p>
+<p style="font-size: 280%"><b><%=prodotto.getNome() %></b></p>
 <br>
 <p style="font-weight: 600; font-size: 200%">Marca: <%=prodotto.getMarca() %> </p>
 <p style="font-size: 150%">Prezzo: <%= prodotto.getPrezzo() %> &euro;</p>
