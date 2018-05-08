@@ -163,7 +163,7 @@ magnify("myimage", 2);
 <input type="hidden" name="qProdotto" value="<%=prodotto.getQuantitaDisponibile()%>">
 <center>
 <button  style="margin-left: 30px"  class= "btn" id="Acquisto" 
-<%if (utente == null){ %>
+<%if (utente == null || prodotto.getQuantitaDisponibile() == 0){ %>
 disabled
 <%} %>
 >

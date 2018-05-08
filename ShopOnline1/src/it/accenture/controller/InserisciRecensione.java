@@ -49,9 +49,10 @@ public class InserisciRecensione extends HttpServlet{
 		recensioniService.insertRecensioni(recensioni);
 		recensioniService.close();
 		
-		RequestDispatcher dispatcher = req.getRequestDispatcher("DettagliProdotto");
-		dispatcher.forward(req, resp);
+		//RequestDispatcher dispatcher = req.getRequestDispatcher("DettagliProdotto");
+		//dispatcher.forward(req, resp);
 		
+		resp.sendRedirect("DettagliProdotto?idProdotto=" + idProdotto);
 	    
 		
 	}

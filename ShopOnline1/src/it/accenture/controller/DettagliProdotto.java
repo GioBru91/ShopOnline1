@@ -17,8 +17,10 @@ import it.accenture.model.Recensioni;
 
 public class DettagliProdotto extends HttpServlet{
 	
+	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	
 		Prodotto prodotto = new Prodotto();
 		int idProdotto = Integer.parseInt(req.getParameter("idProdotto"));
 		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
