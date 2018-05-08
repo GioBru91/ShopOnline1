@@ -60,9 +60,6 @@ public class LoginFilter implements Filter {
 		} else if (utenteLoggato == null && url.contains("PrendiProdotto")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
-		} else if (utenteLoggato == null && url.contains("effettuaAcquisto.jsp")) {
-			System.out.println("accesso negato");
-			httpResp.sendRedirect("index.html");
 		} else if (utenteLoggato == null && url.contains("InserisciRecensione")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
