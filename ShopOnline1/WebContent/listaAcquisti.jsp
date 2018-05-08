@@ -142,13 +142,13 @@
 <tbody>
 <% for (Acquisto acquisto : listaAcquisti) { %>
 <tr>
-<td><%= acquisto.getIdProdotto() %></td>
-<td><%= acquisto.getTipoSpedizione() %> </td>
+<td align="center"><%= acquisto.getIdProdotto() %></td>
+<td align="center"><%= acquisto.getTipoSpedizione() %> </td>
 <td><%= acquisto.getDataInizio() %> </td>
 <td><%= acquisto.getDataFine() %> </td>
-<td><%= acquisto.getPrezzoDiSpedizione() %> &euro; </td>
-<td><%= acquisto.getQuantitaAcquistata() %> </td>
-<td><%= acquisto.getPrezzoTotale() %> &euro; </td>
+<td align="center"><%= acquisto.getPrezzoDiSpedizione() %> &euro; </td>
+<td align="center"><%= acquisto.getQuantitaAcquistata() %> </td>
+<td align="center"><%= acquisto.getPrezzoTotale() %> &euro; </td>
 
 
 <td>

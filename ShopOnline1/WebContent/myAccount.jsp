@@ -137,7 +137,7 @@
 </div>
 
 
-<div class="rowgrid"   style="width: 48%;margin-left: 740px;margin-top: -150px;"> 
+<div  id="colonne" class=rowgrid"   style="width: 48%;margin-left: 800px;margin-top: -200px;"> 
   <div class="column" style="margin-left: 60px">
     <img src="img/giacca-bomber-da-uomo-182891_400.jpg" style="width:70%; margin: 10px">
     <img src="img/giacca-bomber-da-uomo-182891_400.jpg" style="width:50%; margin-left: 60px">
@@ -153,7 +153,7 @@
 <br>
 <br>
 
-<p style="margin-left: 220px;font-size: 140%; margin-top: 20px;">Clicca <a href="modificaAccount.jsp" style="font-weight: 600;font-size: 120%">qui</a> 
+<p style="margin-left: 220px;font-size: 140%; margin-top: -5px;">Clicca <a href="modificaAccount.jsp" style="font-weight: 600;font-size: 120%; color: black;">qui</a> 
 per modificare i tuoi dati</p>
 
 

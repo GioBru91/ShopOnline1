@@ -124,8 +124,8 @@
 
 <div class="chisiamo" >
 <h1>Oh lovely rose</h1>
-  <h3>nasce in una stanza buia in via Washington, 50, in Milano</h3>
-  <h3>un progetto partorito da tre ragazzi</h3>
+  <h3> un progetto che nasce in una stanza buia</h3>
+  <h3>in via Washington, 50, in Milano.</h3>
   <h3>Giovanni Rucoletta, Domenico Schifio, Albachiara Wewe</h3>
 
 
