@@ -20,6 +20,7 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <%List<Prodotto> listaPiuVenduti = (List<Prodotto>) session.getAttribute("listaPiuVenduti"); %>
+
 <a id="home" href="index.jsp" >
 <center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">

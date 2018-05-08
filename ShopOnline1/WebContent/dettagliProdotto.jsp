@@ -23,6 +23,7 @@
 <%List<Prodotto> listaPiuVenduti = (List<Prodotto>) session.getAttribute("listaPiuVenduti"); %>
 <% List<Recensioni> listaRecensioni = (List<Recensioni>) request.getAttribute("listaRecensioni"); %>
 <% Prodotto prodotto =(Prodotto) request.getAttribute("prodotto"); %>
+
 <a id="home" href="index.jsp" >
 <center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
