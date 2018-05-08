@@ -179,7 +179,7 @@ magnify("myimage", 2);
 
 
 <form action="EffettuaAcquisto" method="post">
-<div id="spedizione" class="form-group"  style="margin-left: -1040px; margin-top: 170px;">
+<div id="spedizione" class="form-group" align="left" style="margin-left: -1060px; margin-top: 170px;">
 <div style="line-height: 34px; width: 40%; float: right; margin-right: 15%; margin-top: -220px;">
 <label style="font-size: 120%; font-weight: inherit">Scegli la data di inizio spedizione</label>
 <div  style="margin-top: 5px;">
