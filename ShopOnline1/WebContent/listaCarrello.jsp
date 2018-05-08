@@ -179,7 +179,7 @@ disabled
 </form>
 </td>
 <td>
-<form action="DettagliProdotto" method="post" >
+<form action="DettagliProdotto" method="get" >
 <input type="hidden" name="idProdotto" value="<%=prodotto.getIdProdotto()%>">
 <button class= "btn" id="Dettagli">
 <img src="img/dettagli.png" style="width: 37px;">
