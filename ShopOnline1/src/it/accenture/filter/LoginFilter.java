@@ -39,11 +39,20 @@ public class LoginFilter implements Filter {
 		}else if (utenteLoggato == null && url.contains("ListaAcquisti")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");	
+		}else if (utenteLoggato == null && url.contains("myAccount.jsp")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
+		}else if (utenteLoggato == null && url.contains("modificaAccount.jsp")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
 			
 		} else if (utenteLoggato == null && url.contains("ListaOrdini")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");
 		} else if (utenteLoggato == null && url.contains("EffettuaAcquisto")) {
+			System.out.println("accesso negato");
+			httpResp.sendRedirect("index.html");
+		} else if (utenteLoggato == null && url.contains("effettuaAcquisto.jsp")) {
 			System.out.println("accesso negato");
 			httpResp.sendRedirect("index.html");	
 		} else {
