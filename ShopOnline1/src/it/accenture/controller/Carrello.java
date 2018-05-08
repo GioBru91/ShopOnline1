@@ -36,11 +36,16 @@ public class Carrello extends HttpServlet{
 		listaCarrello.add(prodotto);
 		double prezzoTotale = 0;
 		double sconto = 0;
+		double prezzoFinale= 0;
 		for (Prodotto prodotto2 : listaCarrello) {
 			if(prodotto2.isOfferta()) {
+				sconto = prodotto2.getPrezzo() * prodotto2.getSconto()/100;
+				prezzoFinale = prodotto2.getPrezzo() - sconto;
 				
+			}else {
+				prezzoFinale = prodotto2.getPrezzo();
 			}
-			prezzoTotale += prodotto2.getPrezzo();
+			prezzoTotale += prezzoFinale;
 			System.out.println(prezzoTotale);
 		}
 		
