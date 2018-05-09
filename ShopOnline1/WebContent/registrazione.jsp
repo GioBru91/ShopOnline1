@@ -170,7 +170,7 @@
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Password</label>
 <div>
 
-<input type="password" style="width:30%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;background-color: #fff;
+<input type="password" style="width:30%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;
 		background-image: none;border: 1px solid #ccc;border-radius: 4px;" placeholder="Inserisci password" id="pwd" class="masked" name="password">
         <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
             <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>
@@ -190,6 +190,10 @@
 
 <input type="submit" value="Registrati" class="btn" style=" font-weight: 600;">
 <input type="submit" value="Esci" class="btn" style=" font-weight: 600;">
+
+<div class="alert alert-danger" id="alert" style="display:none">
+<h1>Devi inserire i valori per tutti i campi</h1>
+</div>
 </div>
 
 </div>
@@ -217,9 +221,7 @@
 
 <!-- alert -->
 
-<div class="alert alert-danger" id="alert" style="display:none">
-<h1>Devi inserire i valori per tutti i campi</h1>
-</div>
+
 
 <%if (request.getAttribute("errore1") != null){ %>
 <div class="alert alert-danger"  style = margin-top:20px">

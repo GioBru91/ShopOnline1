@@ -3,7 +3,7 @@ function validazioneForm() {
 	var cognome=  document.getElementById('cognome').value;
 	var indirizzo=  document.getElementById('indirizzo').value;
 	var username=  document.getElementById('username').value;
-	var password=  document.getElementById('password').value;
+	var password=  document.getElementById('pwd').value;
 	var controllo= true;
 	
 	if (nome==""){
@@ -28,8 +28,8 @@ function validazioneForm() {
 		controllo=false;
 	}
 	if (password==""){
-		document.getElementById('password').placeholder='Campo Obbligatorio';
-		document.getElementById('password').classList.add('alert-danger');
+		document.getElementById('pwd').placeholder='Campo Obbligatorio';
+		document.getElementById('pwd').classList.add('alert-danger');
 		controllo=false;
 	}
 	if(controllo==false){
@@ -52,14 +52,14 @@ function validazioneFormAcquisto() {
 
 function validazioneFormLogin() {
 	var username=  document.getElementById('username').value;
-	var password=  document.getElementById('password').value;
+	var password=  document.getElementById('pwd').value;
 	var controllo= true;
 	
 	if (username=="" & password ==""){
 		document.getElementById('username').placeholder='Campo Obbligatorio';
 		document.getElementById('username').classList.add('alert-danger');
-		document.getElementById('password').placeholder='Campo Obbligatorio';
-		document.getElementById('password').classList.add('alert-danger');
+		document.getElementById('pwd').placeholder='Campo Obbligatorio';
+		document.getElementById('pwd').classList.add('alert-danger');
 		controllo=false;
 	}else if(username=="" & password !=""){
 		document.getElementById('username').placeholder='Campo Obbligatorio';
@@ -71,8 +71,8 @@ function validazioneFormLogin() {
 	else if (username !="" & password==""){
 		document.getElementById('username').classList.remove('alert-danger');
 		document.getElementById('username').classList.add('alert-success');
-		document.getElementById('password').placeholder='Campo Obbligatorio';
-		document.getElementById('password').classList.add('alert-danger');
+		document.getElementById('pwd').placeholder='Campo Obbligatorio';
+		document.getElementById('pwd').classList.add('alert-danger');
 		controllo=false;
 	
 	}

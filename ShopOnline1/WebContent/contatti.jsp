@@ -124,9 +124,11 @@
 
 <div class="chisiamo" >
 <h1>Oh lovely rose</h1>
-  <h3> un progetto che nasce in una stanza buia</h3>
-  <h3>in via Washington, 50, in Milano.</h3>
-  <h3>Giovanni Rucoletta, Domenico Schifio, Albachiara Wewe</h3>
+  <h3>Progetto che si occupa principalmente della vendita al dettaglio on-line</h3>
+  <h3>di articoli di abbigliamento, per la casa ed elettronica.</h3>
+  <h3>Nato e cresciuto in via Washington, 50, a Milano.</h3>
+  <h3>Gestito da:</h3>
+  <h3>Giovanni Brugaletta, Albachiara Maselli e Domenico Leo.</h3>
 
 
 <br>
