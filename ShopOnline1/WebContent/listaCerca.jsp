@@ -20,6 +20,7 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% List<Prodotto> listaCerca = (List<Prodotto>) request.getAttribute("listaCerca"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<%String keyword = (String) request.getAttribute("keyword"); %>
 
 
 <a id="home" href="index.jsp" >
@@ -124,6 +125,11 @@
 
 <!-- CONTAINER -->
 <center>
+<%if(keyword.equals("")){ %>
+<h1 align="center">INSERISCI UN CAMPO NELLA BARRA DI RICERCA</h1>
+<%}else { %>
+<h1 align="center">Hai cercato prodotti per: "<%=keyword %>" </h1>
+<%if(listaCerca.size() > 0) { %>
 <div class = "container">
 <div class = "table-responsive">
 <table class="table">
@@ -144,7 +150,7 @@
 <% for (Prodotto prodotto : listaCerca) { %>
 <tr>
 <td align="center"><%= prodotto.getIdProdotto() %></td>
-<td><%= prodotto.getNome() %> </td>
+<td align="center"><%= prodotto.getNome() %></td>
 <td><%= prodotto.getCategoria().toString().replace("_", " ") %> </td>
 <td><%= prodotto.getMarca() %> </td>
 <td align="center"><%= prodotto.getPrezzo() %> &euro; </td>
@@ -205,6 +211,9 @@ disabled
 </table>
 </div>
 </div>
+<%}else { %>
+<h1 align="center">LA TUA RICERCA NON HA PORTATO A NESSUN PRODOTTO</h1>
+<%} %>
 </center>
 
 <br>
@@ -216,7 +225,7 @@ disabled
 </div>
 <% } %>
 
-
+<%} %>
 <div class="footer">
 <div class="G2lBJZk">
 <div class="social_bar" data-testid="social-links-bar" style="margin-top: 1%; margin-bottom: 1%;">
