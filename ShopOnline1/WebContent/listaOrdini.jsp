@@ -125,6 +125,7 @@
 
 <!-- CONTAINER -->
 <center>
+<%if(listaOrdini.size() > 0) { %>
 <div class = "container">
 <div class = "table-responsive">
 <table class="table">
@@ -177,6 +178,9 @@
 </table>
 </div>
 </div>
+<%}else { %>
+<h1 align="center">LA TUA LISTA ORDINI E' VUOTA</h1>
+<%} %>
 </center>
 
 <br>

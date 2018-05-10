@@ -123,6 +123,7 @@
 <br>
 
 <!-- CONTAINER -->
+<%if(listaAcquisti.size() > 0) { %>
 <center>
 <div class = "container">
 <div class = "table-responsive">
@@ -190,6 +191,9 @@ disabled
 </table>
 </div>
 </div>
+<%}else { %>
+<h1 align="center">LA TUA LISTA ACQUISTI E' VUOTA</h1>
+<%} %>
 </center>
 
 <br>
