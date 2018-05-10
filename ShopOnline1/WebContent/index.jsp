@@ -114,7 +114,8 @@
 <div class="jumbotron" style="align:center; font:initial; color: black;">
 <marquee scrollamount="10">
 
-<h1><a href="ListaSaldi" style="color: black; font-size: 80px; font-style: oblique; font-family: Old Standard TT; font-weight: inherit;">SALDI</a></h1>
+<h1><a href="ListaSaldi" style="color: black; font-size: 80px; font-style: oblique; font-family: Old Standard TT; font-weight: inherit;">
+<img src="img/two_fulmini.png" width="10%">SALDI <img src="img/two_fulmini_rev.png" width="10%"></a></h1>
 </marquee>
 </div>
 
@@ -215,7 +216,7 @@ class="item active"
 <% } %>
 >
 
-<a style="display:table" data-toggle="popover" data-trigger="hover" title="Prodotti più venduti" data-content="<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %>&euro;, <%if(prodotto.isOfferta()) { %> Offerta : <%= prodotto.getSconto() %>%, <%} else {%> Non in offerta <%}%>, Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>">
+<a style="display:table;" data-toggle="popover" data-trigger="hover" title="Prodotti più venduti" data-content="<%= prodotto.getNome() %>, <%= prodotto.getCategoria().toString().replace("_", " ") %>,<%= prodotto.getMarca() %>, <%= prodotto.getPrezzo() %>&euro;, <%if(prodotto.isOfferta()) { %> Offerta : <%= prodotto.getSconto() %>%, <%} else {%> Non in offerta <%}%>, Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %>">
 <img  src="<%= prodotto.getImmagine()%>">
 <!-- class="img-carousel" -->
 </a>

@@ -168,10 +168,7 @@ magnify("myimage", 2);
 <br>
 <br>
 
-<center>
-<img src="img/separatore1.png" width="50%" style="margin-top: -140px;
-    margin-left: 300px;">
-</center>
+
 
 
 
