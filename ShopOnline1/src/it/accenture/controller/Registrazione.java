@@ -33,7 +33,8 @@ public class Registrazione extends HttpServlet {
 	    	utenteService.registrazione(utente);
 			System.out.println("utente registrato");
 			utenteService.close();
-		    RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
+			req.setAttribute("username", username);
+		    RequestDispatcher dispatcher = req.getRequestDispatcher("login.jsp");
 		    dispatcher.forward(req, resp);
 		}else {
 		    System.out.println("username gia utilizzato");

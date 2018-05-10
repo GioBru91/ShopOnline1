@@ -19,6 +19,7 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
 <%List<Prodotto> listaPiuVenduti = (List<Prodotto>) session.getAttribute("listaPiuVenduti"); %>
+<%String username = (String) request.getAttribute("username"); %>
 <a id="home" href="index.jsp" >
 <center>
 <button class="btnpc" id="home" style="float:  left;width:  80%;margin-left:  100px; margin-top: 2%">
@@ -130,7 +131,11 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Username</label>
 <div >
-<input type="text" style="width:30%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
+<%if(username != null) {%>
+<input type="text" style="width:30%" name ="username" value="<%=username %>" class= "form-control" id="username">
+<%}else{%>
+<input type="text" style="width:30%" name ="username" placeholder="Inserisci Username" class= "form-control" id="username">
+<% }%>
 </div>
 </div>
 
