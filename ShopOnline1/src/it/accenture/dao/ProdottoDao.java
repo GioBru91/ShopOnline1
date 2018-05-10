@@ -15,7 +15,7 @@ public interface ProdottoDao {
 	
 	public Prodotto getProdottoById(int idProdotto);
 	
-	public List<Prodotto> getProdottoByNome(String nomeProdotto);
+	public List<Prodotto> getProdottoByCerca(String keyword);
 	
 	public List<Prodotto> prodottiPiuVenduti();
 	

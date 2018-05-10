@@ -188,17 +188,17 @@ public class ProdottoDaoImpl implements ProdottoDao{
 	}
 
 	@Override
-	public List<Prodotto> getProdottoByNome(String nomeProdotto) {
+	public List<Prodotto> getProdottoByCerca(String keyword) {
 		List<Prodotto> listaCerca = new ArrayList<>();
 		ResultSet rs = null;
-		String query = "select * from prodotto where upper(nome) like " + "upper('%" + nomeProdotto + "%')";
+		String query = "select * from prodotto where upper(nome) like upper('%" + keyword + "%') or upper(marca) like upper('%" + keyword + "%') or upper(categoria) like upper('%" + keyword + "%')"; 
 		try {
 			statement = connection.createStatement();
 			rs = statement.executeQuery(query);
-			if(rs.next()) {
+			while(rs.next()) {
 				Prodotto prodotto = new Prodotto();
 				prodotto.setIdProdotto(rs.getInt(1));
-				prodotto.setNome(nomeProdotto);
+				prodotto.setNome(rs.getString(2));
 				prodotto.setCategoria(Categoria.valueOf(rs.getString(3)));
 				prodotto.setMarca(rs.getString(4));
 				prodotto.setPrezzo(rs.getDouble(5));

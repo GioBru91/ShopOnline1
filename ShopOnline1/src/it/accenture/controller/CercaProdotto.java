@@ -18,17 +18,18 @@ public class CercaProdotto extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		String nomeProdotto = req.getParameter("nomeProdotto");
+		String keyword = req.getParameter("nomeProdotto");
 		List<Prodotto> listaCerca = new ArrayList<>();
 		
-		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
-		listaCerca = prodottoService.getProdottoByNome(nomeProdotto);
+		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();	
+		listaCerca = prodottoService.getProdottoByCerca(keyword);
 		System.out.println("i prodotti sono : " + listaCerca.size());
 		prodottoService.close();
 		req.setAttribute("listaCerca", listaCerca);
+		req.setAttribute("keyword", keyword);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("listaCerca.jsp");
 		dispatcher.forward(req, resp);
-		
+	
 	
 	}
 
