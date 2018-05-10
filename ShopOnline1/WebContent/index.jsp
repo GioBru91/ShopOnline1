@@ -243,8 +243,9 @@ $(document).ready(function() {
 
 <br>
 <br>
+
 <center>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/Arrow_Up_icon.png" width="40%"></button>
 </center>
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
@@ -266,7 +267,7 @@ function topFunction() {
 </script>
 
 
-<br>
+
 <br>
 
 <div class="footer">
