@@ -245,6 +245,9 @@ $(document).ready(function() {
 <br>
 
 
+<br>
+<br>
+
 <div class="footer">
 <div class="G2lBJZk">
 <div class="social_bar" data-testid="social-links-bar" style="margin-top: 1%; margin-bottom: 1%;">
