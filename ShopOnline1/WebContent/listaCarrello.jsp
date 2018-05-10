@@ -19,7 +19,11 @@
 
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
-<%double prezzoTotale = (double) session.getAttribute("prezzoTotale"); %>
+<%double prezzoTotale = 0; %>
+<%if (session.getAttribute("prezzoTotale") != null){  %>
+<% prezzoTotale = (double) session.getAttribute("prezzoTotale"); %>
+<%} %>
+
 
 <a id="home" href="index.jsp" >
 <center>
