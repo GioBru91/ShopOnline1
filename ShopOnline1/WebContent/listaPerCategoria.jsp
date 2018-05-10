@@ -1,3 +1,5 @@
+<%@page import="jdk.nashorn.internal.ir.RuntimeNode.Request"%>
+<%@page import="it.accenture.model.Categoria"%>
 <%@page import="it.accenture.model.Prodotto"%>
 <%@page import="java.util.List"%>
 <%@page import="it.accenture.model.Utente"%>
@@ -20,6 +22,7 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% List<Prodotto> listaPerCategoria = (List<Prodotto>) request.getAttribute("listaPerCategoria"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
+<%Categoria categoria = (Categoria) request.getAttribute("categoria"); %>
 
 <a id="home" href="index.jsp" >
 <center>
@@ -125,8 +128,8 @@
 <div class = "container">
 
 
-<h1>SALDI</h1>
-
+<h1><%=categoria.toString().replace("_", " ") %></h1>
+<br>
 
 
 <div class = "table-responsive">
