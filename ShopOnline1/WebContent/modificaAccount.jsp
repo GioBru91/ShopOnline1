@@ -190,7 +190,7 @@
 <!-- bottoni -->
 <div class="form-group" style="margin-top: 100px;">
 <input type="submit" value="Aggiorna" class="btn" style=" font-weight: 600;">
-<input type="reset" value="Esci" class="btn " style=" font-weight: 600;">
+<input type="reset" value="Resetta" class="btn " style=" font-weight: 600;">
 </div>
 </div>
 </form>

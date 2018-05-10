@@ -189,7 +189,7 @@
 
 
 <input type="submit" value="Registrati" class="btn" style=" font-weight: 600;">
-<input type="submit" value="Esci" class="btn" style=" font-weight: 600;">
+<input type="reset" value="Resetta" class="btn" style=" font-weight: 600;">
 
 <div class="alert alert-danger" id="alert" style="display:none">
 <h1>Devi inserire i valori per tutti i campi</h1>

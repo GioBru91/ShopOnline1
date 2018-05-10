@@ -151,7 +151,7 @@
 <div class="form-group">
 <input type="submit" value="Login" class="btn" style="font-weight: 600;">
 
-<input type="submit" value="Esci" class="btn" style="font-weight: 600;">
+<input type="reset" value="Resetta" class="btn" style="font-weight: 600;">
 </div>
 </form>
 
