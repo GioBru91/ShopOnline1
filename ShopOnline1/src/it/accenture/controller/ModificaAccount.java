@@ -27,19 +27,25 @@ public class ModificaAccount extends HttpServlet {
 		HttpSession sessione = req.getSession();
 		Utente utente = (Utente) sessione.getAttribute("utenteLoggato");
 	
-	    utente.setNome(nome);
-	    utente.setCognome(cognome);
-	    utente.setIndirizzo(indirizzo);
-	    utente.setUsername(username);
-	    utente.setPassword(password);
-	    System.out.println(utente);
 	    UtenteDaoImpl utenteService = new UtenteDaoImpl();
-	    utenteService.updateUtente(utente);
-		System.out.println(utente);
-		utenteService.close();
-		RequestDispatcher dispatcher = req.getRequestDispatcher("index.html");
-		dispatcher.forward(req, resp);
-		
+	    Utente controlloUtente = utenteService.controlloUsername(username);
+	    if (controlloUtente == null) {
+	    	utente.setNome(nome);
+		    utente.setCognome(cognome);
+		    utente.setIndirizzo(indirizzo);
+		    utente.setUsername(username);
+		    utente.setPassword(password);
+		    utenteService.updateUtente(utente);
+			System.out.println(utente);
+			utenteService.close();
+			RequestDispatcher dispatcher = req.getRequestDispatcher("myAccount.jsp");
+			dispatcher.forward(req, resp);
+	    }else {
+		    System.out.println("username gia utilizzato");
+	    	req.setAttribute("errore1",true);
+	    	RequestDispatcher dispatcher = req.getRequestDispatcher("modificaAccount.jsp");
+		    dispatcher.forward(req, resp);
+	    }	
 		
 	}
 

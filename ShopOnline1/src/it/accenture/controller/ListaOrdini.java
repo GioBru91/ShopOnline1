@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import it.accenture.dao.AcquistoDaoImpl;
+import it.accenture.dao.ProdottoDaoImpl;
 import it.accenture.model.Acquisto;
+import it.accenture.model.Prodotto;
 import it.accenture.model.Utente;
 
 public class ListaOrdini extends HttpServlet {
@@ -21,11 +23,24 @@ public class ListaOrdini extends HttpServlet {
 		HttpSession sessione = req.getSession();
 		Utente utenteLoggato = (Utente) sessione.getAttribute("utenteLoggato");
 		
+		List<Prodotto> listaProdottiOrdini = new ArrayList<>();
 		List<Acquisto> listaOrdini = new ArrayList<>();
 		AcquistoDaoImpl acquistiService = new AcquistoDaoImpl();
 		listaOrdini = acquistiService.getListaOrdiniByUtente(utenteLoggato.getIdUtente());
 		System.out.println("Gli ordini sono : " + listaOrdini.size());
 		acquistiService.close();
+		ProdottoDaoImpl prodottoService = new ProdottoDaoImpl();
+		int idProdotto = 0;
+		Prodotto prodotto = new Prodotto();
+		for (Acquisto acquisto : listaOrdini) {
+			idProdotto = acquisto.getIdProdotto();
+			prodotto = prodottoService.getProdottoById(idProdotto);
+			
+			listaProdottiOrdini.add(prodotto);
+		}	
+		prodottoService.close();
+		System.out.println("la size é " + listaProdottiOrdini.size());
+		req.setAttribute("listaProdottiOrdini", listaProdottiOrdini);
 		req.setAttribute("listaOrdini", listaOrdini);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("listaOrdini.jsp");
 		dispatcher.forward(req, resp);

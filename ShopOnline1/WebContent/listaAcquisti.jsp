@@ -21,7 +21,7 @@
 <%Utente utente = (Utente) session.getAttribute("utenteLoggato");   %>
 <% List<Acquisto> listaAcquisti = (List<Acquisto>) request.getAttribute("listaAcquisti"); %>
 <%List<Prodotto> listaCarrello = (List<Prodotto>) session.getAttribute("listaCarrello"); %>
-<%Prodotto prodotto = (Prodotto) request.getAttribute("prodotto"); %>
+<%List<Prodotto> listaProdottiAcquisto = (List<Prodotto>) request.getAttribute("listaProdottiAcquisto"); %>
 
 <a id="home" href="index.jsp" >
 <center>
@@ -131,6 +131,9 @@
 <thead>
 <tr>
 <th>N° Prodotto</th>
+<th>Immagine </th>
+<th>Nome</th>
+<th>Marca </th>
 <th>Tipo Spedizione</th>
 <th>Data Invio</th>
 <th>Data Arrivo</th>
@@ -141,9 +144,14 @@
 </tr>
 </thead>
 <tbody>
-<% for (Acquisto acquisto : listaAcquisti) { %>
+<%for (Acquisto acquisto : listaAcquisti) { 
+Prodotto prodotto = listaProdottiAcquisto.get(listaAcquisti.indexOf(acquisto));%>
+<%if (acquisto.getIdProdotto() == prodotto.getIdProdotto()) {%>
 <tr>
 <td align="center"><%= acquisto.getIdProdotto() %></td>
+<td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
+<td><%= prodotto.getNome() %> </td>
+<td><%= prodotto.getMarca() %> </td>
 <td align="center"><%= acquisto.getTipoSpedizione() %> </td>
 <td><%= acquisto.getDataInizio() %> </td>
 <td><%= acquisto.getDataFine() %> </td>
@@ -184,6 +192,7 @@ disabled
 <img src="img/dettagli.png" style="width: 37px;">
 </button>
 </form>
+<%} %>
 <%} %>
 </td>
 </tr>

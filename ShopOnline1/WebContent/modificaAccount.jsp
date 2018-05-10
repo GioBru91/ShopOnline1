@@ -201,12 +201,12 @@
 <!-- alert -->
 
 <div class="alert alert-danger" id="alert" style="display:none">
-<h1>Devi inserire i valori per tutti i campi</h1>
+<h2 align="center">Devi inserire i valori per tutti i campi</h2>
 </div>
 
 <%if (request.getAttribute("errore1") != null){ %>
 <div class="alert alert-danger"  style = margin-top:20px">
-<h4>Username già utilizzato</h4>
+<h2 align="center">Username già utilizzato</h2>
 </div>
 <% } %>
 

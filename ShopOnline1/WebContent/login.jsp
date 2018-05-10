@@ -187,12 +187,12 @@
 
 </div>
 <div class="alert alert-danger" id="alert" style="display:none; margin-top: 20px">
-<h4 class ="text-center" style = margin-top:14px">Devi inserire i valori per tutti i campi</h4>
+<h2 align="center">Devi inserire i valori per tutti i campi</h2>
 </div>
 
 <%if (request.getAttribute("errore")!= null){ %>
 <div class="alert alert-danger"  style = margin-top:20px">
-<h4>Utente e password sbagliati.</h4>
+<h2 align="center">Utente e password sbagliati.</h2>
 </div>
 <% } %>
 
