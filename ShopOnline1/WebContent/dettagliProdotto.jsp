@@ -151,7 +151,13 @@ magnify("myimage", 2);
 </p>
 <p>--</p>
 <%} %>
+<%if(prodotto.getQuantitaDisponibile() == 0){ %>
+<p>
+<img src="img/xrossa.png" width="20px">
+</p>
+<%}else{ %>
 <p style="font-size: 150%">Quantità disponibile: <%= prodotto.getQuantitaDisponibile() %> </p>
+<%} %>
 </center>
 <br><br><br>
 

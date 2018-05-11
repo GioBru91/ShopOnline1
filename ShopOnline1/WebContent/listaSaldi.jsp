@@ -148,7 +148,13 @@
 <td align="center"><%= prodotto.getPrezzo() %> &euro; </td>
 <td><img src="img/vverde.png" width="20px"></td>
 <td align="center"><%= prodotto.getSconto() %> % </td>
+<%if(prodotto.getQuantitaDisponibile() == 0){ %>
+<td>
+<img src="img/xrossa.png" width="20px" style="margin-left: 48px;" id="quantita">
+</td>
+<%}else{ %>
 <td align="center"><%= prodotto.getQuantitaDisponibile() %> </td>
+<%} %>
 <td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
 <td>
 <form action="EffettuaAcquisto" method="get" >

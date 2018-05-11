@@ -167,7 +167,13 @@
 </td>
 <td>--</td>
 <%} %>
+<%if(prodotto.getQuantitaDisponibile() == 0){ %>
+<td>
+<img src="img/xrossa.png" width="20px" style="margin-left: 48px;" id="quantita">
+</td>
+<%}else{ %>
 <td align="center"><%= prodotto.getQuantitaDisponibile() %> </td>
+<%} %>
 <td><img src="<%= prodotto.getImmagine() %>" width="100px"></td>
 <td>
 <form action="EffettuaAcquisto" method="get" >

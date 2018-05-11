@@ -260,6 +260,10 @@ a {
 	position: fixed;
 }
 
+.quantita{
+	position: fixed;
+}
+
 #myBtn {
   
   position: inherit;
