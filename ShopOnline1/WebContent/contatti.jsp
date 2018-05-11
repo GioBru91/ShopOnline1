@@ -150,7 +150,7 @@
 
 
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0;margin-top: -430px;margin-left: -300px;" allowfullscreen=""></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3517074678603!2d9.152405615622449!3d45.46271857910092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c16185ad1d21%3A0xd5574de063bbca43!2sVia+Giorgio+Washington%2C+50%2C+20146+Milano+MI!5e0!3m2!1sit!2sit!4v1525350554057" width="400" height="400" frameborder="0" style="border:0;margin-top: -480px;margin-left: -300px;" allowfullscreen=""></iframe>
 
 </div>
 

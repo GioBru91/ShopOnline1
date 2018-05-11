@@ -131,7 +131,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Nuovo Nome</label>
 <div>
-<input type="text" style="width:30%" name ="nome" value="<%=utente.getNome() %>" class= "form-control " id="nome">
+<input type="text" style="width:40%" name ="nome" value="<%=utente.getNome() %>" class= "form-control " id="nome">
 </div>
 </div>
 
@@ -140,7 +140,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Nuovo Cognome</label>
 <div>
-<input type="text" style="width:30%"  name ="cognome" value="<%=utente.getCognome() %>" class= "form-control" id="cognome">
+<input type="text" style="width:40%"  name ="cognome" value="<%=utente.getCognome() %>" class= "form-control" id="cognome">
 </div>
 </div>
 
@@ -149,7 +149,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Nuovo Indirizzo</label>
 <div>
-<input type="text" style="width:30%"  name ="indirizzo" value="<%=utente.getIndirizzo() %>" class= "form-control" id="indirizzo">
+<input type="text" style="width:40%"  name ="indirizzo" value="<%=utente.getIndirizzo() %>" class= "form-control" id="indirizzo">
 </div>
 </div>
 
@@ -158,7 +158,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Nuovo Username</label>
 <div >
-<input type="text" style="width:30%" name ="username" value="<%=utente.getUsername() %>" class= "form-control" id="username">
+<input type="text" style="width:40%" name ="username" value="<%=utente.getUsername() %>" class= "form-control" id="username">
 </div>
 </div>
 
@@ -166,7 +166,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit" > Inserisci Nuova Password</label>
 <div>
-<input type="password" style="width:30%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;
+<input type="password" style="width:40%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;
 		background-image: none;border: 1px solid #ccc;border-radius: 4px;" value="<%=utente.getPassword() %>" id="pwd" class="masked" name="password">
         <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
             <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>
@@ -176,7 +176,7 @@
 
  <br>
 <br>
-<div class="rowgrid"   style="width: 40%;margin-left: 800px;margin-top: -400px;"> 
+<div id="colonne" class="rowgrid"   style="width: 40%;margin-left: 800px;margin-top: -400px;"> 
   <div class="column" style="margin-left: 50px">
     <img src="img/romanzo1.jpg" style="width:120%; margin: 15px; ">
     <img src="img/romanzo1.jpg" style="width:60%; margin-left: 60px">

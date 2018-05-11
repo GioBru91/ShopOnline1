@@ -161,7 +161,7 @@
 </form>
 
 
-<div class="rowgrid"   style="width: 40%;margin-left: 800px;margin-top: -180px;"> 
+<div id="pic" class="rowgrid"   style="width: 40%;margin-left: 800px;margin-top: -180px;"> 
   <div class="column" style="margin-left: 60px">
     <img src="img/bambina_nero.jpg" style="width:60%; margin: 15px; ">
     <img src="img/bambina_nero.jpg" style="width:100%; margin-left: 60px">

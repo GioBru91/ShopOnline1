@@ -132,7 +132,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Nome</label>
 <div>
-<input type="text" style="width:30%" name ="nome" placeholder="Inserisci nome" class= "form-control " id="nome">
+<input type="text" style="width:40%" name ="nome" placeholder="Inserisci nome" class= "form-control " id="nome">
 </div>
 </div>
 
@@ -141,7 +141,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Cognome</label>
 <div>
-<input type="text" style="width:30%"  name ="cognome" placeholder="Inserisci cognome" class= "form-control" id="cognome">
+<input type="text" style="width:40%"  name ="cognome" placeholder="Inserisci cognome" class= "form-control" id="cognome">
 </div>
 </div>
 
@@ -152,7 +152,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Indirizzo</label>
 <div>
-<input type="text" style="width:30%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
+<input type="text" style="width:40%"  name ="indirizzo" placeholder="Inserisci indirizzo" class= "form-control" id="indirizzo">
 </div>
 </div>
 
@@ -161,7 +161,7 @@
 <div class="form-group" >
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Username</label>
 <div >
-<input type="text" style="width:30%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
+<input type="text" style="width:40%" name ="username" placeholder="Inserisci username" class= "form-control" id="username">
 </div>
 </div>
 
@@ -170,7 +170,7 @@
 <label style="font-size: 120%; font-weight: inherit"> Inserisci Password</label>
 <div>
 
-<input type="password" style="width:30%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;
+<input type="password" style="width:40%;height: 36px;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;color: #555;
 		background-image: none;border: 1px solid #ccc;border-radius: 4px;" placeholder="Inserisci password" id="pwd" class="masked" name="password">
         <button type="button" onclick="showHide()" id="eye" style="width: 3%; border: none; background-color: white;">
             <img src="img/icona_occhio.png" alt="eye" style="width: 100%; background-color: white;"/>

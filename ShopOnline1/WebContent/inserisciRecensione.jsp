@@ -163,7 +163,7 @@
 </form>
 
 
-<div class="rowgrid"   style="width: 40%;margin-left: 850px;margin-top: -400px;"> 
+<div  id="colonne" class="rowgrid"   style="width: 40%;margin-left: 950px;margin-top: -350px;"> 
   <div class="column" style="margin-left: 60px">
     <img src="<%=prodotto.getImmagine() %>" style="width:100%; margin: 15px; ">
     <img src="<%=prodotto.getImmagine() %>" style="width:80%; margin-left: 60px">
@@ -176,31 +176,10 @@
 </div>
 
 <br>
-
-
-<center>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/Arrow_Up_icon.png" width="40%"></button>
-</center>
-<script>
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-</script>
-
 <br>
+<br>
+
+
 
 
 
